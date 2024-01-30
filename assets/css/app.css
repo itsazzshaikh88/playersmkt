@@ -1,0 +1,41 @@
+.language-dropdown {
+	padding: 0.2rem;
+	font-size: 0.8rem;
+	color: #495057;
+	background-color: #fff;
+	background-image: none;
+	background-clip: padding-box;
+	border: none;
+	border-bottom: 1px solid #01d099; 
+	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+	vertical-align: bottom;
+	font-weight: bold;
+	color: #01d099;
+	margin-bottom: 10px;
+}
+.language-dropdown option:checked{
+	color: #01d099;
+}
+.language-dropdown option:not(:checked){
+	color: #000;
+}
+.language-dropdown:focus, .language-dropdown:hover {
+	outline: none !important;
+	box-shadow:  none !important;
+}
+.text-black {
+	color: #000 !important;
+}
+.text-green {
+	color: #01d099 !important;
+}
+.home-list {
+	font-weight: normal !important;
+	font-size: 12px !important;
+}
+.text-underline {
+	text-decoration: underline;
+}
+.border-radius-none {
+	border-radius: none !important;
+}

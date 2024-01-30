@@ -1,0 +1,48 @@
+.custom-login-card {
+	border: none !important;
+	border-radius: 3px !important;
+	box-shadow: 0 0 5px #d7d7d7;
+}
+.box-shadow-login {
+	box-shadow: 0 0 5px #d7d7d7;
+}
+.custom-login-card .form-control {
+	border-radius: 0px !important;
+	font-size: 0.8rem !important;
+}
+
+.text-label {
+	color: #222222;
+}
+.btn-login {
+	border-radius: 50px;
+}
+.or-div {
+	position: relative;
+}
+.or-div::before {
+	content: "";
+	position: absolute;
+	width: 45%;
+	left: 0;
+	height: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #e7e7e7;
+}
+.or-div::after {
+	content: "";
+	position: absolute;
+	width: 45%;
+	right: 0;
+	height: 2px;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #e7e7e7;
+}
+.btn-create {
+	background-color: #e7e7e7;
+	border: #e7e7e7;
+	color: #01d099 !important;
+	border-radius: 50px;
+}
