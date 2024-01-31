@@ -23,8 +23,26 @@ class Register extends App_Controller
 	{
 		parent::__construct();
 	}
-	public function player()
+	public function player($action = null, $player_id = null)
 	{
+
+		if ($this->input->method() == 'post') {
+			$data = $this->security->xss_clean($this->input->post());
+			// Process $data as needed
+			$response =  $this->registration_model->add_player($data);
+			// Send a response back to the client
+			$this->output
+				->set_content_type('application/json')
+				->set_output(json_encode($response));
+			return;
+		}
+		$data['player_detail'] = [];
+		if ($this->uri->total_segments() == 4 && $action == 'account-created') {
+			$id = $this->input->get('account-id');
+			$token = $this->input->get('account-token');
+			$data['player_detail'] = $this->registration_model->fetchPlayerDetail($id, $token);
+		}
+
 		// App Languages
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
@@ -35,7 +53,7 @@ class Register extends App_Controller
 		$view_name = 'register/player';
 		$data['view_path'] = "pages/$view_name";
 		$data['css_files'] = ['assets/css/custom/login.css'];
-		$data['scripts'] = ['assets/js/custom/login.js'];
+		$data['scripts'] = ['assets/js/custom/player-register.js'];
 		$this->load->view('template', $data);
 	}
 }

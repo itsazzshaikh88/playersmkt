@@ -1,63 +1,13 @@
 <!-- footer 2-->
 <footer id="footer" class="footer-2">
 	<!-- Footer Top-->
-	<div class="top-footer">
-
-		<!-- Logo Footer-->
-		<div class="col-lg-12">
-			<div class="logo-footer">
-				<h2>Sports Cup</h2>
-			</div>
-		</div>
-		<!-- End Logo Footer-->
-
-		<!-- Social Icons-->
-		<ul class="social">
-			<li>
-				<div>
-					<a href="#" class="facebook">
-						<i class="fa fa-facebook"></i>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#" class="twitter-icon">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#" class="vimeo">
-						<i class="fa fa-vimeo-square"></i>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#" class="google-plus">
-						<i class="fa fa-google-plus"></i>
-					</a>
-				</div>
-			</li>
-			<li>
-				<div>
-					<a href="#" class="youtube">
-						<i class="fa fa-youtube"></i>
-					</a>
-				</div>
-			</li>
-		</ul>
-		<!-- End Social Icons-->
-	</div>
+	<div class="top-footer"></div>
 	<!-- End Footer Top-->
 
 	<!-- Links Footer-->
 	<div class="links-footer">
 		<div class="container">
 			<div class="row">
-
 				<!-- Column Links -->
 				<div class="col-lg-2 col-md-5 col-sm-5">
 					<div class="info-links">
@@ -126,14 +76,17 @@
 		</div>
 	</div>
 	<!-- End Links Footer-->
-
-
 	<!-- footer Down-->
 	<div class="footer-down">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<p>&copy; 2018 SportsCup . All Rights Reserved</p>
+					<?php
+						$start_year = "2023";
+						$year = date('Y');
+						$copyright_year = $start_year === $year ? $year : "$start_year - $year";
+					?>
+					<p>&copy; <?= $copyright_year ?> <?= APP_NAME ?> . All Rights Reserved</p>
 				</div>
 			</div>
 		</div>
