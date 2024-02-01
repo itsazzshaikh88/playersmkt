@@ -5,7 +5,7 @@
 	<base href="<?= base_url() ?>">
 	<!-- Basic -->
 	<meta charset="utf-8">
-	<title>SportsCup - Bootstrap 4 Theme for Sports</title>
+	<title><?= isset($app_title) ? $app_title : APP_NAME . " - Showcase your talent" ?></title>
 	<meta name="keywords" content="playersmkt" />
 	<meta name="description" content="PlayersMkt - Connecting Talented Players with Clubs Worldwide">
 	<meta name="author" content="playersmkt.com">

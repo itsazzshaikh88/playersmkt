@@ -34,6 +34,7 @@ class Welcome extends App_Controller
 		$view_name = 'home';
 		$data['view_path'] = "pages/$view_name";
 		$data['scripts'] = ['assets/js/custom/home.js'];
+		$data['app_title'] = APP_NAME . " - Your Gateway to Sports Talent";
 		$this->load->view('template', $data);
 	}
 
