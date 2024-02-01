@@ -7,7 +7,7 @@
 						<h3 class="text-green">Player Login</h3>
 						<small class="text-black">Unleash your talent, connect with clubs.</small>
 						<hr>
-						<form action="">
+						<form action="login/player" method="post" id="form" onsubmit="validate()">
 							<div class="form-group">
 								<label for="" class="text-label">Email Address <span class="text-danger">*</span></label>
 								<input type="email" name="email" id="email" required autocomplete="off" class="form-control" placeholder="Enter Registered Email Address">
@@ -19,11 +19,16 @@
 							<div class="form-group">
 								<label for="" class="text-label"><input type="checkbox" name="remember_me" id="remember_me"> Remember Me </label>
 							</div>
+							<div class="row mt-3 d-none" id="alert-container">
+								<div class="col-md-12">
+									<div class="alert alert-danger text-center" id="alert-message"></div>
+								</div>
+							</div>
 							<div class="form-group">
-								<button class="btn btn-primary w-100 btn-login">Log In Now</button>
+								<button class="btn btn-primary w-100 btn-login" id="submit-btn">Log In Now</button>
 							</div>
 							<div class="text-right">
-								<a href="">Forgot Password</a>
+								<a href="account/forgot-password?user-type=player">Forgot Password</a>
 							</div>
 							<div class="or-div text-center">
 								<span class="text-black">OR</span>

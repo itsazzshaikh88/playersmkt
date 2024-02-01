@@ -25,6 +25,15 @@ class Login extends App_Controller
 	}
 	public function player()
 	{
+		if ($this->input->method() == 'post') {
+			$data = $this->security->xss_clean($this->input->post());
+			$response = $this->registration_model->player_login($data);
+			$this->output
+				->set_content_type('application/json')
+				->set_output(json_encode($response));
+			return;
+		}
+
 		// App Languages
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;

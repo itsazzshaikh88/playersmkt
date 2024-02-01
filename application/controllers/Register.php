@@ -30,6 +30,20 @@ class Register extends App_Controller
 			$data = $this->security->xss_clean($this->input->post());
 			// Process $data as needed
 			$response =  $this->registration_model->add_player($data);
+			if ($response['status_text'] == 'success') {
+				$player_name = "$data[first_name] $data[last_name]";
+				// Send Email If Acccount Created Successfully
+				$email_data['username'] = $player_name;
+				$email_data['verification_link'] = base_url() . "verification/player/$response[player_id]?verification-source=email&account-id=$response[id]&account-token=$response[token]";
+				$message = $this->load->view('email_templates/player-registration', $email_data, TRUE);
+				$sender['email'] = "account@playersmkt.com";
+				$sender['name'] = "Acccount";
+				$receiver['email'] = $data['email'];
+				$receiver['name'] = $player_name;
+				$subject = "Welcome to " . APP_NAME . " - Verify Your Account";
+				$this->app_mail($sender, $receiver, $subject, $message);
+			}
+
 			// Send a response back to the client
 			$this->output
 				->set_content_type('application/json')

@@ -361,9 +361,9 @@
 	<!-- Sports Categories End -->
 
 	<!-- White Section -->
-	
-	
-	
+
+
+
 	<!-- End White Section -->
 
 	<!-- End gray Section -->
@@ -372,57 +372,362 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="text-center padding-bottom">
-						<h2>We have a great community, <span class="text-resalt">JOIN</span> now.</h2>
-						<p>Duis non lorem porta, eros sit amet, tempor sem. semper a tempus et.</p>
+						<h2>Explore Featured <span class="text-resalt">Players</span></h2>
+						<p>Dive into our curated showcase of exceptional players. Discover their unique talents, stories, and achievements as we bring you the best in the world of sports.
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Info Resalt-->
-		<div id="ri-grid" class="ri-grid ri-grid-size-2">
-			<img class="ri-loading-image" src="img/grid/loading.gif" alt="Image">
-			<ul>
-				<li><a href="#"><img src="img/grid/1.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/2.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/3.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/4.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/5.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/6.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/7.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/8.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/9.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/10.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/11.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/12.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/13.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/14.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/15.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/16.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/1.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/2.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/3.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/4.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/5.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/6.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/7.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/8.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/9.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/10.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/11.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/12.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/13.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/14.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/15.jpg" alt="Image"></a></li>
-				<li><a href="#"><img src="img/grid/16.jpg" alt="Image"></a></li>
-			</ul>
+		<div class="container padding-top">
+			<div class="row portfolioContainer" style="position: relative; height: 1501.22px;">
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 0px; top: 0px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/1.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								13
+							</span>
+							<h4>
+								Cristiano Ronaldo
+								<span>Forward</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 defender" style="position: absolute; left: 325px; top: 0px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/2.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								10
+							</span>
+							<h4>
+								Lionel Messi
+								<span>Defender</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 midfielder" style="position: absolute; left: 650px; top: 0px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/3.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Neymar
+								<span>Midfielder</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 goalkeeper" style="position: absolute; left: 975px; top: 0px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/4.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Luis Suárez
+								<span>Goalkeeper</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 midfielder" style="position: absolute; left: 0px; top: 500px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/5.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Gareth Bale
+								<span>Midfielder</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 goalkeeper" style="position: absolute; left: 325px; top: 500px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/6.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Sergio Agüero
+								<span>Goalkeeper</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 650px; top: 500px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/1.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								13
+							</span>
+							<h4>
+								Cristiano Ronaldo
+								<span>Forward</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 defender" style="position: absolute; left: 975px; top: 500px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/2.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								10
+							</span>
+							<h4>
+								Lionel Messi
+								<span>Defender</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 midfielder" style="position: absolute; left: 0px; top: 1000px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/3.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Neymar
+								<span>Midfielder</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 goalkeeper" style="position: absolute; left: 325px; top: 1000px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/4.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Luis Suárez
+								<span>Goalkeeper</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 midfielder" style="position: absolute; left: 650px; top: 1000px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/5.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Gareth Bale
+								<span>Midfielder</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+				<!-- Item Player -->
+				<div class="col-xl-3 col-lg-4 col-md-6 goalkeeper" style="position: absolute; left: 975px; top: 1000px;">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="img/players/6.jpg" alt="location-team">
+							<div class="overlay"><a href="single-player.html">+</a></div>
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+								2
+							</span>
+							<h4>
+								Sergio Agüero
+								<span>Goalkeeper</span>
+							</h4>
+							<ul>
+								<li>
+									<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> Colombia </span>
+								</li>
+								<li><strong>MATCHES:</strong> <span>90</span></li>
+								<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<!-- End Item Player -->
+
+			</div>
 		</div>
 		<!-- End Info Resalt-->
 
 		<div class="container">
 			<div class="row justify-content-center padding-top">
-				<a href="single-team.html" class="btn-iw">Join Our Club</a>
-				<a href="contact.html" class="btn-iw outline skin">Make Donation</a>
+				<a href="players/find/all" class="btn-iw">Explore All Players</a>
+				<a href="clubs/find/all" class="btn-iw outline skin">View All Clubs</a>
 			</div>
 		</div>
 
@@ -436,16 +741,17 @@
 				<div class="col-md-12">
 					<div class="text-center">
 						<h2>Enter your e-mail and <span class="text-resalt">subscribe</span> to our newsletter.</h2>
-						<p>Duis non lorem porta, eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat.</p>
+						<p>Subscribe to our newsletter and stay in the loop with the latest in sports recruitment, player showcases, and exciting opportunities. Join our community to receive exclusive updates, featured player spotlights, and insights into the evolving world of sports.
+						</p>
 					</div>
-					<form id="newsletterForm" action="http://html.iwthemes.com/sportscup/run/php/mailchip/newsletter-subscribe.php">
+					<form id="newsletterForm" action="app/newsletter" method="POST" onsubmit="subscribe_to_newsletter()">
 						<div class="row">
 							<div class="col-md-6">
 								<div class="input-group">
 									<span class="input-group-addon">
 										<i class="fa fa-envelope"></i>
 									</span>
-									<input class="form-control" placeholder="Your Name" name="name" type="text" required="required">
+									<input class="form-control" placeholder="Enter Your Name" name="name" type="text" required="required">
 								</div>
 							</div>
 							<div class="col-md-6">
@@ -453,11 +759,16 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope"></i>
 									</span>
-									<input class="form-control" placeholder="Your  Email" name="email" type="email" required="required">
+									<input class="form-control" placeholder="Enter Your Email" name="email" type="email" required="required">
 									<span class="input-group-btn">
-										<button class="btn btn-primary" type="submit" name="subscribe">SIGN UP</button>
+										<button class="btn btn-primary" type="submit" id="submit-btn" name="subscribe">SIGN UP</button>
 									</span>
 								</div>
+							</div>
+						</div>
+						<div class="row mt-3 d-none" id="alert-container">
+							<div class="col-md-12">
+								<div class="alert alert-danger" id="alert-message"></div>
 							</div>
 						</div>
 					</form>

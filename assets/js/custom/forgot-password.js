@@ -11,7 +11,6 @@ async function validate() {
 	submit_btn.innerHTML = btn_loader;
 	submit_btn.setAttribute("disabled", true);
 	messsage_container.classList.add("d-none");
-
 	try {
 		const response = await fetch(form.action, {
 			method: form.method,

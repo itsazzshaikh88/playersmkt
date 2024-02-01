@@ -84,7 +84,17 @@ defined('EXIT_DATABASE')       or define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      or define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      or define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
+$local_servers = ['localhost', '127.0.0.1'];
 // User Defined Constant
 define('APP_NAME', 'PlayersMkt');
 define('APP_URL_COOKIE', '.playersmkt.com');
 define('FILES_URL', 'https://files.playersmkt.com/');
+define('APP_LOGO', 'https://playersmkt.com/img/logo.png');
+$player_app = "https://player.playersmkt.com";
+$club_app = "https://club.playersmkt.com";
+if (in_array($_SERVER['HTTP_HOST'], $local_servers)) {
+	$player_app = "http://" . $_SERVER['HTTP_HOST'] . "/player-plmkt";
+	$club_app = "http://" . $_SERVER['HTTP_HOST'] . "/club-plmkt";
+}
+define('PLAYER_APP_URL', $player_app);
+define('CLUB_APP_URL', $club_app);

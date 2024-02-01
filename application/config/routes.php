@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -56,3 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 // User Defined Routes
 $route['about-us'] = 'welcome/about_us';
 $route['contact-us'] = 'welcome/contact_us';
+$route['account/forgot-password'] = 'account/forgot_password';
+$route['account/update-password/(:any)?'] = 'account/update_password/$1';

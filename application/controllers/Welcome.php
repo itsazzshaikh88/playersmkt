@@ -33,6 +33,7 @@ class Welcome extends App_Controller
 		// Load View Template
 		$view_name = 'home';
 		$data['view_path'] = "pages/$view_name";
+		$data['scripts'] = ['assets/js/custom/home.js'];
 		$this->load->view('template', $data);
 	}
 

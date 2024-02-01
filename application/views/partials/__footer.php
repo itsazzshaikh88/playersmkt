@@ -82,9 +82,9 @@
 			<div class="row">
 				<div class="col-md-12">
 					<?php
-						$start_year = "2023";
-						$year = date('Y');
-						$copyright_year = $start_year === $year ? $year : "$start_year - $year";
+					$start_year = "2023";
+					$year = date('Y');
+					$copyright_year = $start_year === $year ? $year : "$start_year - $year";
 					?>
 					<p>&copy; <?= $copyright_year ?> <?= APP_NAME ?> . All Rights Reserved</p>
 				</div>
@@ -115,6 +115,8 @@
 <!-- User Defined Script  -->
 <script>
 	const base_url = "<?= base_url() ?>";
+	const player_base_url = "<?= PLAYER_APP_URL ?>";
+	const club_base_url = "<?= CLUB_APP_URL ?>";
 </script>
 <script src="assets/js/app.js"></script>
 

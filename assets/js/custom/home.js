@@ -1,10 +1,10 @@
-const form = document.getElementById("form");
+const form = document.getElementById("newsletterForm");
 const submit_btn = document.getElementById("submit-btn");
-const btn_loader = `<i class="fa-solid fa-circle-notch fa-spin"></i> Logging In ....`;
+const btn_loader = `<i class="fa-solid fa-circle-notch fa-spin"></i> Please Wait ....`;
 const btn_text = submit_btn.innerHTML;
 const messsage_container = document.getElementById("alert-container");
 const message_box = document.getElementById("alert-message");
-async function validate() {
+async function subscribe_to_newsletter() {
 	event.preventDefault();
 	const formData = new FormData(form);
 	// set loader
@@ -24,13 +24,7 @@ async function validate() {
 		const data = await response.json();
 		messsage_container.classList.add("d-none");
 		// redirect to account resgistered page
-		if (data.status == "fail") {
-			showErrorMessage(data.message, data.class);
-		} else if (data.status == "success") {
-			window.location = data.url;
-		} else {
-			showErrorMessage(data.message, data.class);
-		}
+		showErrorMessage(data.message, data.class);
 	} catch (error) {
 		showErrorMessage(error, "danger");
 	} finally {
@@ -44,7 +38,7 @@ function showErrorMessage(message, class_name) {
 	var classes = message_box.className.split(" ");
 	// Filter out all classes except "alert"
 	var filteredClasses = classes.filter(function (className) {
-		return className === "alert" || className === "text-center";
+		return className === "alert";
 	});
 	// Set the class attribute of the div to only include "alert"
 	message_box.className = filteredClasses.join(" ");

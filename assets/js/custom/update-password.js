@@ -1,8 +1,9 @@
 const form = document.getElementById("form");
 const submit_btn = document.getElementById("submit-btn");
-const btn_loader = `<i class="fa-solid fa-circle-notch fa-spin"></i> Logging In ....`;
+const btn_loader = `<i class="fa-solid fa-circle-notch fa-spin"></i> Updating Password ....`;
 const btn_text = submit_btn.innerHTML;
 const messsage_container = document.getElementById("alert-container");
+const content_container = document.getElementById("content-container");
 const message_box = document.getElementById("alert-message");
 async function validate() {
 	event.preventDefault();
@@ -11,7 +12,13 @@ async function validate() {
 	submit_btn.innerHTML = btn_loader;
 	submit_btn.setAttribute("disabled", true);
 	messsage_container.classList.add("d-none");
-
+	const password_checked = validatePassword();
+	if (!password_checked) {
+		showErrorMessage(`Password and Confirm Password Not Matched`, "danger");
+		submit_btn.innerHTML = btn_text;
+		submit_btn.removeAttribute("disabled");
+		return;
+	}
 	try {
 		const response = await fetch(form.action, {
 			method: form.method,
@@ -27,7 +34,7 @@ async function validate() {
 		if (data.status == "fail") {
 			showErrorMessage(data.message, data.class);
 		} else if (data.status == "success") {
-			window.location = data.url;
+			content_container.innerHTML = data.content;
 		} else {
 			showErrorMessage(data.message, data.class);
 		}
@@ -53,4 +60,13 @@ function showErrorMessage(message, class_name) {
 	message_box.innerHTML = message;
 	message_box.classList.add(`alert-${class_name}`);
 	messsage_container.focus();
+}
+
+function validatePassword() {
+	const password = document.getElementById("password").value;
+	const confirm_password = document.getElementById("con_password").value;
+
+	if (password != "" && confirm_password != "" && password === confirm_password)
+		return true;
+	else return false;
 }
