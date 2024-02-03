@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends App_Controller
+class Player extends App_Controller
 {
 
 	/**
@@ -24,15 +24,16 @@ class Welcome extends App_Controller
 		parent::__construct();
 	}
 
-	public function index()
+	public function find()
 	{
 		// App Languages
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
+        $data['Player_details'] = $this->lists_model->players();
 		// Load View and Language Files
 		$this->lang->load('home', $this->site_lang);
 		// Load View Template
-		$view_name = '';
+		$view_name = 'player-list';
 		$data['view_path'] = "pages/$view_name";
 		$data['scripts'] = ['assets/js/custom/home.js'];
 		$data['app_title'] = APP_NAME . " - Your Gateway to Sports Talent";
