@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Player extends App_Controller
+class Players extends App_Controller
 {
 
 	/**

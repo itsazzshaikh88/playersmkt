@@ -9,41 +9,34 @@
 		<div class="container">
 			<div class="row">
 				<!-- Column Links -->
-				<div class="col-lg-2 col-md-5 col-sm-5">
+				<div class="col-lg-3 col-md-5 col-sm-5">
 					<div class="info-links">
 						<h5>Organisation</h5>
-						<ul>
-							<li><a href="#">Volunteers</a></li>
-							<li><a href="#">Committees</a></li>
-							<li><a href="#">Official Documents</a></li>
-							<li><a href="#">Terms of Service</a></li>
-						</ul>
+						<h5>Organisation</h5>
+						<h5>Organisation</h5>
+						
 					</div>
 				</div>
 				<!-- End Column Links -->
 
 				<!-- Column Links -->
-				<div class="col-lg-4 col-md-7 col-sm-7">
+				<div class="col-lg-3 col-md-7 col-sm-7">
 					<div class="info-links">
-						<h5>Groups</h5>
-						<ul class="columns">
+						<h5>Soluion</h5>
+						<ul class="rows">
 							<li><a href="#">GROUP A</a></li>
 							<li><a href="#">GROUP B</a></li>
 							<li><a href="#">GROUP C</a></li>
 							<li><a href="#">GROUP D</a></li>
-							<li><a href="#">GROUP E</a></li>
-							<li><a href="#">GROUP F</a></li>
-							<li><a href="#">GROUP G</a></li>
-							<li><a href="#">GROUP H</a></li>
 						</ul>
 					</div>
 				</div>
 				<!-- End Column Links -->
 
 				<!-- Column Links -->
-				<div class="col-lg-2 col-md-5 col-sm-5">
+				<div class="col-lg-3 col-md-5 col-sm-5">
 					<div class="info-links">
-						<h5>Interest Links</h5>
+						<h5>Company</h5>
 						<ul>
 							<li><a href="#">Statistics</a></li>
 							<li><a href="#">Teams</a></li>
@@ -55,18 +48,14 @@
 				<!-- End Column Links -->
 
 				<!-- Column Links -->
-				<div class="col-lg-4 col-md-7 col-sm-7">
+				<div class="col-lg-3 col-md-7 col-sm-7">
 					<div class="info-links">
 						<h5>Organisation</h5>
-						<ul class="columns">
+						<ul class="rows">
 							<li><a href="#">NIZHNY NOVGOROD</a></li>
 							<li><a href="#">SAINT PETERSBURG</a></li>
 							<li><a href="#">EKATERINBURG</a></li>
 							<li><a href="#">MOSCOW</a></li>
-							<li><a href="#">KAZAN</a></li>
-							<li><a href="#">KALININGRAD</a></li>
-							<li><a href="#">VOLGOGRAD</a></li>
-							<li><a href="#">ROSTOV-ON-DON</a></li>
 						</ul>
 					</div>
 				</div>
@@ -130,7 +119,6 @@ if (isset($scripts) && !empty($scripts)) :
 	endforeach;
 endif;
 ?>
-
 </body>
 
 </html>
