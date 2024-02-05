@@ -22,7 +22,7 @@
 				<!-- Column Links -->
 				<div class="col-lg-3 col-md-7 col-sm-7">
 					<div class="info-links">
-						<h5>Soluion</h5>
+						<h5>Last Posts</h5>
 						<ul class="rows">
 							<li><a href="#">GROUP A</a></li>
 							<li><a href="#">GROUP B</a></li>
@@ -36,12 +36,12 @@
 				<!-- Column Links -->
 				<div class="col-lg-3 col-md-5 col-sm-5">
 					<div class="info-links">
-						<h5>Company</h5>
+						<h5>Quick Links</h5>
 						<ul>
-							<li><a href="#">Statistics</a></li>
-							<li><a href="#">Teams</a></li>
-							<li><a href="#">Qualifiers</a></li>
-							<li><a href="#">Ticketing</a></li>
+							<li><a href="about-us">About Us</a></li>
+							<li><a href="players/find">Players</a></li>
+							<li><a href="clubs/find">Clubs</a></li>
+							<li><a href="contact-us">Contact Us</a></li>
 						</ul>
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 				<!-- Column Links -->
 				<div class="col-lg-3 col-md-7 col-sm-7">
 					<div class="info-links">
-						<h5>Organisation</h5>
+						<h5>About Us</h5>
 						<ul class="rows">
 							<li><a href="#">NIZHNY NOVGOROD</a></li>
 							<li><a href="#">SAINT PETERSBURG</a></li>
@@ -83,7 +83,6 @@
 	<!-- footer Down-->
 </footer>
 <!-- End footer 2-->
-
 
 </div>
 <!-- End layout-->

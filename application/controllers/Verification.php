@@ -73,4 +73,29 @@ class Verification extends App_Controller
 		$data['view_path'] = "pages/$view_name";
 		$this->load->view('template', $data);
 	}
+
+
+	public function club()
+	{
+		if ($this->input->method() == 'post') {
+			$data = $this->security->xss_clean($this->input->post());
+			$response = $this->registration_model->club_login($data);
+			$this->output
+				->set_content_type('application/json')
+				->set_output(json_encode($response));
+			return;
+		}
+
+		// App Languages
+		$data['current_language'] = $this->site_lang;
+		$data['supported_languages'] = $this->supported_languages;
+		// Load View and Language Files
+		$this->lang->load('login', $this->site_lang);
+		// Load View Template
+		$view_name = 'login/club';
+		$data['view_path'] = "pages/$view_name";
+		$data['css_files'] = ['assets/css/custom/login.css'];
+		$data['scripts'] = ['assets/js/custom/login.js'];
+		$this->load->view('template', $data);
+	}
 }
