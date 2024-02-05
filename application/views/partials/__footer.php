@@ -25,9 +25,9 @@
 						<h5>Last Posts</h5>
 						<ul class="rows">
 							<li><a href="#">GROUP A</a></li>
-							<li><a href="#">GROUP B</a></li>
-							<li><a href="#">GROUP C</a></li>
-							<li><a href="#">GROUP D</a></li>
+						</ul>
+						<ul class="rows">
+							<li><a href="#">GROUP A</a></li>
 						</ul>
 					</div>
 				</div>
