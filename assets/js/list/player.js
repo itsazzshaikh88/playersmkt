@@ -20,7 +20,7 @@ let FetchList = (scroll) => {
                     let pp = invalid.includes(element.profile_photo) ? 'img/user_png.png' : element.profile_photo;
                     let position = element.position_name == null ? '-' : element.position_name;
 
-                    str += `<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 0px; top: 0px;">
+                    str += `<div class="col-xl-3 col-lg-4 col-md-6 forward">
 						<div class="item-player">
 							<div class="head-player">
 								<img src="img/players/1.jpg" alt="location-team">

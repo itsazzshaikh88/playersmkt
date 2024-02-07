@@ -1,45 +1,37 @@
-
 let FetchList = (scroll) => {
+	let club_country = document.getElementById("country").value;
+	let club_sports = document.getElementById("sport").value;
+	let rowcount = document.getElementById("rowcountClub").value;
+	let content = document.getElementById("content_info");
 
-	let club_country = document.getElementById('country').value
-	let club_sports = document.getElementById('sport').value
-	let rowcount = document.getElementById('rowcountClub').value 
-	let content = document.getElementById('content_info')
+	content.style.height = "50pc";
 
-	
-	content.style.height ="50pc"
-	
-	
-	
 	$.ajax({
-		url:base_url + 'club/fetch_clubs',
-		method:"GET",
-		data:{club_country,club_sports,rowcount,scroll},
-		dataType:"json",
-		beforeSend:function()
-	{
-		$("#clubs_list").html(`<div class="spinner-border m-5" role="status">
+		url: base_url + "Clubs/fetch_clubs",
+		method: "GET",
+		data: { club_country, club_sports, rowcount, scroll },
+		dataType: "json",
+		beforeSend: function () {
+			$("#clubs_list").html(`<div class="spinner-border m-5" role="status">
 		<span class="sr-only">Loading...</span>
-	  </div>`)
-	},
-		success:function(data)
-	{
-		let str = ''
-		let count = 0
-	
-		if(data['list'].length > 0)
-		{
-			data['list'].forEach(element => {
-				
-				let flag = 'img/bydefaultflag.png'
-				let country = element.club_country == '' ? '-': element.club_country
-				let sport = element.sport_name == null ? '-': element.sport_name
-				let city = element.club_city == '' || null ? '-': element.club_city
-				const invalid = [null,'','-',' ',undefined]
-				let pp = invalid.includes(element.profile_picture) ? 'img/bydefaultclub.png': element.profile_picture
-			
-		
-				str += `<div class="col-md-6 col-lg-4 col-xl-4 group-a">
+	  </div>`);
+		},
+		success: function (data) {
+			let str = "";
+			let count = 0;
+
+			if (data["list"].length > 0) {
+				data["list"].forEach((element) => {
+					let flag = "img/bydefaultflag.png";
+					let country = element.club_country == "" ? "-" : element.club_country;
+					let sport = element.sport_name == null ? "-" : element.sport_name;
+					let city = element.club_city == "" || null ? "-" : element.club_city;
+					const invalid = [null, "", "-", " ", undefined];
+					let pp = invalid.includes(element.profile_picture)
+						? "img/bydefaultclub.png"
+						: element.profile_picture;
+
+					str += `<div class="col-md-6 col-lg-4 col-xl-3 group-a">
 				<div class="item-team card">
 					<div class="head-team">
 						<img src="${pp}" alt="location-team">
@@ -61,39 +53,32 @@ let FetchList = (scroll) => {
 						${element.club_id}</a>
 					</div>
 				</div>
-			</div>`
-		
-			
-		
-			})
-			
-			$("#club_list").html(str)
-			$("#rowcountClub").val(data['count'])
-			
-			if(data['list'].length > 0)
-			{
-				$("#club_list").append(`<div class="row ml-5"><a class="text-success" id="seemoreClub" onclick="SeeMore()">See More [+]</a></div>`)
-			}else{	
-				$("#seemoreClub").remove()
+			</div>`;
+				});
+
+				$("#club_list").html(str);
+				$("#rowcountClub").val(data["count"]);
+
+				if (data["list"].length > 0) {
+					$("#club_list").append(
+						`<div class="row ml-5"><a class="text-success" id="seemoreClub" onclick="SeeMore()">See More [+]</a></div>`
+					);
+				} else {
+					$("#seemoreClub").remove();
+				}
+			} else {
+				$("#club_list").html(`<tr style="margin-left:200px">
+			<td class="text-center"> <img src="${
+				base_url + "img/nodatafound.png"
+			}" width="500px"></td><td><h6 class="text-danger">Data Not Found</h6></td>
+			</tr>`);
 			}
-		
-		}else
-		{
-			$("#club_list").html(`<tr style="margin-left:200px">
-			<td class="text-center"> <img src="${base_url + 'img/nodatafound.png'}" width="500px"></td><td><h6 class="text-danger">Data Not Found</h6></td>
-			</tr>`)	
-		}
-		
-	}
-	
-	})
-	
-	}
-	
-	FetchList()
-	
-	  function SeeMore() {
-		FetchList(1)
-	  }
-	
-	
+		},
+	});
+};
+
+FetchList();
+
+function SeeMore() {
+	FetchList(1);
+}

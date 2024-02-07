@@ -16,6 +16,53 @@ class Lists_model extends CI_Model
 		return $this->db->query($sql)->result_array();
 	}
 
+	function find_player()
+	{
+
+		$data =  $this->input->get();
+		$data = array_filter($data, function ($value) {
+			return $value !== null && $value !== '';
+		});
+
+		$sport_id = $this->input->get('sport_id');
+
+		unset($data['rowcount']);
+		unset($data['scroll']);
+		unset($data['sport_id']);
+
+
+
+		// Table names
+		$table1 = 'players';
+		$table2 = 'sports';
+		$table3 = 'sport_positions';
+
+		// Select fields from tables
+		$this->db->select('players.sport_id,players.country,players.player_id,sports.sport_name,sport_positions.position_name');
+
+		// Joins
+		$this->db->from($table1);
+		$this->db->join($table2, 'sports.sr_no = players.sport_id', 'left');
+		$this->db->join($table3, 'sport_positions.id = players.position_id', 'left');
+
+		// Dynamic conditions
+		if (!empty($data)) {
+			$this->db->where($data);
+		}
+
+		if ($sport_id != '')
+			$this->db->where('players.sport_id', $sport_id);
+
+		// Limit and offset
+		$this->db->limit(10);
+
+		// Execute the query
+		$query = $this->db->get();
+
+		// Return the result
+		return $query->result_array();
+	}
+
 	function fetch_players($multi)
 	{
 		$data =  $this->input->get();
@@ -62,6 +109,9 @@ class Lists_model extends CI_Model
 			return $query->result_array();
 		
 	}
+
+
+	
 	function fetch_clubs($multi)
 	{
 		$data =  $this->input->get();
@@ -78,11 +128,11 @@ class Lists_model extends CI_Model
 			$table2 = 'sports';
 	 
 			// Select fields from tables
-			$this->db->select('clubs.club_sports,clubs.club_country,clubs.club_id,clubs.profile_picture,sports.sport_name,clubs.club_city');
+			$this->db->select('clubs.country,clubs.club_id,sports.sport_name,clubs.city');
 	 
 			// Joins
 			$this->db->from($table1);
-			$this->db->join($table2, 'sports.sr_no = clubs.club_sports', 'left');
+			$this->db->join($table2, 'sports.sr_no = clubs.club_name', 'left');
 			// Dynamic conditions
 			if (!empty($data)) {
 				$this->db->where($data);
@@ -131,6 +181,9 @@ class Lists_model extends CI_Model
 		$sql = "select * from players LIMIT 10";
 		return $this->db->query($sql)->result_array();
 	}
+
+
+
 	// function players()
 	// {
 	// 	$sql = "select * from players ";

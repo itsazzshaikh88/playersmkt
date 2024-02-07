@@ -24,6 +24,9 @@ class Players extends App_Controller
 		parent::__construct();
 	}
 
+
+
+
 	public function find()
 	{
 		// if ($this->input->method() == 'post') {
@@ -45,28 +48,9 @@ class Players extends App_Controller
 		// Load View and Language Files
 		$this->lang->load('login', $this->site_lang);
 		// Load View Template
-
 		$view_name = 'player/find';
 		$data['view_path'] = "pages/$view_name";
-
-
-
-		// $row_count = $this->input->get('rowcount');
-		// $scroll = $this->input->get('scroll');
-
-		$multi = 0;
-		$offest = 0;
-
-		// if($scroll == 1)
-		// {
-		// 	$offest = ++$row_count ;
-		// 	$multi = $scroll == 1 ? $offest * 10 : 0;
-		// }
-
 		$data['sports'] = $this->app_model->fetchSports();
-		// $data['count'] = $offest;
-		//   echo json_encode($data);
-
 		$data['css_files'] = ['assets/css/custom/login.css'];
 		$data['scripts'] = ['assets/js/custom/login.js'];
 		$data['scripts'] = ['assets/js/list/player.js'];
@@ -78,7 +62,7 @@ class Players extends App_Controller
 
 	function list()
 	{
-		$data['list'] = $this->registration_model->find_player();
+		$data['list'] = $this->Lists_model->find_player();
 		echo json_encode($data);
 	}
 
@@ -93,14 +77,15 @@ class Players extends App_Controller
 		$multi = 0;
 		$offest = 0;
 
-		if ($scroll == 1) {
-			$offest = ++$row_count;
+		if($scroll == 1)
+		{
+			$offest = ++$row_count ;
 			$multi = $scroll == 1 ? $offest * 10 : 0;
 		}
 
-		$data['list'] = $this->Lists_model->fetch_players($multi);
+		$data['list'] =$this->lists_model->fetch_players($multi);
 		$data['count'] = $offest;
-		echo json_encode($data);
+		  echo json_encode($data);
 	}
 
 
@@ -108,10 +93,11 @@ class Players extends App_Controller
 	function position()
 	{
 		echo json_encode($this->Lists_model->fetch_position());
+		
 	}
 
 
-	
+
 	function new()
 	{
 		$data['current_language'] = $this->site_lang;
@@ -128,4 +114,5 @@ class Players extends App_Controller
 		$data['scripts'] = ['assets/js/list/player.js'];
 		$this->load->view('template', $data);
 	}
+
 }

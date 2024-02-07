@@ -49,6 +49,27 @@ class Clubs extends App_Controller
 	
 	}
 
+
+    function fetch_clubs()
+	{
+		$row_count = $this->input->get('rowcount');
+		$scroll = $this->input->get('scroll');
+
+		$multi = 0;
+		$offest = 0;
+
+		if($scroll == 1)
+		{
+			$offest = ++$row_count ;
+			$multi = $scroll == 1 ? $offest * 10 : 0;
+		}
+
+		$data['list'] =$this->Lists_model->fetch_clubs($multi);
+		$data['count'] = $offest;
+		  echo json_encode($data);
+	}
+
+
     function new(){
          // App Languages
          $data['current_language'] = $this->site_lang;
@@ -68,22 +89,5 @@ class Clubs extends App_Controller
          $this->load->view('template', $data);
     }
 
-    function fetch_clubs()
-	{
-		$row_count = $this->input->get('rowcount');
-		$scroll = $this->input->get('scroll');
-
-		$multi = 0;
-		$offest = 0;
-
-		if($scroll == 1)
-		{
-			$offest = ++$row_count ;
-			$multi = $scroll == 1 ? $offest * 10 : 0;
-		}
-
-		$data['list'] =$this->lists_model->fetch_clubs($multi);
-		$data['count'] = $offest;
-		  echo json_encode($data);
-	}
+    
 }
