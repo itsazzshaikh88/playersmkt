@@ -83,7 +83,7 @@ class Registration_model extends CI_Model
 					'status' => 'success',
 					'class' => 'success',
 					'message' => 'Login Successfull.',
-					'url' => PLAYER_APP_URL . "/feed/" . $user['player_id']
+					'url' => PLAYER_APP_URL
 				);
 			} else {
 				$response = array(
