@@ -6,7 +6,7 @@ let FetchList = (scroll) => {
     content.style.height = "50pc";
 
     $.ajax({
-        url: base_url + 'players/list',
+        url: base_url + 'Players/list',
         method: "GET",
         data: { country, sport_id },
         dataType: "json",
@@ -21,30 +21,31 @@ let FetchList = (scroll) => {
                     let position = element.position_name == null ? '-' : element.position_name;
 
                     str += `<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="item-player">
-                            <div class="head-player">
-                                <img src="${pp}" alt="location-team">
-                                <div class="overlay"><a href="single-player.html">+</a></div>
-                            </div>
-                            <div class="info-player">
-                                <span class="number-player">
-                                    13
-                                </span>
-                                <h4>
-                                    ${element.player_id}
-                                    <span>${position}</span>
-                                </h4>
-                                <ul>
-                                    <li>
-                                        <strong>Country</strong> <span>${element.country}</span>
-                                    </li>
+						<div class="item-player">
+							<div class="head-player">
+								<img src="img/players/1.jpg" alt="location-team">
+								<div class="overlay"><a href="single-player.html">+</a></div>
+							</div>
+							<div class="info-player">
+								<span class="number-player">
+									13
+								</span>
+								<h4>
+                                ${element.player_id}
+                                <span>${position}</span>
+								</h4>
+								<ul>
+									<li>
+                                    <strong>Country</strong> <span>${element.country}</span>
+									</li>
+									
                                     <li><strong>City:</strong> <span>${element.city}</span></li>
-                                    <li><strong>AGE:</strong> <span>${'-'}</span></li>
-                                </ul>
-                            </div>
-                            <a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>`;
+									<li><strong>AGE:</strong> <span>${'-'}</span></li>
+								</ul>
+							</div>
+							<a href="#" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+						</div>
+					</div>`;
                 });
 
                 // Append instead of replacing HTML
@@ -76,7 +77,7 @@ FetchList();
         console.log(sport_id);
     
         $.ajax({
-            url:base_url + 'lists/position/',
+            url:base_url + 'Players/position/',
             method:"GET",
             data:{id:sport_id},
             dataType:"json",

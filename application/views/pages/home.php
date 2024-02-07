@@ -107,7 +107,7 @@
 										<span class="position">
 											<?= $clubs['id'] ?>
 										</span>
-										<a href="single-team.html">
+										<a href="#">
 											<img src="img/clubs-logos/rusia.png" alt="">
 											<?= $clubs['club_id'] ?>
 										</a>
@@ -118,7 +118,7 @@
 								<?php endforeach; ?>
 							</ul>
 						</div>
-						<?php if (count($club_details) > 10) : ?>
+						<?php if (count($club_details) >= 10) : ?>
 							<div class="">
 								<a href="clubs/new" class="btn btn-sm btn-primary text-white">See More +</a>
 							</div>
@@ -218,7 +218,7 @@
 										<span class="position">
 											<?= $players['id'] ?>
 										</span>
-										<a href="single-team.html">
+										<a href="#">
 											<img src="img/players/1.jpg" alt="">
 											<?= $players['player_id'] ?>
 										</a>
@@ -229,9 +229,9 @@
 								<?php endforeach; ?>
 							</ul>
 						</div>
-						<?php if (count($Player_details) > 10) : ?>
+						<?php if (count($Player_details) >= 10) : ?>
 							<div class="">
-								<a href="players/new" class="btn btn-sm btn-primary text-white">See More +</a>
+								<a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
 							</div>
 						<?php endif; ?>
 					</div>
@@ -400,11 +400,11 @@
 						<div class="item-player">
 							<div class="head-player">
 								<img src="img/players/1.jpg" alt="location-team">
-								<div class="overlay"><a href="single-player.html">+</a></div>
+								<div class="overlay"><a href="">+</a></div>
 							</div>
 							<div class="info-player">
 								<span class="number-player">
-									13
+								<?= $players['id'] ?>
 								</span>
 								<h4>
 									<?= $players['player_id'] ?>
@@ -412,8 +412,8 @@
 								</h4>
 								<ul>
 									<li>
-										<strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt="">
-											Colombia </span>
+										<strong>NATIONALITY</strong> <span>
+										<?= $players['country'] ?> </span>
 									</li>
 									<li><strong>MATCHES:</strong> <span>90</span></li>
 									<li><strong>AGE:</strong> <span>28</span></li>

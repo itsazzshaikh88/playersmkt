@@ -103,7 +103,7 @@ class Registration_model extends CI_Model
 		return $response;
 	}
 
-// ----------------------------------------------------------------------------------------------------------------------
+	// ----------------------------------------------------------------------------------------------------------------------
 	function add_club($data)
 	{
 		$exist = $this->db->where('email', $data['email'])->get('clubs')->row_array();
@@ -114,7 +114,7 @@ class Registration_model extends CI_Model
 			);
 		}
 
-		
+
 		// unset data
 		unset($data['con_password']);
 		// Modify Data
@@ -123,7 +123,7 @@ class Registration_model extends CI_Model
 		// print_r($data);
 		$this->db->insert('clubs', $data);
 		$insert_id = $this->db->insert_id();
-	
+
 		$today = date('Y-m-d');
 		$daily_users = $this->db->where('registered_at', $today)->get('clubs')->result_array();
 		$total_registered = (int)count($daily_users);
@@ -213,48 +213,46 @@ class Registration_model extends CI_Model
 	{
 
 		$data =  $this->input->get();
-		$data = array_filter($data,function($value){
+		$data = array_filter($data, function ($value) {
 			return $value !== null && $value !== '';
 		});
-		
+
 		$sport_id = $this->input->get('sport_id');
 
 		unset($data['rowcount']);
 		unset($data['scroll']);
 		unset($data['sport_id']);
 
-		
-	
-			// Table names
-			$table1 = 'players';
-			$table2 = 'sports';
-			$table3 = 'positions';
-	 
-			// Select fields from tables
-			$this->db->select('players.sport_id,players.country,players.player_id,players.profile_photo,sports.sport_name,positions.position_name');
-	 
-			// Joins
-			$this->db->from($table1);
-			$this->db->join($table2, 'sports.sr_no = players.sport_id', 'left');
-			$this->db->join($table3, 'positions.id = players.position_id', 'left');
-	 
-			// Dynamic conditions
-			if (!empty($data)) {
-				$this->db->where($data);
-			}
 
-			if($sport_id != '')
-			$this->db->where('players.sport_id',$sport_id);
 
-			// Limit and offset
-			$this->db->limit(10);
-	 
-			// Execute the query
-			$query = $this->db->get();
-	 
-			// Return the result
-			return $query->result_array();
-	
-		
+		// Table names
+		$table1 = 'players';
+		$table2 = 'sports';
+		$table3 = 'sport_positions';
+
+		// Select fields from tables
+		$this->db->select('players.sport_id,players.country,players.player_id,players.profile_photo,sports.sport_name,sport_positions.position_name');
+
+		// Joins
+		$this->db->from($table1);
+		$this->db->join($table2, 'sports.sr_no = players.sport_id', 'left');
+		$this->db->join($table3, 'sport_positions.id = players.position_id', 'left');
+
+		// Dynamic conditions
+		if (!empty($data)) {
+			$this->db->where($data);
+		}
+
+		if ($sport_id != '')
+			$this->db->where('players.sport_id', $sport_id);
+
+		// Limit and offset
+		$this->db->limit(10);
+
+		// Execute the query
+		$query = $this->db->get();
+
+		// Return the result
+		return $query->result_array();
 	}
 }

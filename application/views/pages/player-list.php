@@ -22,11 +22,11 @@
                         </h4>
                         <ul>
                             <li>
-                                <strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt="">
-                                    Colombia </span>
+                            <strong>COUNTRY</strong>
+                            <span><?= $players['country'] ?></span>
                             </li>
-                            <li><strong>MATCHES:</strong> <span>90</span></li>
-                            <li><strong>AGE:</strong> <span>28</span></li>
+                            <li><strong>SPORTS:</strong> <span>90</span></li>
+						<li><strong>AGE:</strong> <span>28</span></li>
                         </ul>
                     </div>
                     <a href="#" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>

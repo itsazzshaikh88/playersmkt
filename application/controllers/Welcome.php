@@ -30,9 +30,9 @@ class Welcome extends App_Controller
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
 		// fetch player data
-		$data['Player_details'] = $this->lists_model->players();
+		$data['Player_details'] = $this->Lists_model->players();
 		// fetch club data
-		$data['club_details'] = $this->lists_model->ClubFetch();
+		$data['club_details'] = $this->Lists_model->ClubFetch();
 		// Load View and Language Files
 		$this->lang->load('home', $this->site_lang);
 		// Load View Template

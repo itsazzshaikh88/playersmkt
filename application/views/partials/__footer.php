@@ -11,10 +11,11 @@
 				<!-- Column Links -->
 				<div class="col-lg-3 col-md-5 col-sm-5">
 					<div class="info-links">
-						<h5>Organisation</h5>
-						<h5>Organisation</h5>
-						<h5>Organisation</h5>
-						
+						<h5><i class="bi bi-geo-alt"></i> </h5>
+						<h5><i class="bi bi-telephone"></i> </h5>
+						<h5><i class="bi bi-envelope"></i> </h5>
+						<h5><i class="bi bi-globe"></i> </h5>
+
 					</div>
 				</div>
 				<!-- End Column Links -->
@@ -26,6 +27,7 @@
 						<ul class="rows">
 							<li><a href="#">GROUP A</a></li>
 						</ul>
+						<h5>Last Posts</h5>
 						<ul class="rows">
 							<li><a href="#">GROUP A</a></li>
 						</ul>
