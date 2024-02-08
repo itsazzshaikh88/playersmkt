@@ -2,10 +2,7 @@ let FetchList = (scroll) => {
 	let club_country = document.getElementById("country").value;
 	let club_sports = document.getElementById("sport").value;
 	let rowcount = document.getElementById("rowcountClub").value;
-	let content = document.getElementById("content_info");
-
-	content.style.height = "50pc";
-
+	
 	$.ajax({
 		url: base_url + "Clubs/fetch_clubs",
 		method: "GET",
@@ -18,7 +15,6 @@ let FetchList = (scroll) => {
 		},
 		success: function (data) {
 			let str = "";
-			let count = 0;
 
 			if (data["list"].length > 0) {
 				data["list"].forEach((element) => {
@@ -57,15 +53,7 @@ let FetchList = (scroll) => {
 				});
 
 				$("#club_list").html(str);
-				$("#rowcountClub").val(data["count"]);
 
-				if (data["list"].length > 0) {
-					$("#club_list").append(
-						`<div class="row ml-5"><a class="text-success" id="seemoreClub" onclick="SeeMore()">See More [+]</a></div>`
-					);
-				} else {
-					$("#seemoreClub").remove();
-				}
 			} else {
 				$("#club_list").html(`<tr style="margin-left:200px">
 			<td class="text-center"> <img src="${

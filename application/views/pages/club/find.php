@@ -1,24 +1,19 @@
-<!-- Section Title -->
-<style>
-    .content-info {
-        overflow-x: hidden;
-    }
-</style>
+<!-- Info Resalt-->
+<div class="container-fluid padding-top">
+    <div class="row">
+        <div class="col-xl-3 col-lg-3 col-md-3">
 
-<section class="content-info list mb-3 " id="content_info" >
-    <div class="container-fluid padding-top">
-        <div class="row mb-3 p-0">
-            <div class="col-md-3">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Filter</h5>
-                            <div class="row homelist">
-                            <input type="hidden" name="rowcount" id="rowcountClub" value="0">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label">Country</label>
-                                        <select id="country" name="country" class="form-control" required="">
+
+
+            <div class="card">
+                <div class="card-head">
+                    <h4>Filter</h4>
+                </div>
+                <div class="card-body">
+                <input type="hidden" name="rowcount" id="rowcountClub" value="0">
+                    <div class="row">
+                        <label class="control-label">Country</label>
+                        <select id="country" name="country" class="form-control" required="">
                                             <option value="">Select country</option>
                                             <option value="Afghanistan">Afghanistan</option>
                                             <option value="Åland Islands">Åland Islands</option>
@@ -51,7 +46,8 @@
                                             <option value="Botswana">Botswana</option>
                                             <option value="Bouvet Island">Bouvet Island</option>
                                             <option value="Brazil">Brazil</option>
-                                            <option value="British Indian Ocean Territory">British Indian Ocean Territory
+                                            <option value="British Indian Ocean Territory">British Indian Ocean
+                                                Territory
                                             </option>
                                             <option value="Brunei Darussalam">Brunei Darussalam</option>
                                             <option value="Bulgaria">Bulgaria</option>
@@ -93,14 +89,16 @@
                                             <option value="Eritrea">Eritrea</option>
                                             <option value="Estonia">Estonia</option>
                                             <option value="Ethiopia">Ethiopia</option>
-                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                            <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)
+                                            </option>
                                             <option value="Faroe Islands">Faroe Islands</option>
                                             <option value="Fiji">Fiji</option>
                                             <option value="Finland">Finland</option>
                                             <option value="France">France</option>
                                             <option value="French Guiana">French Guiana</option>
                                             <option value="French Polynesia">French Polynesia</option>
-                                            <option value="French Southern Territories">French Southern Territories</option>
+                                            <option value="French Southern Territories">French Southern Territories
+                                            </option>
                                             <option value="Gabon">Gabon</option>
                                             <option value="Gambia">Gambia</option>
                                             <option value="Georgia">Georgia</option>
@@ -161,7 +159,8 @@
                                             <option value="Lithuania">Lithuania</option>
                                             <option value="Luxembourg">Luxembourg</option>
                                             <option value="Macao">Macao</option>
-                                            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former
+                                            <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The
+                                                Former
                                                 Yugoslav
                                                 Republic of</option>
                                             <option value="Madagascar">Madagascar</option>
@@ -176,7 +175,8 @@
                                             <option value="Mauritius">Mauritius</option>
                                             <option value="Mayotte">Mayotte</option>
                                             <option value="Mexico">Mexico</option>
-                                            <option value="Micronesia, Federated States of">Micronesia, Federated States of
+                                            <option value="Micronesia, Federated States of">Micronesia, Federated States
+                                                of
                                             </option>
                                             <option value="Moldova, Republic of">Moldova, Republic of</option>
                                             <option value="Monaco">Monaco</option>
@@ -203,7 +203,8 @@
                                             <option value="Oman">Oman</option>
                                             <option value="Pakistan">Pakistan</option>
                                             <option value="Palau">Palau</option>
-                                            <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied
+                                            <option value="Palestinian Territory, Occupied">Palestinian Territory,
+                                                Occupied
                                             </option>
                                             <option value="Panama">Panama</option>
                                             <option value="Papua New Guinea">Papua New Guinea</option>
@@ -240,7 +241,8 @@
                                             <option value="Solomon Islands">Solomon Islands</option>
                                             <option value="Somalia">Somalia</option>
                                             <option value="South Africa">South Africa</option>
-                                            <option value="South Georgia and The South Sandwich Islands">South Georgia and
+                                            <option value="South Georgia and The South Sandwich Islands">South Georgia
+                                                and
                                                 The South
                                                 Sandwich Islands</option>
                                             <option value="Spain">Spain</option>
@@ -289,43 +291,67 @@
                                             <option value="Zambia">Zambia</option>
                                             <option value="Zimbabwe">Zimbabwe</option>
                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label class="control-label">Sports</label>
-                                        <select id="sport" name="sport" class="form-control" required="" onchange="FetchPosition()">
+                    </div>
+                    <div class="row">
+                        <label class="control-label">Sports</label>
+                        <select id="sport" name="sport" class="form-control" required="" onchange="FetchPosition()">
                                             <option value="">Select Sport</option>
                                             <?php foreach ($sports as $sport) : ?>
                                                 <option value="<?= $sport['sr_no'] ?>"><?= $sport['sport_name'] ?></option>
                                             <?php endforeach; ?>
                                         </select>
-                                    </div>
+                    </div>
+                    
+                    <div class="row">
+                    <div class="col-md-12">
+                                    <button type="button" class="btn-outline btn-dark" onclick="FetchList()">Apply</button>
                                 </div>
-                             
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                <button type="button" class="btn-outline btn-dark" onclick="FetchList()">Apply</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="loader" id="loader"></div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col-md-9 ">
-                <!-- Centered content -->
-
-                <div class="row portfolioContainer" id="club_list">
 
 
-                </div>
+
+
+        </div>
+
+
+
+        <div class="col-xl-9 col-lg-9 col-md-8">
+            <div class="row" id="club_list">
+
+                <!-- <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="item-player">
+                        <div class="head-player">
+                            <img src="img/players/1.jpg" alt="location-team">
+                            <div class="overlay"><a href="">+</a></div>
+                        </div>
+                        <div class="info-player">
+                            <span class="number-player">
+
+                            </span>
+                            <h4>
+                                asdgfhg
+                                <span>Forward</span>
+                            </h4>
+                            <ul>
+                                <li>
+                                    <strong>NATIONALITY</strong> <span>
+                                        qwer </span>
+                                </li>
+                                <li><strong>MATCHES:</strong> <span>90</span></li>
+                                <li><strong>AGE:</strong> <span>28</span></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                </div> -->
+
+
+
+
             </div>
         </div>
     </div>
-</section>
-<!-- End Section Area -  Content Central -->
+</div>
+<!-- End Info Resalt-->

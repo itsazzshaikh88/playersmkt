@@ -8,14 +8,15 @@
 	<div class="links-footer">
 		<div class="container">
 			<div class="row">
-				<!-- Column Links -->
-				<div class="col-lg-3 col-md-5 col-sm-5">
-					<div class="info-links">
-						<h5><i class="bi bi-geo-alt"></i> </h5>
-						<h5><i class="bi bi-telephone"></i> </h5>
-						<h5><i class="bi bi-envelope"></i> </h5>
-						<h5><i class="bi bi-globe"></i> </h5>
 
+				<!-- Column Links -->
+				<div class="col-lg-3 col-md-7 col-sm-7">
+					<div class="info-links">
+						<h5>About Us</h5>
+						<ul class="rows">
+							<li><a>We are a team of dedicated professionals passionate about serving our clients in the marketing industry. Our goal is to provide innovative solutions and exceptional service to help businesses thrive in today's competitive landscape.</a></li>
+
+						</ul>
 					</div>
 				</div>
 				<!-- End Column Links -->
@@ -25,11 +26,17 @@
 					<div class="info-links">
 						<h5>Last Posts</h5>
 						<ul class="rows">
-							<li><a href="#">GROUP A</a></li>
+							<li><a href="#">Breaking Records</a></li>
+							<li>
+								<p style="margin-bottom: 0rem !important;">The unstoppable force of <b>Azim Shaikh</b> continues to redefine greatness, setting new benchmarks and inspiring athletes worldwide.</p>
+							</li>
 						</ul>
-						<h5>Last Posts</h5>
+
 						<ul class="rows">
-							<li><a href="#">GROUP A</a></li>
+							<li><a href="#">Injury Update</a></li>
+							<li>
+								<p style="margin-bottom: 0rem !important;"><b>Ansari Kamran</b> sidelined temporarily due to a minor injury, but remains optimistic about their swift return to the field.</p>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -50,15 +57,14 @@
 				<!-- End Column Links -->
 
 				<!-- Column Links -->
-				<div class="col-lg-3 col-md-7 col-sm-7">
+				<div class="col-lg-3 col-md-5 col-sm-5">
+					<h5>Contact Dtails</h5>
 					<div class="info-links">
-						<h5>About Us</h5>
-						<ul class="rows">
-							<li><a href="#">NIZHNY NOVGOROD</a></li>
-							<li><a href="#">SAINT PETERSBURG</a></li>
-							<li><a href="#">EKATERINBURG</a></li>
-							<li><a href="#">MOSCOW</a></li>
-						</ul>
+						<h5><i class="bi bi-geo-alt"></i> Tset</h5>
+						<h5><i class="bi bi-telephone"></i> +28 4596871265</h5>
+						<h5><i class="bi bi-envelope"></i> testing25@yahoo.com</h5>
+						<h5><i class="bi bi-globe"></i> Abcdefg.com</h5>
+
 					</div>
 				</div>
 				<!-- End Column Links -->

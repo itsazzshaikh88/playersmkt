@@ -17584,7 +17584,7 @@ footer.footer-2 {
 }
 /* line 1679, ../sass/main.scss */
 footer.footer-2 .top-footer {
-	padding-top: 60px;
+	padding-top: 0px;
 	border-bottom: 1px solid #666 !important;
 	position: relative;
 }
@@ -17607,7 +17607,7 @@ footer.footer-2 .links-footer ul li a {
 /* line 1698, ../sass/main.scss */
 footer.footer-2 .footer-down {
 	background: transparent;
-	margin-top: 60px;
+	margin-top: 10px;
 }
 /* line 1701, ../sass/main.scss */
 footer.footer-2 .footer-down .col-md-12 {
@@ -17663,7 +17663,7 @@ footer.footer-3 .footer-down .col-md-12 {
 /* line 1747, ../sass/main.scss */
 footer .top-footer {
 	border-bottom: 1px solid #222;
-	padding-bottom: 60px;
+	padding-bottom: 0px;
 	margin-bottom: 60px;
 }
 /* line 1751, ../sass/main.scss */
