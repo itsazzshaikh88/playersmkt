@@ -38,7 +38,7 @@ class Lists_model extends CI_Model
 		$table3 = 'sport_positions';
 
 		// Select fields from tables
-		$this->db->select('players.sport_id,players.country,players.player_id,sports.sport_name,sport_positions.position_name');
+		$this->db->select('players.sport_id,players.country,players.player_id,sports.sport_name,sport_positions.position_name,players.city');
 
 		// Joins
 		$this->db->from($table1);
@@ -138,10 +138,6 @@ class Lists_model extends CI_Model
 				$this->db->where($data);
 			}
 
-	 
-			// Limit and offset
-			$this->db->limit(10, $multi);
-	 
 			// Execute the query
 			$query = $this->db->get();
 	 

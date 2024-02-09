@@ -9,8 +9,7 @@ let FetchList = (scroll) => {
 		dataType: "json",
 		success: function (data) {
 			let str = "";
-			
-
+		
 			if (data["list"].length > 0) {
 				data["list"].forEach((element) => {
 					console.log(element);

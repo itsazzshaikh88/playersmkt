@@ -49,7 +49,6 @@ class Clubs extends App_Controller
 	
 	}
 
-
     function fetch_clubs()
 	{
 		$row_count = $this->input->get('rowcount');

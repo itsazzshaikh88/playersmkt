@@ -320,34 +320,7 @@
         <div class="col-xl-9 col-lg-9 col-md-8">
             <div class="row" id="club_list">
 
-                <!-- <div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="item-player">
-                        <div class="head-player">
-                            <img src="img/players/1.jpg" alt="location-team">
-                            <div class="overlay"><a href="">+</a></div>
-                        </div>
-                        <div class="info-player">
-                            <span class="number-player">
-
-                            </span>
-                            <h4>
-                                asdgfhg
-                                <span>Forward</span>
-                            </h4>
-                            <ul>
-                                <li>
-                                    <strong>NATIONALITY</strong> <span>
-                                        qwer </span>
-                                </li>
-                                <li><strong>MATCHES:</strong> <span>90</span></li>
-                                <li><strong>AGE:</strong> <span>28</span></li>
-                            </ul>
-                        </div>
-                        <a href="#" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div> -->
-
-
+                
 
 
             </div>

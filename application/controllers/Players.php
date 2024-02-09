@@ -24,9 +24,6 @@ class Players extends App_Controller
 		parent::__construct();
 	}
 
-
-
-
 	public function find()
 	{
 		// if ($this->input->method() == 'post') {
@@ -57,17 +54,11 @@ class Players extends App_Controller
 		$this->load->view('template', $data);
 	}
 
-
-
-
 	function list()
 	{
 		$data['list'] = $this->Lists_model->find_player();
 		echo json_encode($data);
 	}
-
-
-
 
 	function fetch_players()
 	{
@@ -89,14 +80,11 @@ class Players extends App_Controller
 	}
 
 
-
 	function position()
 	{
 		echo json_encode($this->Lists_model->fetch_position());
 		
 	}
-
-
 
 	function new()
 	{

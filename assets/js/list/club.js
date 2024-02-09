@@ -18,10 +18,13 @@ let FetchList = (scroll) => {
 
 			if (data["list"].length > 0) {
 				data["list"].forEach((element) => {
+
+					console.log(element);
+
 					let flag = "img/bydefaultflag.png";
-					let country = element.club_country == "" ? "-" : element.club_country;
+					let country = element.country == "" ? "-" : element.country;
 					let sport = element.sport_name == null ? "-" : element.sport_name;
-					let city = element.club_city == "" || null ? "-" : element.club_city;
+					let city = element.city == "" || null ? "-" : element.city;
 					const invalid = [null, "", "-", " ", undefined];
 					let pp = invalid.includes(element.profile_picture)
 						? "img/bydefaultclub.png"
