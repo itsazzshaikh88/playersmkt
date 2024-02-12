@@ -19198,6 +19198,7 @@ address strong {
 	overflow: hidden;
 	max-height: 165px;
 	position: relative;
+	border-bottom: 1px solid #e7e7e780;
 }
 /* line 2981, ../sass/main.scss */
 .item-player .info-player {

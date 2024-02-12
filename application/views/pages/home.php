@@ -216,7 +216,7 @@
 											<?= $players ?>
 										</span>
 										<a href="single-team.html">
-											<img src="img/players/1.jpg" alt="">
+											<img src="images/default-listing.png" alt="">
 											Cristiano R.
 										</a>
 										<span class="points home-list text-green">
@@ -309,7 +309,7 @@
 					<div class="row">
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/cricket">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/cricket.avif' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/cricket.avif' ?>);">
 									<h4>Cricket </h4>
 								</div>
 							</a>
@@ -317,7 +317,7 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/football">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/football.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/football.jpg' ?>);">
 									<h4>Football</h4>
 								</div>
 							</a>
@@ -325,14 +325,14 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/basketball">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/basketball.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/basketball.jpg' ?>);">
 									<h4>Basketball</h4>
 								</div>
 							</a>
 						</div>
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/hockey">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/hockey.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/hockey.jpg' ?>);">
 									<h4>Hockey </h4>
 								</div>
 							</a>
@@ -340,7 +340,7 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/tennis">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/tennis.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/tennis.jpg' ?>);">
 									<h4>Tennis</h4>
 								</div>
 							</a>
@@ -348,7 +348,7 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/badminton">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/badminton.avif' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/badminton.avif' ?>);">
 									<h4>Badminton</h4>
 								</div>
 							</a>
@@ -388,7 +388,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 0px; top: 0px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/1.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">
@@ -416,7 +416,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 defender" style="position: absolute; left: 325px; top: 0px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/2.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">
@@ -444,7 +444,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 midfielder" style="position: absolute; left: 650px; top: 0px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/3.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">
@@ -472,8 +472,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 goalkeeper" style="position: absolute; left: 975px; top: 0px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/4.jpg" alt="location-team">
-							<div class="overlay"><a href="single-player.html">+</a></div>
+							<img src="images/default-listing.png" alt="location-team">
 						</div>
 						<div class="info-player">
 							<span class="number-player">
@@ -556,7 +555,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 650px; top: 500px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/1.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">
@@ -584,7 +583,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 defender" style="position: absolute; left: 975px; top: 500px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/2.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">
@@ -612,7 +611,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 midfielder" style="position: absolute; left: 0px; top: 1000px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/3.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">
@@ -640,7 +639,7 @@
 				<div class="col-xl-3 col-lg-4 col-md-6 goalkeeper" style="position: absolute; left: 325px; top: 1000px;">
 					<div class="item-player">
 						<div class="head-player">
-							<img src="img/players/4.jpg" alt="location-team">
+							<img src="images/default-listing.png" alt="location-team">
 							<div class="overlay"><a href="single-player.html">+</a></div>
 						</div>
 						<div class="info-player">

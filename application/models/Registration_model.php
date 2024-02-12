@@ -63,9 +63,24 @@ class Registration_model extends CI_Model
 		$user = $this->db->get_where('players', $data)->row_array();
 		if (!empty($user)) {
 			// account is valid
-			$auth_token = hash("sha256", time());
+			// Generate Auth Token
+			$timestamp = microtime(true); // Get current time with microseconds
+			$randomString = bin2hex(random_bytes(16)); // Generate a random string
+			$tokenData = $timestamp . $randomString . $user['id'] . 'P';
+			$auth_token = hash('sha256', $tokenData);
+			// End Generation of Auth Token
 			$status = $this->db->where('id', $user['id'])->update('players', ['auth_token' => $auth_token]);
 			if ($status) {
+				// Insert Auth Token Data
+				$auth_token_data = array(
+					'user_id' => $user['id'],
+					'user_type' => 'P',
+					'token' => $auth_token,
+					'is_expired' => 0,
+					'created_at' => time(),
+				);
+				// Insert record of auth token
+				$this->db->insert('auth_tokens', $auth_token_data);
 				// set cookie for 3 hours
 				$domain = $_SERVER['HTTP_HOST'] === 'localhost' ? $_SERVER['HTTP_HOST'] : APP_URL_COOKIE;
 				$secure = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? true : false;
@@ -113,9 +128,23 @@ class Registration_model extends CI_Model
 		$user = $this->db->get_where('clubs', $data)->row_array();
 		if (!empty($user)) {
 			// account is valid
-			$auth_token = hash("sha256", time());
+			// Generate Auth Token
+			$timestamp = microtime(true); // Get current time with microseconds
+			$randomString = bin2hex(random_bytes(16)); // Generate a random string
+			$tokenData = $timestamp . $randomString . $user['id'] . 'C';
+			$auth_token = hash('sha256', $tokenData);
 			$status = $this->db->where('id', $user['id'])->update('clubs', ['auth_token' => $auth_token]);
 			if ($status) {
+				// Insert Auth Token Data
+				$auth_token_data = array(
+					'user_id' => $user['id'],
+					'user_type' => 'C',
+					'token' => $auth_token,
+					'is_expired' => 0,
+					'created_at' => time(),
+				);
+				// Insert record of auth token
+				$this->db->insert('auth_tokens', $auth_token_data);
 				// set cookie for 3 hours
 				$domain = $_SERVER['HTTP_HOST'] === 'localhost' ? $_SERVER['HTTP_HOST'] : APP_URL_COOKIE;
 				$secure = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? true : false;

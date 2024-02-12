@@ -4,20 +4,13 @@
 	?>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-4">
-					<div class=" text-center mt-5">
-						<h5 class="mt-5 text-black">
-							Ready to take your sports journey to new heights? Join <span class="text-green">PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.
-
-						</h5>
-						<img src="images/register.png" class="img-fluid" alt="">
-					</div>
-				</div>
 				<div class="col-md-8">
 					<div class="card border-radius-none custom-login-card">
 						<div class="card-body border-radius-none">
-							<h3 class="text-green">Player Registration</h3>
-							<small class="text-black">Unlock Opportunities, Showcase Talent!</small>
+							<h3 class="text-green">Club Registration</h3>
+							<small class="text-black">
+								Welcome to <span class="text-success"><?= APP_NAME ?></span>! By creating your club account, you'll gain access to a wide range of features tailored to meet your team's needs. Join our global network of clubs and unlock opportunities to connect with talented players, manage team activities, and showcase your achievements. Get started today and take your club to new heights!
+							</small>
 							<hr>
 							<form id="form" onsubmit="submitForm()" method="post" action="register/player">
 								<div class=" form-group row">
@@ -85,6 +78,16 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-4">
+					<div class=" text-center mt-5">
+						<h5 class="mt-5 text-black">
+							Ready to take your sports journey to new heights? Join <span class="text-green">PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.
+
+						</h5>
+						<img src="images/register.png" class="img-fluid" alt="">
+					</div>
+				</div>
+
 			</div>
 		</div>
 	<?php

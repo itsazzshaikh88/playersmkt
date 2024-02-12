@@ -3,11 +3,16 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				
+
 			</div>
 			<div class="col-md-6">
 				<!-- Menu-->
 				<ul class="sf-menu float-right" id="menu">
+					<?php if (!empty($this->user)) : ?>
+						<li class="">
+							<a href="<?= generatePanelLink($this->user, $this->usertype) ?>">My Profile</a>
+						</li>
+					<?php endif; ?>
 					<li class="">
 						<a href="about-us"><?= $this->lang->line('nav_about_us') ?></a>
 					</li>
