@@ -59,13 +59,12 @@
 				<!-- Column Links -->
 				<div class="col-lg-3 col-md-5 col-sm-5">
 					<h5>Contact Dtails</h5>
-					<div class="info-links">
-						<h5><i class="bi bi-geo-alt"></i> Tset</h5>
-						<h5><i class="bi bi-telephone"></i> +28 4596871265</h5>
-						<h5><i class="bi bi-envelope"></i> testing25@yahoo.com</h5>
-						<h5><i class="bi bi-globe"></i> Abcdefg.com</h5>
-
-					</div>
+					<ul>
+						<li> <a href=""> <i class="bi bi-geo-alt"></i> Tset </a> </li>
+						<li> <a href=""> <i class="bi bi-telephone"></i> +28 4596871265 </a> </li>
+						<li> <a href=""> <i class="bi bi-envelope"></i> testing25@yahoo.com </a> </li>
+						<li> <a href=""> <i class="bi bi-globe"></i> Abcdefg.com </a> </li>
+					</ul>
 				</div>
 				<!-- End Column Links -->
 

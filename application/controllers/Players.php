@@ -56,7 +56,7 @@ class Players extends App_Controller
 
 	function list()
 	{
-		$data['list'] = $this->Lists_model->find_player();
+		$data['list'] = $this->Player_model->find_player();
 		echo json_encode($data);
 	}
 
@@ -68,22 +68,20 @@ class Players extends App_Controller
 		$multi = 0;
 		$offest = 0;
 
-		if($scroll == 1)
-		{
-			$offest = ++$row_count ;
+		if ($scroll == 1) {
+			$offest = ++$row_count;
 			$multi = $scroll == 1 ? $offest * 10 : 0;
 		}
 
-		$data['list'] =$this->lists_model->fetch_players($multi);
+		$data['list'] = $this->Player_model->fetch_players($multi);
 		$data['count'] = $offest;
-		  echo json_encode($data);
+		echo json_encode($data);
 	}
 
 
 	function position()
 	{
-		echo json_encode($this->Lists_model->fetch_position());
-		
+		echo json_encode($this->Player_model->fetch_position());
 	}
 
 	function new()
@@ -96,11 +94,24 @@ class Players extends App_Controller
 		$multi = 0;
 		$offest = 0;
 		$data['sports'] = $this->app_model->fetchSports();
-		$data['Player_details'] = $this->Lists_model->players();
+		$data['Player_details'] = $this->Player_model->players();
 		$data['css_files'] = ['assets/css/custom/login.css'];
 		$data['scripts'] = ['assets/js/custom/login.js'];
 		$data['scripts'] = ['assets/js/list/player.js'];
 		$this->load->view('template', $data);
 	}
 
+	function profile($id)
+	{
+		$data['current_language'] = $this->site_lang;
+		$data['supported_languages'] = $this->supported_languages;
+		$this->lang->load('login', $this->site_lang);
+		$data['Player_details'] = $this->Player_model->player($id);
+		$data['Personal_info'] = $this->Player_model->players_info($id);
+		$view_name = 'player/profile.php';
+		$data['view_path'] = "pages/$view_name";
+		$data['css_files'] = ['assets/css/custom/login.css'];
+		$data['scripts'] = ['assets/js/custom/login.js'];
+		$this->load->view('template', $data);
+	}
 }

@@ -39,13 +39,13 @@ class Clubs extends App_Controller
         $data['css_files'] = ['assets/css/custom/login.css'];
         $data['scripts'] = ['assets/js/custom/login.js'];
         $data['scripts'] = ['assets/js/list/club.js'];
-		$data['sports'] = $this->Lists_model->sports();
+		$data['sports'] = $this->Club_model->sports();
         $this->load->view('template', $data);
     }
 
     function position()
 	{
-		echo json_encode($this->Lists_model->fetch_position());
+		echo json_encode($this->Club_model->fetch_position());
 	
 	}
 
@@ -63,7 +63,7 @@ class Clubs extends App_Controller
 			$multi = $scroll == 1 ? $offest * 10 : 0;
 		}
 
-		$data['list'] =$this->Lists_model->fetch_clubs($multi);
+		$data['list'] =$this->Club_model->fetch_clubs($multi);
 		$data['count'] = $offest;
 		  echo json_encode($data);
 	}
@@ -81,12 +81,27 @@ class Clubs extends App_Controller
          $data['view_path'] = "pages/$view_name";
          $data['sports'] = $this->app_model->fetchSports();
          $data['css_files'] = ['assets/css/custom/login.css'];
-         $data['club_details'] = $this->Lists_model->ClubFetch();
+         $data['club_details'] = $this->Club_model->ClubFetch();
          $data['scripts'] = ['assets/js/custom/login.js'];
          $data['scripts'] = ['assets/js/list/club.js'];
          $data['sports'] = $this->Lists_model->sports();
          $this->load->view('template', $data);
     }
+
+
+    function profile($id)
+	{
+		$data['current_language'] = $this->site_lang;
+		$data['supported_languages'] = $this->supported_languages;
+		$this->lang->load('login', $this->site_lang);
+		$data['club_details'] = $this->Club_model->get_club_id($id);
+		$data['club_info'] = $this->Club_model->get_club_info($id);
+		$view_name = 'club/profile.php';
+		$data['view_path'] = "pages/$view_name";
+		$data['css_files'] = ['assets/css/custom/login.css'];
+		$data['scripts'] = ['assets/js/custom/login.js'];
+		$this->load->view('template', $data);
+	}
 
     
 }

@@ -41,7 +41,7 @@ let FetchList = (scroll) => {
                             <li><strong>AGE:</strong> <span>${"-"}</span></li>
                             </ul>
                         </div>
-                        <a href="#" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        <a href="players/profile/${element.id}" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </div>`;
 				});

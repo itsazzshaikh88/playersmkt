@@ -102,13 +102,19 @@
 							<ul>
 								<?php
 								foreach ($club_details as $clubs) :
+
+									if (isset($clubs['photo'])) {
+										$profile = $clubs['photo'];
+									  } else {
+										$profile = 'img/clubs-logos/rusia.png';
+									  }
 								?>
 									<li>
 										<span class="position">
 											<?= $clubs['id'] ?>
 										</span>
-										<a href="#">
-											<img src="img/clubs-logos/rusia.png" alt="">
+										<a href="clubs/profile/<?= $clubs['id'] ?>">
+											<img src="<?= $profile ?>" alt="">
 											<?= $clubs['club_id'] ?>
 										</a>
 										<span class="points home-list text-green">
@@ -213,13 +219,19 @@
 							<ul>
 								<?php
 								foreach ($Player_details as $players) :
+
+									if (isset($players['photo'])) {
+										$profile = $players['photo'];
+									  } else {
+										$profile = 'img/players/1.jpg';
+									  }
 								?>
 									<li>
 										<span class="position">
 											<?= $players['id'] ?>
 										</span>
-										<a href="#">
-											<img src="img/players/1.jpg" alt="">
+										<a href="players/profile/<?= $players['id'] ?>">
+											<img src="<?= $profile ?>" alt="">
 											<?= $players['player_id'] ?>
 										</a>
 										<span class="points home-list text-green">
@@ -400,7 +412,6 @@
 						<div class="item-player">
 							<div class="head-player">
 								<img src="img/players/1.jpg" alt="location-team">
-								<div class="overlay"><a href="">+</a></div>
 							</div>
 							<div class="info-player">
 								<span class="number-player">
@@ -419,7 +430,7 @@
 									<li><strong>AGE:</strong> <span>28</span></li>
 								</ul>
 							</div>
-							<a href="#" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<a href="players/profile/<?= $players['id'] ?>" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				<?php

@@ -1,6 +1,6 @@
 <?php
 
-class Lists_model extends CI_Model 
+class Player_model extends CI_Model 
 {
 	
 	public function sports()
@@ -38,7 +38,7 @@ class Lists_model extends CI_Model
 		$table3 = 'sport_positions';
 
 		// Select fields from tables
-		$this->db->select('players.sport_id,players.country,players.player_id,sports.sport_name,sport_positions.position_name,players.city');
+		$this->db->select('players.id,players.sport_id,players.country,players.player_id,sports.sport_name,sport_positions.position_name,players.city');
 
 		// Joins
 		$this->db->from($table1);
@@ -112,38 +112,38 @@ class Lists_model extends CI_Model
 
 
 	
-	function fetch_clubs($multi)
-	{
-		$data =  $this->input->get();
-		$data = array_filter($data,function($value){
-			return $value !== null && $value !== '';
-		});
+	// function fetch_clubs($multi)
+	// {
+	// 	$data =  $this->input->get();
+	// 	$data = array_filter($data,function($value){
+	// 		return $value !== null && $value !== '';
+	// 	});
 
-		unset($data['rowcount']);
-		unset($data['scroll']);
+	// 	unset($data['rowcount']);
+	// 	unset($data['scroll']);
 		
 	
-			// Table names
-			$table1 = 'clubs';
-			$table2 = 'sports';
+	// 		// Table names
+	// 		$table1 = 'clubs';
+	// 		$table2 = 'sports';
 	 
-			// Select fields from tables
-			$this->db->select('clubs.country,clubs.club_id,sports.sport_name,clubs.city');
+	// 		// Select fields from tables
+	// 		$this->db->select('clubs.country,clubs.club_id,sports.sport_name,clubs.city');
 	 
-			// Joins
-			$this->db->from($table1);
-			$this->db->join($table2, 'sports.sr_no = clubs.club_name', 'left');
-			// Dynamic conditions
-			if (!empty($data)) {
-				$this->db->where($data);
-			}
+	// 		// Joins
+	// 		$this->db->from($table1);
+	// 		$this->db->join($table2, 'sports.sr_no = clubs.club_name', 'left');
+	// 		// Dynamic conditions
+	// 		if (!empty($data)) {
+	// 			$this->db->where($data);
+	// 		}
 
-			// Execute the query
-			$query = $this->db->get();
+	// 		// Execute the query
+	// 		$query = $this->db->get();
 	 
-			// Return the result
-			return $query->result_array();
-	}
+	// 		// Return the result
+	// 		return $query->result_array();
+	// }
 
 	function SportFetch()
 	{
@@ -167,11 +167,11 @@ class Lists_model extends CI_Model
 		p.sport_id = s.sr_no;";
 		return $this->db->query($sql)->result_array();
 	}
-	function ClubFetch()
-	{
-		$sql = "select * from clubs LIMIT 10";
-		return $this->db->query($sql)->result_array();
-	}
+	// function ClubFetch()
+	// {
+	// 	$sql = "select * from clubs LIMIT 10";
+	// 	return $this->db->query($sql)->result_array();
+	// }
 	function players()
 	{
 		$sql = "select * from players LIMIT 10";
@@ -180,9 +180,15 @@ class Lists_model extends CI_Model
 
 
 
-	// function players()
-	// {
-	// 	$sql = "select * from players ";
-	// 	return $this->db->query($sql)->result_array();
-	// }
+	function player($id)
+	{
+		$sql = "select * from players where id = $id";
+		return $this->db->query($sql)->row_array();
+	}
+
+	function players_info($id)
+	{
+		$sql = "select * from user_details where id = $id ";
+		return $this->db->query($sql)->row_array();
+	}
 }

@@ -48,7 +48,7 @@ let FetchList = (scroll) => {
 							<i class="fas fa-volleyball-ball" aria-hidden="true"></i>
 							${sport}
 						</span>
-						<a href="#" class="btn"><i class="fa fa-user" aria-hidden="true"></i>
+						<a href="clubs/profile/${element.id}" class="btn"><i class="fa fa-user" aria-hidden="true"></i>
 						${element.club_id}</a>
 					</div>
 				</div>
