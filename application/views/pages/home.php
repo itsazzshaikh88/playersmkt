@@ -105,9 +105,9 @@
 
 									if (isset($clubs['photo'])) {
 										$profile = $clubs['photo'];
-									  } else {
+									} else {
 										$profile = 'img/clubs-logos/rusia.png';
-									  }
+									}
 								?>
 									<li>
 										<span class="position">
@@ -222,15 +222,17 @@
 
 									if (isset($players['photo'])) {
 										$profile = $players['photo'];
-									  } else {
-										$profile = 'img/players/1.jpg';
-									  }
+									} else {
+										$profile = 'images/default-listing.png';
+									}
 								?>
 									<li>
 										<span class="position">
 											<?= $players['id'] ?>
 										</span>
-
+										<a href="players/profile/<?= $players['id'] ?>">
+											<img src="<?= $profile ?>" alt="">
+											<?= $players['player_id'] ?>
 										</a>
 										<span class="points home-list text-green">
 											Player Sport
@@ -403,7 +405,38 @@
 			<div class="row portfolioContainer" style="position: relative; height: 1501.22px;">
 
 				<!-- Item Player -->
-
+				<?php
+				foreach ($Player_details as $players) :
+				?>
+				<div class="col-xl-3 col-lg-4 col-md-6 defender">
+					<div class="item-player">
+						<div class="head-player">
+							<img src="images/default-listing.png" alt="location-team">
+							
+						</div>
+						<div class="info-player">
+							<span class="number-player">
+							<?= $players['id'] ?>
+							</span>
+							<h4>
+							<?= $players['player_id'] ?>
+								<span>Defender</span>
+							</h4>
+							<ul>
+							<li>
+										<strong>NATIONALITY</strong> <span>
+										<?= $players['country'] ?> </span>
+									</li>
+									<li><strong>MATCHES:</strong> <span>90</span></li>
+									<li><strong>AGE:</strong> <span>28</span></li>
+							</ul>
+						</div>
+						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<?php
+				endforeach;
+				?>
 				<!-- End Item Player -->
 
 			</div>
