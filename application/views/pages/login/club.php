@@ -1,11 +1,12 @@
 <div class="default-section paddings">
 	<div class="container">
 		<div class="row justify-content-center">
+
 			<div class="col-md-4">
 				<div class="card border-radius-none custom-login-card">
 					<div class="card-body border-radius-none">
 						<h3 class="text-green">Club Login</h3>
-						<small class="text-black">Unleash your talent, connect with clubs.</small>
+
 						<hr>
 						<form action="login/club" method="post" id="form" onsubmit="validate()">
 							<div class="form-group">
@@ -34,17 +35,13 @@
 								<span class="text-black">OR</span>
 							</div>
 							<div class="form-group">
-								<a href="register/club" class=""><span class="text-black">Don't Have an Acccount?</span> <span class="text-green">Create Your Account</span></a>
+
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-7">
-				<div class="text-center mt-5">
-					<img src="images/login-sport.png" class="img-fluid" alt="">
-				</div>
-			</div>
+
 		</div>
 	</div>
 

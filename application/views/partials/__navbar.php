@@ -40,6 +40,19 @@
 <!-- End Header-->
 
 <?php
+
+function generatePanelLink($user, $usertype)
+{
+	$panel_link = 'javascript:void(0)';
+	if (!empty($user)) {
+		if ($usertype == 'P')
+			$panel_link = PLAYER_APP_URL;
+		elseif ($usertype == 'C')
+			$panel_link = CLUB_APP_URL;
+	}
+	return $panel_link;
+}
+
 // include web navbar
 include_once '__web_nav.php';
 // include mobile navbar

@@ -230,9 +230,7 @@
 										<span class="position">
 											<?= $players['id'] ?>
 										</span>
-										<a href="players/profile/<?= $players['id'] ?>">
-											<img src="<?= $profile ?>" alt="">
-											<?= $players['player_id'] ?>
+
 										</a>
 										<span class="points home-list text-green">
 											Player Sport
@@ -328,7 +326,7 @@
 					<div class="row">
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/cricket">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/cricket.avif' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/cricket.avif' ?>);">
 									<h4>Cricket </h4>
 								</div>
 							</a>
@@ -336,7 +334,7 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/football">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/football.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/football.jpg' ?>);">
 									<h4>Football</h4>
 								</div>
 							</a>
@@ -344,14 +342,14 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/basketball">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/basketball.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/basketball.jpg' ?>);">
 									<h4>Basketball</h4>
 								</div>
 							</a>
 						</div>
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/hockey">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/hockey.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/hockey.jpg' ?>);">
 									<h4>Hockey </h4>
 								</div>
 							</a>
@@ -359,7 +357,7 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/tennis">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/tennis.jpg' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/tennis.jpg' ?>);">
 									<h4>Tennis</h4>
 								</div>
 							</a>
@@ -367,7 +365,7 @@
 
 						<div class="col-md-6 col-xl-4">
 							<a href="sports/categories/badminton">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . 'images/sport_images/badminton.avif' ?>);">
+								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/badminton.avif' ?>);">
 									<h4>Badminton</h4>
 								</div>
 							</a>
@@ -405,38 +403,9 @@
 			<div class="row portfolioContainer" style="position: relative; height: 1501.22px;">
 
 				<!-- Item Player -->
-				<?php
-				foreach ($Player_details as $players) :
-				?>
-					<div class="col-xl-3 col-lg-4 col-md-6 forward" style="position: absolute; left: 0px; top: 0px;">
-						<div class="item-player">
-							<div class="head-player">
-								<img src="img/players/1.jpg" alt="location-team">
-							</div>
-							<div class="info-player">
-								<span class="number-player">
-								<?= $players['id'] ?>
-								</span>
-								<h4>
-									<?= $players['player_id'] ?>
-									<span>Forward</span>
-								</h4>
-								<ul>
-									<li>
-										<strong>NATIONALITY</strong> <span>
-										<?= $players['country'] ?> </span>
-									</li>
-									<li><strong>MATCHES:</strong> <span>90</span></li>
-									<li><strong>AGE:</strong> <span>28</span></li>
-								</ul>
-							</div>
-							<a href="players/profile/<?= $players['id'] ?>" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				<?php
-				endforeach;
-				?>
+
 				<!-- End Item Player -->
+
 			</div>
 		</div>
 		<!-- End Info Resalt-->
