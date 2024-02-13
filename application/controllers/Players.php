@@ -101,14 +101,22 @@ class Players extends App_Controller
 		$this->load->view('template', $data);
 	}
 
-	function profile($id)
+
+	function profile($id, $type = 'details')
 	{
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
 		$this->lang->load('login', $this->site_lang);
 		$data['Player_details'] = $this->Player_model->player($id);
 		$data['Personal_info'] = $this->Player_model->players_info($id);
-		$view_name = 'player/profile.php';
+		if ($type == 'details')
+			$view_name = 'player/profile';
+		elseif ($type == 'posts')
+			$view_name = 'player/post';
+		elseif ($type == 'stats')
+			$view_name = 'player/stats';
+		else
+			$view_name = 'player/profile';
 		$data['view_path'] = "pages/$view_name";
 		$data['css_files'] = ['assets/css/custom/login.css'];
 		$data['scripts'] = ['assets/js/custom/login.js'];
