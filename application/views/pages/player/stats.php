@@ -84,232 +84,166 @@
                      <!-- Content Tabs -->
                      <div class="tab-content">
 
-                         <!-- Tab Theree - career -->
-                         <div class="tab-pane" id="career">
-                             <div class="col-lg-12">
-                                 <table class="table-striped table-responsive table-hover career">
-                                     <thead>
-                                         <tr>
-                                             <th>Season</th>
-                                             <th>Club</th>
-                                             <th>Apps(Subs)</th>
-                                             <th>Goals</th>
-                                         </tr>
-                                     </thead>
-                                     <tbody>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/colombia.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/japan.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/bra.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/arg.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/uru.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/nga.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/mex.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/rusia.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/aus.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/arabia.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                     </tbody>
-                                 </table>
+                         <div class="row">
+
+                             <div class="col-md-12">
+                                 <h3 class="clear-title">Stats</h3>
                              </div>
-                         </div>
-                         <!-- Tab Theree - career -->
+                             <div class="col-md-12">
+                                 <div class="tab-pane" id="stats">
 
-                         <!-- Tab Theree - stats -->
-                         <div class="tab-pane" id="stats">
+                                     <div class="row">
+                                         <div class="col-lg-12">
+                                             <div class="stats-info">
+                                                 <ul>
+                                                     <li>
+                                                         Appearances
+                                                         <h3>50</h3>
+                                                     </li>
 
-                             <div class="row">
-                                 <div class="col-lg-12">
-                                     <div class="stats-info">
-                                         <ul>
-                                             <li>
-                                                 Appearances
-                                                 <h3>50</h3>
-                                             </li>
+                                                     <li>
+                                                         Goals
+                                                         <h3>10</h3>
+                                                     </li>
 
-                                             <li>
-                                                 Goals
-                                                 <h3>10</h3>
-                                             </li>
+                                                     <li>
+                                                         Wins
+                                                         <h3>16</h3>
+                                                     </li>
 
-                                             <li>
-                                                 Wins
-                                                 <h3>16</h3>
-                                             </li>
-
-                                             <li>
-                                                 Losses
-                                                 <h3>5</h3>
-                                             </li>
-                                         </ul>
+                                                     <li>
+                                                         Losses
+                                                         <h3>5</h3>
+                                                     </li>
+                                                 </ul>
+                                             </div>
+                                         </div>
                                      </div>
+
+                                     <div class="row">
+                                         <div class="col-lg-6 col-xl-4">
+                                             <!-- Attack -->
+                                             <div class="panel-box">
+                                                 <div class="titles no-margin">
+                                                     <h4><i class="fa fa-calendar"></i>Attack</h4>
+                                                 </div>
+                                                 <ul class="list-panel">
+                                                     <li>
+                                                         <p>Goals <span>60</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Goals Per Match <span>1.37</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Shots <span>4,621</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Shooting Accuracy % <span>32%</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Penalties Scored <span>30</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Big Chances Created <span>293</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Hit Woodwork <span>107</span></p>
+                                                     </li>
+                                                 </ul>
+                                             </div>
+                                             <!-- End Attack -->
+                                         </div>
+
+                                         <div class="col-lg-6 col-xl-4">
+                                             <!-- Attack -->
+                                             <div class="panel-box">
+                                                 <div class="titles no-margin">
+                                                     <h4><i class="fa fa-calendar"></i>Team Play</h4>
+                                                 </div>
+                                                 <ul class="list-panel">
+                                                     <li>
+                                                         <p>Passes <span>140,417</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Passes Per Match <span>162.14</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Pass Accuracy % <span>76%</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Crosses <span>8,148</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Cross Accuracy % <span>22%</span></p>
+                                                     </li>
+                                                 </ul>
+                                             </div>
+                                             <!-- End Attack -->
+                                         </div>
+
+                                         <div class="col-lg-6 col-xl-4">
+                                             <!-- Attack -->
+                                             <div class="panel-box">
+                                                 <div class="titles no-margin">
+                                                     <h4><i class="fa fa-calendar"></i>Defence</h4>
+                                                 </div>
+                                                 <ul class="list-panel">
+                                                     <li>
+                                                         <p>Clean Sheets <span>226</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Goals Conceded <span>1,170</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Goals Conceded Per Match <span>1.35</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Saves <span>392</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Tackles <span>7,438</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Tackle Success % <span>75%</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Blocked Shots <span>1,208</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Interceptions <span>5,334</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Clearances <span>11,436</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Headed Clearance <span>3,710</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Aerial Battles/Duels Won <span>25,401</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Errors Leading To Goal <span>59</span></p>
+                                                     </li>
+                                                     <li>
+                                                         <p>Own Goals <span>27</span></p>
+                                                     </li>
+                                                 </ul>
+                                             </div>
+                                             <!-- End Attack -->
+                                         </div>
+                                     </div>
+
                                  </div>
+                                 <!-- End Tab Theree - stats -->
                              </div>
 
-                             <div class="row">
-                                 <div class="col-lg-6 col-xl-4">
-                                     <!-- Attack -->
-                                     <div class="panel-box">
-                                         <div class="titles no-margin">
-                                             <h4><i class="fa fa-calendar"></i>Attack</h4>
-                                         </div>
-                                         <ul class="list-panel">
-                                             <li>
-                                                 <p>Goals <span>60</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Goals Per Match <span>1.37</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Shots <span>4,621</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Shooting Accuracy % <span>32%</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Penalties Scored <span>30</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Big Chances Created <span>293</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Hit Woodwork <span>107</span></p>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                     <!-- End Attack -->
-                                 </div>
 
-                                 <div class="col-lg-6 col-xl-4">
-                                     <!-- Attack -->
-                                     <div class="panel-box">
-                                         <div class="titles no-margin">
-                                             <h4><i class="fa fa-calendar"></i>Team Play</h4>
-                                         </div>
-                                         <ul class="list-panel">
-                                             <li>
-                                                 <p>Passes <span>140,417</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Passes Per Match <span>162.14</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Pass Accuracy % <span>76%</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Crosses <span>8,148</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Cross Accuracy % <span>22%</span></p>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                     <!-- End Attack -->
-                                 </div>
 
-                                 <div class="col-lg-6 col-xl-4">
-                                     <!-- Attack -->
-                                     <div class="panel-box">
-                                         <div class="titles no-margin">
-                                             <h4><i class="fa fa-calendar"></i>Defence</h4>
-                                         </div>
-                                         <ul class="list-panel">
-                                             <li>
-                                                 <p>Clean Sheets <span>226</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Goals Conceded <span>1,170</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Goals Conceded Per Match <span>1.35</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Saves <span>392</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Tackles <span>7,438</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Tackle Success % <span>75%</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Blocked Shots <span>1,208</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Interceptions <span>5,334</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Clearances <span>11,436</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Headed Clearance <span>3,710</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Aerial Battles/Duels Won <span>25,401</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Errors Leading To Goal <span>59</span></p>
-                                             </li>
-                                             <li>
-                                                 <p>Own Goals <span>27</span></p>
-                                             </li>
-                                         </ul>
-                                     </div>
-                                     <!-- End Attack -->
-                                 </div>
-                             </div>
+                             <!-- Tab Theree - stats -->
+
+
 
                          </div>
-                         <!-- End Tab Theree - stats -->
-
 
                      </div>
                      <!-- Content Tabs -->

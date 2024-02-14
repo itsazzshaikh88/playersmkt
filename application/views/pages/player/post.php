@@ -56,7 +56,7 @@
                              <h4><i class="fa fa-link"></i>Links</h4>
                          </div>
                          <ul class="list-panel" id="myTab">
-                         <li>
+                             <li>
                                  <p><a href="players/profile/<?= $Player_details['id'] ?>/details">Profile</a></p>
                              </li>
                              <li>
@@ -83,87 +83,95 @@
 
                      <!-- Content Tabs -->
                      <div class="tab-content">
-                         
-<!-- Tab Theree - career -->
-<div class="tab-pane" id="career">
-                             <div class="col-lg-12">
-                                 <table class="table-striped table-responsive table-hover career">
-                                     <thead>
-                                         <tr>
-                                             <th>Season</th>
-                                             <th>Club</th>
-                                             <th>Apps(Subs)</th>
-                                             <th>Goals</th>
-                                         </tr>
-                                     </thead>
-                                     <tbody>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/colombia.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/japan.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/bra.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/arg.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/uru.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/nga.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/mex.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/rusia.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/aus.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                         <tr>
-                                             <td>2017/2018</td>
-                                             <td><img src="img/clubs-logos/arabia.png" alt="icon1">Japan</td>
-                                             <td>22(0)</td>
-                                             <td>50</td>
-                                         </tr>
-                                     </tbody>
-                                 </table>
-                             </div>
-                         </div>
-                         <!-- Tab Theree - career -->
-                     
-                         
+
+                     <style>
+                                .post {
+                                    width: 100%;
+                                    height: 336px !important;
+                                    border: 0;
+                                }
+                            </style>
+
+                            <!--Items Club video -->
+                            <div class="row no-line-height">
+
+                                <div class="col-md-12">
+                                    <h3 class="clear-title">Latest Club Videos</h3>
+                                </div>
+
+                            </div>
+                            <!--End Items Club video -->
+
+                            <!--Items Club video -->
+                            <div class="row no-line-height">
+                                <div class="col-lg-2 col-xl-2">
+                                </div>
+
+                                <!--Item Club News -->
+                                <div class="col-lg-8 col-xl-8">
+                                    <!-- Widget Text-->
+                                    <div class="panel-box">
+                                        <div class="titles no-margin">
+                                            <h4><a href="#">Eliminatory to the world.</a></h4>
+                                        </div>
+                                        <iframe class="video post" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- End Widget Text-->
+                                </div>
+                                <!--End Item Club News -->
+
+                                <div class="col-lg-2 col-xl-2">
+                                </div>
+                            </div>
+                            <!--End Items Club video -->
+
+                            <!--Items Club video -->
+                            <div class="row no-line-height">
+                                <div class="col-lg-2 col-xl-2">
+                                </div>
+
+                                <!--Item Club News -->
+                                <div class="col-lg-8 col-xl-8">
+                                    <!-- Widget Text-->
+                                    <div class="panel-box">
+                                        <div class="titles no-margin">
+                                            <h4><a href="#">Colombia classification</a></h4>
+                                        </div>
+                                        <iframe class="video post" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- End Widget Text-->
+                                </div>
+                                <!--End Item Club News -->
+
+                                <div class="col-lg-2 col-xl-2">
+                                </div>
+                            </div>
+                            <!--End Items Club video -->
+
+                            <!--Items Club video -->
+                            <div class="row no-line-height">
+                                <div class="col-lg-2 col-xl-2">
+                                </div>
+
+                                <!--Item Club News -->
+                                <div class="col-lg-8 col-xl-8">
+                                    <!-- Widget Text-->
+                                    <div class="panel-box">
+                                        <div class="titles no-margin">
+                                            <h4><a href="#">The Day that COLOMBIA Classifies WORLDCUP 16 YEARS AFTER !!!</a></h4>
+                                        </div>
+                                        <iframe class="video post" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- End Widget Text-->
+                                </div>
+                                <!--End Item Club News -->
+
+                                <div class="col-lg-2 col-xl-2">
+                                </div>
+                            </div>
+                            <!--End Items Club video -->
+
+
                      </div>
                      <!-- Content Tabs -->
                  </div>
