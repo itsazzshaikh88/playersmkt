@@ -11,7 +11,22 @@
      </div>
  </div>
  <!-- End Section Title -->
+ <style>
+     .post {
+         width: 100%;
+         height: 336px !important;
+         border: 0;
+     }
 
+     p {
+         margin-bottom: 0rem !important;
+
+     }
+
+     .panel-box .list-panel li {
+         margin: 0px 0 !important;
+     }
+ </style>
  <!-- Section Area - Content Central -->
  <section class="content-info">
 
@@ -24,7 +39,12 @@
 
                      <div class="item-player single-player">
                          <div class="head-player">
-                             <img src="img/players/7.jpg" alt="location-team">
+                             <?php if (isset($Personal_info['photo'])) {
+                                    $profile = $Personal_info['photo'];
+                                } else {
+                                    $profile = 'images/default-listing.png';
+                                } ?>
+                             <img src="<?= $profile ?>" alt="location-team">
                          </div>
                          <div class="info-player">
                              <span class="number-player">
@@ -63,7 +83,7 @@
                                  <p><a href="players/profile/<?= $Player_details['id'] ?>/posts">Posts</a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats">STATS</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats">Stats</a></p>
                              </li>
                          </ul>
                      </div>
@@ -75,101 +95,76 @@
                  <div class="col-lg-8 col-xl-9">
                      <!-- Nav Tabs -->
                      <ul class="nav nav-tabs">
-                         <!-- <li class="active"><a data-toggle="tab">Overview</a></li> -->
-                         <!-- <li><a data-toggle="tab">CAREER</a></li> -->
-                         <!-- <li><a data-toggle="tab">STATS</a></li> -->
+                         <li class="active"><a>Post</a></li>
                      </ul>
                      <!-- End Nav Tabs -->
 
                      <!-- Content Tabs -->
                      <div class="tab-content">
 
-                     <style>
-                                .post {
-                                    width: 100%;
-                                    height: 336px !important;
-                                    border: 0;
-                                }
-                            </style>
+                         <!--Items Club video -->
+                         <div class="row no-line-height">
 
-                            <!--Items Club video -->
-                            <div class="row no-line-height">
+                             <div class="col-md-12">
+                                 <h3 class="clear-title">Latest Club Videos</h3>
+                             </div>
 
-                                <div class="col-md-12">
-                                    <h3 class="clear-title">Latest Club Videos</h3>
-                                </div>
+                         </div>
+                         <!--End Items Club video -->
 
-                            </div>
-                            <!--End Items Club video -->
+                         <!--Items Club video -->
+                         <div class="row no-line-height">
+                             <div class="col-lg-2 col-xl-2">
+                             </div>
 
-                            <!--Items Club video -->
-                            <div class="row no-line-height">
-                                <div class="col-lg-2 col-xl-2">
-                                </div>
+                             <div class="col-lg-8 col-xl-8">
+                                 <div class="panel-box">
+                                     <div class="titles no-margin">
+                                         <h4><a href="#">Eliminatory to the world.</a></h4>
+                                     </div>
+                                     <iframe class="video post" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                 </div>
+                             </div>
+                             <div class="col-lg-2 col-xl-2">
+                             </div>
+                         </div>
+                         <!--End Items Club video -->
 
-                                <!--Item Club News -->
-                                <div class="col-lg-8 col-xl-8">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Eliminatory to the world.</a></h4>
-                                        </div>
-                                        <iframe class="video post" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
+                         <!--Items Club video -->
+                         <div class="row no-line-height">
+                             <div class="col-lg-2 col-xl-2">
+                             </div>
 
-                                <div class="col-lg-2 col-xl-2">
-                                </div>
-                            </div>
-                            <!--End Items Club video -->
+                             <div class="col-lg-8 col-xl-8">
+                                 <div class="panel-box">
+                                     <div class="titles no-margin">
+                                         <h4><a href="#">Colombia classification</a></h4>
+                                     </div>
+                                     <iframe class="video post" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                 </div>
+                             </div>
+                             <div class="col-lg-2 col-xl-2">
+                             </div>
+                         </div>
+                         <!--End Items Club video -->
 
-                            <!--Items Club video -->
-                            <div class="row no-line-height">
-                                <div class="col-lg-2 col-xl-2">
-                                </div>
+                         <!--Items Club video -->
+                         <div class="row no-line-height">
+                             <div class="col-lg-2 col-xl-2">
+                             </div>
 
-                                <!--Item Club News -->
-                                <div class="col-lg-8 col-xl-8">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Colombia classification</a></h4>
-                                        </div>
-                                        <iframe class="video post" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <div class="col-lg-2 col-xl-2">
-                                </div>
-                            </div>
-                            <!--End Items Club video -->
-
-                            <!--Items Club video -->
-                            <div class="row no-line-height">
-                                <div class="col-lg-2 col-xl-2">
-                                </div>
-
-                                <!--Item Club News -->
-                                <div class="col-lg-8 col-xl-8">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">The Day that COLOMBIA Classifies WORLDCUP 16 YEARS AFTER !!!</a></h4>
-                                        </div>
-                                        <iframe class="video post" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <div class="col-lg-2 col-xl-2">
-                                </div>
-                            </div>
-                            <!--End Items Club video -->
+                             <div class="col-lg-8 col-xl-8">
+                                 <div class="panel-box">
+                                     <div class="titles no-margin">
+                                         <h4><a href="#">The Day that COLOMBIA Classifies WORLDCUP 16 YEARS AFTER !!!</a></h4>
+                                     </div>
+                                     <iframe class="video post" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                 </div>
+                             </div>
+                             <div class="col-lg-2 col-xl-2">
+                             </div>
+                         </div>
+                         <!--End Items Club video -->
 
 
                      </div>

@@ -15,7 +15,7 @@ let FetchList = (scroll) => {
 					console.log(element);
 					const invalid = [null, "", "-", " ", undefined];
 					let pp = invalid.includes(element.profile_photo)
-						? "img/players/1.jpg"
+						? "images/default-listing.png"
 						: element.profile_photo;
 					let position =
 						element.position_name == null ? "-" : element.position_name;

@@ -39,69 +39,73 @@ class Clubs extends App_Controller
         $data['css_files'] = ['assets/css/custom/login.css'];
         $data['scripts'] = ['assets/js/custom/login.js'];
         $data['scripts'] = ['assets/js/list/club.js'];
-		$data['sports'] = $this->Club_model->sports();
+        $data['sports'] = $this->Club_model->sports();
         $this->load->view('template', $data);
     }
 
     function position()
-	{
-		echo json_encode($this->Club_model->fetch_position());
-	
-	}
+    {
+        echo json_encode($this->Club_model->fetch_position());
+    }
 
     function fetch_clubs()
-	{
-		$row_count = $this->input->get('rowcount');
-		$scroll = $this->input->get('scroll');
+    {
+        $row_count = $this->input->get('rowcount');
+        $scroll = $this->input->get('scroll');
 
-		$multi = 0;
-		$offest = 0;
+        $multi = 0;
+        $offest = 0;
 
-		if($scroll == 1)
-		{
-			$offest = ++$row_count ;
-			$multi = $scroll == 1 ? $offest * 10 : 0;
-		}
+        if ($scroll == 1) {
+            $offest = ++$row_count;
+            $multi = $scroll == 1 ? $offest * 10 : 0;
+        }
 
-		$data['list'] =$this->Club_model->fetch_clubs($multi);
-		$data['count'] = $offest;
-		  echo json_encode($data);
-	}
-
-
-    function new(){
-         // App Languages
-         $data['current_language'] = $this->site_lang;
-         $data['supported_languages'] = $this->supported_languages;
-         // Load View and Language Files
-         $this->lang->load('login', $this->site_lang);
-         // Load View Template
- 
-         $view_name = 'club-list';
-         $data['view_path'] = "pages/$view_name";
-         $data['sports'] = $this->app_model->fetchSports();
-         $data['css_files'] = ['assets/css/custom/login.css'];
-         $data['club_details'] = $this->Club_model->ClubFetch();
-         $data['scripts'] = ['assets/js/custom/login.js'];
-         $data['scripts'] = ['assets/js/list/club.js'];
-         $data['sports'] = $this->Lists_model->sports();
-         $this->load->view('template', $data);
+        $data['list'] = $this->Club_model->fetch_clubs($multi);
+        $data['count'] = $offest;
+        echo json_encode($data);
     }
 
 
-    function profile($id)
-	{
-		$data['current_language'] = $this->site_lang;
-		$data['supported_languages'] = $this->supported_languages;
-		$this->lang->load('login', $this->site_lang);
-		$data['club_details'] = $this->Club_model->get_club_id($id);
-		$data['club_info'] = $this->Club_model->get_club_info($id);
-		$view_name = 'club/profile.php';
-		$data['view_path'] = "pages/$view_name";
-		$data['css_files'] = ['assets/css/custom/login.css'];
-		$data['scripts'] = ['assets/js/custom/login.js'];
-		$this->load->view('template', $data);
-	}
+    function new()
+    {
+        // App Languages
+        $data['current_language'] = $this->site_lang;
+        $data['supported_languages'] = $this->supported_languages;
+        // Load View and Language Files
+        $this->lang->load('login', $this->site_lang);
+        // Load View Template
 
-    
+        $view_name = 'club-list';
+        $data['view_path'] = "pages/$view_name";
+        $data['sports'] = $this->app_model->fetchSports();
+        $data['css_files'] = ['assets/css/custom/login.css'];
+        $data['club_details'] = $this->Club_model->ClubFetch();
+        $data['scripts'] = ['assets/js/custom/login.js'];
+        $data['scripts'] = ['assets/js/list/club.js'];
+        $data['sports'] = $this->Lists_model->sports();
+        $this->load->view('template', $data);
+    }
+
+
+    function profile($id, $type = 'details')
+    {
+        $data['current_language'] = $this->site_lang;
+        $data['supported_languages'] = $this->supported_languages;
+        $this->lang->load('login', $this->site_lang);
+        $data['club_details'] = $this->Club_model->get_club_id($id);
+        $data['club_info'] = $this->Club_model->get_club_info($id);
+        if ($type == 'details')
+            $view_name = 'club/profile';
+        elseif ($type == 'posts')
+            $view_name = 'club/post';
+        elseif ($type == 'stats')
+            $view_name = 'club/stats';
+        else
+            $view_name = 'club/profile';
+        $data['view_path'] = "pages/$view_name";
+        $data['css_files'] = ['assets/css/custom/login.css'];
+        $data['scripts'] = ['assets/js/custom/login.js'];
+        $this->load->view('template', $data);
+    }
 }

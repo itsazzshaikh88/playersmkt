@@ -11,7 +11,16 @@
      </div>
  </div>
  <!-- End Section Title -->
+ <style>
+     p {
+         margin-bottom: 0rem !important;
 
+     }
+
+     .panel-box .list-panel li {
+         margin: 0px 0 !important;
+     }
+ </style>
  <!-- Section Area - Content Central -->
  <section class="content-info">
 
@@ -24,7 +33,12 @@
 
                      <div class="item-player single-player">
                          <div class="head-player">
-                             <img src="img/players/7.jpg" alt="location-team">
+                             <?php if (isset($Personal_info['photo'])) {
+                                    $profile = $Personal_info['photo'];
+                                } else {
+                                    $profile = 'images/default-listing.png';
+                                } ?>
+                             <img src="<?= $profile ?>" alt="location-team">
                          </div>
                          <div class="info-player">
                              <span class="number-player">
@@ -62,7 +76,7 @@
                                  <p><a href="players/profile/<?= $Player_details['id'] ?>/posts">Posts</a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats">STATS</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats">Stats</a></p>
                              </li>
 
                          </ul>
