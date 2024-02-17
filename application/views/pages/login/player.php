@@ -10,11 +10,11 @@
 						<form action="login/player" method="post" id="form" onsubmit="validate()">
 							<div class="form-group">
 								<label for="" class="text-label"><?= $this->lang->line('email') ?> <span class="text-danger">*</span></label>
-								<input type="email" name="email" id="email" required autocomplete="off" class="form-control" placeholder="Enter Registered Email Address">
+								<input type="email" name="email" id="email" required autocomplete="off" class="form-control" placeholder="<?= $this->lang->line('registered_email') ?>">
 							</div>
 							<div class="form-group">
 								<label for="" class="text-label"><?= $this->lang->line('pass') ?> <span class="text-danger">*</span></label>
-								<input type="password" name="password" id="password" required autocomplete="off" class="form-control" placeholder="Type Your Password ....">
+								<input type="password" name="password" id="password" required autocomplete="off" class="form-control" placeholder="<?= $this->lang->line('registered_pass') ?>">
 							</div>
 							<div class="form-group">
 								<label for="" class="text-label"><input type="checkbox" name="remember_me" id="remember_me"> <?= $this->lang->line('remember') ?> </label>

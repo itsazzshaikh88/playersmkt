@@ -111,7 +111,7 @@ class Register extends App_Controller
 		$data['supported_languages'] = $this->supported_languages;
 		$data['sports'] = $this->app_model->fetchSports();
 		// Load View and Language Files
-		$this->lang->load('login', $this->site_lang);
+		$this->lang->load('register', $this->site_lang);
 		// Load View Template
 		$view_name = 'register/club';
 		$data['view_path'] = "pages/$view_name";
