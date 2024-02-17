@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Clubs extends App_Controller
+class Sports extends App_Controller
 {
 
     public function __construct()
@@ -118,7 +118,6 @@ class Clubs extends App_Controller
         $view_name = 'categories/badmenton';
         $data['view_path'] = "pages/$view_name";
         $data['scripts'] = ['assets/js/custom/home.js'];
-        $data['scripts'] = ['assets/js/news/news.js'];
         $data['app_title'] = APP_NAME . " - Your Gateway to Sports Talent";
 
         $this->load->view('template', $data);

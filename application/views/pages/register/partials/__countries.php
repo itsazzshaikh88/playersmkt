@@ -1,5 +1,5 @@
 <select id="country" name="country" class="form-control form-control-sm" required="">
-	<option value="">Select country</option>
+	<option value=""><?= $this->lang->line('input_country_name')?> </option>
 	<option value="Afghanistan">Afghanistan</option>
 	<option value="Åland Islands">Åland Islands</option>
 	<option value="Albania">Albania</option>

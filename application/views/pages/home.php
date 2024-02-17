@@ -97,7 +97,7 @@
 				<!-- Club Ranking -->
 				<div class="col-lg-4">
 					<div class="club-ranking">
-						<h3><a href="/clubs/new">Recent Clubs</a></h3>
+						<h3><a href="/clubs/new"><?= $this->lang->line('recent_club_label') ?></a></h3>
 						<div class="info-ranking">
 							<ul>
 								<?php
@@ -137,7 +137,7 @@
 				<!-- recent-results -->
 				<div class="col-lg-4">
 					<div class="recent-results">
-						<h3><a href="javascript:void(0)">Recent Result</a></h3>
+						<h3><a href="javascript:void(0)"><?= $this->lang->line('recent_result_label') ?></a></h3>
 						<div class="info-results">
 							<ul>
 								<li>
@@ -214,7 +214,7 @@
 				<!-- Top player -->
 				<div class="col-lg-4">
 					<div class="player-ranking">
-						<h3><a href="players/new">Recent player</a></h3>
+						<h3><a href="players/new"><?= $this->lang->line('recent_player_label') ?></a></h3>
 						<div class="info-player">
 							<ul>
 								<?php
@@ -235,7 +235,7 @@
 											<?= $players['player_id'] ?>
 										</a>
 										<span class="points home-list text-green">
-											Player Sport
+										<!-- <?= $players['sport_id'] ?> -->
 										</span>
 									</li>
 								<?php endforeach; ?>
@@ -254,54 +254,7 @@
 	</div>
 	<!-- Schedules and Stats End  -->
 
-	<!-- Parallax Section - Testimonials -->
-	<!-- 
-	<div class="parallax-section parallax-total" style="background:url(img/slide/3.jpg);">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-12">
-					<div class="text-center padding-bottom">
-						<h2>We have earned the trust of <span class="text-resalt">25,869</span> Club Members.</h2>
-						<p>Duis non lorem porta, eros sit amet, tempor sem. semper a tempus et.</p>
-					</div>
-
-					<ul class="testimonials testimonials-carousel">
-						<li>
-							<blockquote>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque!.</p>
-								<img src="img/testimonials/1.jpg" alt="">
-								<strong>Federic Gordon</strong><a href="#">@iwthemes</a>
-							</blockquote>
-						</li>
-						<li>
-							<blockquote>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque!.</p>
-								<img src="img/testimonials/2.jpg" alt="">
-								<strong>Federic Gordon</strong><a href="#">@iwthemes</a>
-							</blockquote>
-						</li>
-						<li>
-							<blockquote>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque!.</p>
-								<img src="img/testimonials/3.jpg" alt="">
-								<strong>Federic Gordon</strong><a href="#">@iwthemes</a>
-							</blockquote>
-						</li>
-						<li>
-							<blockquote>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellentesque!.</p>
-								<img src="img/testimonials/4.jpg" alt="">
-								<strong>Federic Gordon</strong><a href="#">@iwthemes</a>
-							</blockquote>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-    -->
-	<!-- End Gray Section - Testimonials -->
-
+	
 	<!-- Sports Categories  -->
 	<div class="dark-section paddings-big">
 		<div class="scale">
@@ -311,15 +264,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 padding-top">
-					<h2>Sports Categories</h2>
+					<h2><?= $this->lang->line('categorie_label') ?></h2>
 					<p class="lead">
-						Explore a world of talent and opportunities across diverse sports on PlayersMkt. From aspiring
-						athletes to elite clubs, our platform brings together passion, skill, and potential, creating a
-						global hub for sports enthusiasts to connect, discover, and succeed.
+					<?= $this->lang->line('categorie_info') ?>
 					</p>
 					<div class="text-right">
 						<a href="sports/categories">
-							<h3 class="text-green text-underline">Explore All Categories <span><i class="bi bi-arrow-right-circle"></i></span></h3>
+							<h3 class="text-green text-underline"> <?= $this->lang->line('categories_explore') ?><span><i class="bi bi-arrow-right-circle"></i></span></h3>
 						</a>
 					</div>
 				</div>
@@ -391,10 +342,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="text-center padding-bottom">
-						<h2>Explore Featured <span class="text-resalt">Players</span></h2>
-						<p>Dive into our curated showcase of exceptional players. Discover their unique talents,
-							stories, and achievements as we bring you the best in the world of sports.
-						</p>
+						<h2><?= $this->lang->line('explore_featured') ?></h2>
+						<p><?= $this->lang->line('explore_featured_info') ?></p>
 					</div>
 				</div>
 			</div>
@@ -424,14 +373,14 @@
 							</h4>
 							<ul>
 							<li>
-										<strong>NATIONALITY</strong> <span>
+										<strong><?= $this->lang->line('nationality') ?> :</strong> <span>
 										<?= $players['country'] ?> </span>
 									</li>
-									<li><strong>MATCHES:</strong> <span>90</span></li>
-									<li><strong>AGE:</strong> <span>28</span></li>
+									<li><strong><?= $this->lang->line('matches') ?> :</strong> <span>90</span></li>
+									<li><strong><?= $this->lang->line('age') ?> :</strong> <span>28</span></li>
 							</ul>
 						</div>
-						<a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+						<a href="players/profile/<?= $players['id'] ?>" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 					</div>
 				</div>
 				<?php
@@ -445,8 +394,8 @@
 
 		<div class="container">
 			<div class="row justify-content-center padding-top">
-				<a href="players/find/all" class="btn-iw">Explore All Players</a>
-				<a href="clubs/find/all" class="btn-iw outline skin">View All Clubs</a>
+				<a href="players/find/all" class="btn-iw"><?= $this->lang->line('explore_all_player') ?></a>
+				<a href="clubs/find/all" class="btn-iw outline skin"><?= $this->lang->line('explore_all_club') ?></a>
 			</div>
 		</div>
 
@@ -459,11 +408,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="text-center">
-						<h2>Enter your e-mail and <span class="text-resalt">subscribe</span> to our newsletter.</h2>
-						<p>Subscribe to our newsletter and stay in the loop with the latest in sports recruitment,
-							player showcases, and exciting opportunities. Join our community to receive exclusive
-							updates, featured player spotlights, and insights into the evolving world of sports.
-						</p>
+						<h2><?= $this->lang->line('email_lable') ?></h2>
+						<p><?= $this->lang->line('email_info') ?></p>
 					</div>
 					<form id="newsletterForm" action="app/newsletter" method="POST" onsubmit="subscribe_to_newsletter()">
 						<div class="row">
@@ -472,17 +418,17 @@
 									<span class="input-group-addon">
 										<i class="fa fa-envelope"></i>
 									</span>
-									<input class="form-control" placeholder="Enter Your Name" name="name" type="text" required="required">
+									<input class="form-control" placeholder="<?= $this->lang->line('subscrib_email') ?>" name="name" type="text" required="required">
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="input-group">
 									<span class="input-group-addon">
-										<i class="fa fa-envelope"></i>
+										<i class="fa fa-key"></i>
 									</span>
-									<input class="form-control" placeholder="Enter Your Email" name="email" type="email" required="required">
+									<input class="form-control" placeholder="<?= $this->lang->line('subscrib_pass') ?>" name="email" type="email" required="required">
 									<span class="input-group-btn">
-										<button class="btn btn-primary" type="submit" id="submit-btn" name="subscribe">SIGN UP</button>
+										<button class="btn btn-primary" type="submit" id="submit-btn" name="subscribe"><?= $this->lang->line('sing_up') ?></button>
 									</span>
 								</div>
 							</div>

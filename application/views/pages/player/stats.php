@@ -50,13 +50,13 @@
                              </h4>
                              <ul class="list-panel">
                                  <li>
-                                     <p>Weight <span><?= isset($Personal_info['weight']) ?></span></p>
+                                     <p><?= $this->lang->line('weight') ?> <span><?= isset($Personal_info['weight']) ? $Personal_info['weight'] : '' ?></span></p>
                                  </li>
                                  <li>
-                                     <p>Height <span><?= isset($Personal_info['height']) ?></span></p>
+                                     <p><?= $this->lang->line('height') ?> <span><?= isset($Personal_info['height']) ? $Personal_info['height'] : '' ?></span></p>
                                  </li>
                                  <li>
-                                     <p>Gender <span><?= isset($Personal_info['gender']) ?></span></p>
+                                     <p><?= $this->lang->line('gender') ?> <span><?= isset($Personal_info['gender']) ? $Personal_info['gender'] : '' ?></span></p>
                                  </li>
                              </ul>
 
@@ -66,19 +66,18 @@
                      <!-- Personal Info -->
                      <div class="panel-box">
                          <div class="titles no-margin">
-                             <h4><i class="fa fa-link"></i>Links</h4>
+                             <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
                          </div>
                          <ul class="list-panel" id="myTab">
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/details">Profile</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/details"><?= $this->lang->line('profile') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/posts">Posts</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/posts"><?= $this->lang->line('post') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats">Stats</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats"><?= $this->lang->line('status') ?> </a></p>
                              </li>
-
                          </ul>
                      </div>
                      <!-- End Personal Info -->
@@ -89,9 +88,7 @@
                  <div class="col-lg-8 col-xl-9">
                      <!-- Nav Tabs -->
                      <ul class="nav nav-tabs">
-                         <!-- <li class="active"><a data-toggle="tab">Overview</a></li> -->
-                         <!-- <li><a data-toggle="tab">CAREER</a></li> -->
-                         <!-- <li><a data-toggle="tab">STATS</a></li> -->
+                         <li class="active"><a ><?= $this->lang->line('status') ?> </a></li>
                      </ul>
                      <!-- End Nav Tabs -->
 
@@ -101,7 +98,7 @@
                          <div class="row">
 
                              <div class="col-md-12">
-                                 <h3 class="clear-title">Stats</h3>
+                                 <h3 class="clear-title"><?= $this->lang->line('status') ?> </h3>
                              </div>
                              <div class="col-md-12">
                                  <div class="tab-pane" id="stats">

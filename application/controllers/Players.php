@@ -106,7 +106,7 @@ class Players extends App_Controller
 	{
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
-		$this->lang->load('login', $this->site_lang);
+		$this->lang->load('profile', $this->site_lang);
 		$data['Player_details'] = $this->Player_model->player($id);
 		$data['Personal_info'] = $this->Player_model->players_info($id);
 		if ($type == 'details')

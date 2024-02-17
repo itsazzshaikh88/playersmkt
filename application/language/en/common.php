@@ -1,4 +1,5 @@
 <?php
+$lang['nav_my_profile'] = 'My Profile';
 $lang['nav_about_us'] = 'About Us';
 $lang['nav_contact_us'] = 'Contact Us';
 $lang['nav_players'] = 'Players';

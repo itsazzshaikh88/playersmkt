@@ -42,6 +42,7 @@
                          </div>
                          <div class="info-player">
                              <span class="number-player">
+                             <!-- <i class="bi bi-heart"></i> -->
                                  10
                              </span>
                              <h4>
@@ -50,13 +51,13 @@
                              </h4>
                              <ul class="list-panel">
                                  <li>
-                                     <p>Weight <span><?= isset($Personal_info['weight']) ?></span></p>
+                                     <p><?= $this->lang->line('weight') ?> <span><?= isset($Personal_info['weight']) ? $Personal_info['weight'] : '' ?></span></p>
                                  </li>
                                  <li>
-                                     <p>Height <span><?= isset($Personal_info['height']) ?></span></p>
+                                     <p><?= $this->lang->line('height') ?> <span><?= isset($Personal_info['height']) ? $Personal_info['height'] : '' ?></span></p>
                                  </li>
                                  <li>
-                                     <p>Gender <span><?= isset($Personal_info['gender']) ?></span></p>
+                                     <p><?= $this->lang->line('gender') ?> <span><?= isset($Personal_info['gender']) ? $Personal_info['gender'] : '' ?></span></p>
                                  </li>
                              </ul>
 
@@ -66,17 +67,17 @@
                      <!-- Personal Info -->
                      <div class="panel-box">
                          <div class="titles no-margin">
-                             <h4><i class="fa fa-link"></i>Links</h4>
+                             <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
                          </div>
                          <ul class="list-panel" id="myTab">
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/details">Profile</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/details"><?= $this->lang->line('profile') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/posts">Posts</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/posts"><?= $this->lang->line('post') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats">Stats</a></p>
+                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats"><?= $this->lang->line('status') ?> </a></p>
                              </li>
                          </ul>
                      </div>
@@ -88,9 +89,7 @@
                  <div class="col-lg-8 col-xl-9">
                      <!-- Nav Tabs -->
                      <ul class="nav nav-tabs">
-                         <!-- <li class="active"><a data-toggle="tab">Overview</a></li> -->
-                         <!-- <li><a data-toggle="tab">CAREER</a></li> -->
-                         <!-- <li><a data-toggle="tab">STATS</a></li> -->
+                         <li class="active"><a ><?= $this->lang->line('profile') ?></a></li>
                      </ul>
                      <!-- End Nav Tabs -->
 
@@ -102,7 +101,7 @@
 
                              <div class="panel-box padding-b">
                                  <div class="titles">
-                                     <h4>Players Bio</h4>
+                                     <h4><?= $this->lang->line('players_bio') ?> </h4>
                                  </div>
                                  <div class="row">
                                      <div class="col-lg-12 col-xl-4">
@@ -135,49 +134,49 @@
                                      <div class="col-lg-6 col-xl-6">
                                          <div class="panel-box">
                                              <div class="titles no-margin">
-                                                 <h4><i class="fa fa-user"></i>Personal Info</h4>
+                                                 <h4><i class="fa fa-user"></i><?= $this->lang->line('personal_info') ?> </h4>
                                              </div>
                                              <ul class="list-panel">
                                                  <li>
-                                                     <p>Weight <span><?= isset($Personal_info['weight']) ?></span></p>
+                                                     <p><?= $this->lang->line('weight') ?> <span><?= isset($Personal_info['weight']) ? $Personal_info['weight'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Height <span><?= isset($Personal_info['height']) ?></span></p>
+                                                     <p><?= $this->lang->line('height') ?> <span><?= isset($Personal_info['height']) ? $Personal_info['height'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Gender <span><?= isset($Personal_info['gender']) ?></span></p>
+                                                     <p><?= $this->lang->line('gender') ?> <span><?= isset($Personal_info['gender']) ? $Personal_info['gender'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Nationality <span><?= isset($Personal_info['nationality']) ?></span></p>
+                                                     <p><?= $this->lang->line('nationality') ?> <span><?= isset($Personal_info['nationality']) ? $Personal_info['nationality'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Emergency Number
-                                                         <span><?= isset($Personal_info['emergency_contact_number']) ?></span>
+                                                     <p><?= $this->lang->line('emergency_num') ?>
+                                                         <span><?= isset($Personal_info['emergency_contact_number']) ? $Personal_info['emergency_contact_number'] : '' ?></span>
                                                      </p>
                                                  </li>
                                                  <li>
-                                                     <p>Date of Birth <span><?= isset($Personal_info['date_of_birth']) ?></span></p>
+                                                     <p><?= $this->lang->line('dob') ?> <span><?= isset($Personal_info['date_of_birth']) ? $Personal_info['date_of_birth'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Languages <span><?= isset($Personal_info['languages']) ?></span></p>
+                                                     <p><?= $this->lang->line('languages') ?> <span><?= isset($Personal_info['languages']) ? $Personal_info['languages'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Highest Education <span><?= isset($Personal_info['highest_education']) ?></span></p>
+                                                     <p><?= $this->lang->line('highest_edu') ?> <span><?= isset($Personal_info['highest_education']) ? $Personal_info['highest_education'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Certification <span><?= isset($Personal_info['certifications']) ?></span></p>
+                                                     <p><?= $this->lang->line('certification') ?> <span><?= isset($Personal_info['certifications']) ? $Personal_info['certifications'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Hobbies <span><?= isset($Personal_info['hobbies']) ?></span></p>
+                                                     <p><?= $this->lang->line('hobbies') ?> <span><?= isset($Personal_info['hobbies']) ? $Personal_info['hobbies'] : '' ?></span></p>
+                                                 </li>
+                                                 <!-- <li>
+                                                     <p>Skills <span><?= isset($Personal_info['skills']) ? $Personal_info['skills'] : '' ?></span></p>
+                                                 </li> -->
+                                                 <li>
+                                                     <p><?= $this->lang->line('eye_color') ?> <span><?= isset($Personal_info['eye_color']) ? $Personal_info['eye_color'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Skills <span><?= isset($Personal_info['skills']) ?></span></p>
-                                                 </li>
-                                                 <li>
-                                                     <p>Eye Color <span><?= isset($Personal_info['eye_color']) ?></span></p>
-                                                 </li>
-                                                 <li>
-                                                     <p>Hair Color <span><?= isset($Personal_info['hair_color']) ?></span></p>
+                                                     <p><?= $this->lang->line('hair_color') ?> <span><?= isset($Personal_info['hair_color']) ? $Personal_info['hair_color'] : '' ?></span></p>
                                                  </li>
                                              </ul>
                                          </div>
@@ -186,30 +185,30 @@
                                      <div class="col-lg-6 col-xl-6">
                                          <div class="panel-box">
                                              <div class="titles no-margin">
-                                                 <h4><i class="fa fa-calendar"></i>Medical Info</h4>
+                                                 <h4><i class="fa fa-hospital"></i><?= $this->lang->line('medical_info') ?> </h4>
                                              </div>
                                              <ul class="list-panel">
                                                  <li>
-                                                     <p>Medical Condiction <span><?= isset($Personal_info['medical_condition']) ?></span>
+                                                     <p><?= $this->lang->line('medical') ?> <span><?= isset($Personal_info['medical_condition']) ? $Personal_info['medical_condition'] : '' ?></span>
                                                      </p>
                                                  </li>
                                                  <li>
-                                                     <p>Crrunt Medical <span><?= isset($Personal_info['current_medications']) ?></span></p>
+                                                     <p><?= $this->lang->line('crrunt_medi') ?><span><?= isset($Personal_info['current_medications']) ? $Personal_info['current_medications'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Blood Pressure <span><?= isset($Personal_info['blood_pressure']) ?></span></p>
+                                                     <p><?= $this->lang->line('blood') ?> <span><?= isset($Personal_info['blood_pressure']) ? $Personal_info['blood_pressure'] : '' ?></span></p>
+                                                 </li>
+                                                 <!-- <li>
+                                                     <p>Immunization <span><?= isset($Personal_info['immunization_history']) ? $Personal_info['immunization_history'] : '' ?></span></p>
+                                                 </li> -->
+                                                 <li>
+                                                     <p><?= $this->lang->line('cholestrol') ?> <span><?= isset($Personal_info['cholestrol_level']) ? $Personal_info['cholestrol_level'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Immunization <span><?= isset($Personal_info['immunization_history']) ?></span></p>
+                                                     <p><?= $this->lang->line('allergies') ?> <span><?= isset($Personal_info['allergies']) ? $Personal_info['allergies'] : '' ?></span></p>
                                                  </li>
                                                  <li>
-                                                     <p>Cholestrol Level <span><?= isset($Personal_info['cholestrol_level']) ?></span></p>
-                                                 </li>
-                                                 <li>
-                                                     <p>Allergies <span></span><?= isset($Personal_info['allergies']) ?></p>
-                                                 </li>
-                                                 <li>
-                                                     <p>Body Mass <span><?= isset($Personal_info['body_mass_index']) ?></span></p>
+                                                     <p><?= $this->lang->line('body_mass') ?> <span><?= isset($Personal_info['body_mass_index']) ? $Personal_info['body_mass_index'] : '' ?></span></p>
                                                  </li>
                                              </ul>
                                          </div>

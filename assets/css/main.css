@@ -11877,7 +11877,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: "Raleway", sans-serif;
+	/* font-family: "Raleway", sans-serif; */
+	font-family: sans-serif;
 	color: #151e25;
 	font-weight: 500;
 }

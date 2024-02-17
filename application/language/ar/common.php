@@ -1,5 +1,5 @@
 <?php
-
+$lang['nav_my_profile'] = 'ملفي الشخصي';
 $lang['nav_about_us'] = 'معلومات عنا';
 $lang['nav_contact_us'] = 'اتصل بنا';
 $lang['nav_players'] = 'اللاعبين';

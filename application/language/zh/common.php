@@ -1,4 +1,5 @@
 <?php
+$lang['nav_my_profile'] = '我的简历';
 $lang['nav_about_us'] = '关于我们';
 $lang['nav_contact_us'] = '联系我们';
 $lang['nav_players'] = '玩家';

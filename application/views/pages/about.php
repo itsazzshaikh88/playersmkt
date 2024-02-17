@@ -3,7 +3,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <h1>Page About Us</h1>
+                            <h1><?= $this->lang->line('main_headding') ?></h1>
                         </div>
                     </div>
                 </div>
@@ -22,19 +22,17 @@
                             </div>
                             <div class="col-lg-7">
                                 <h4 class="subtitle">
-                                   <span>Company Value</span>
-                                    Who Are You
+                                <?= $this->lang->line('about_we_label') ?>
                                 </h4>
-                                <p>The top seeds in Groups C and D both have designs on winning their respective sections. But if one of them advances as a group winner and the other as a runner-up, then we will be seeing Lionel Messi facing off against Antoine Griezmann either in Kazan (30 June) or Nizhny Novgorod (1 July), depending on their team’s group placings.</p>
-
+                                <?= $this->lang->line('about_we_content') ?>
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <h5>Our Mission</h5>
-                                        <p>Lorem iur adipiscing elit. Ut vehicula dapibus augue nec maximustiam eleifend magna erat, quis vestibulum lacus mattis sit ametec pellentesque lorem sapien.</p>
+                                        <h5><?= $this->lang->line('our_mission_label') ?></h5>
+                                        <p><?= $this->lang->line('our_mission_content') ?></p>
                                     </div>
                                     <div class="col-lg-6">
-                                        <h5>Our Vision</h5>
-                                        <p>Lorem iur adipiscing elit. Ut vehicula dapibus augue nec maximustiam eleifend magna erat, quis vestibulum lacus mattis sit ametec pellentesque lorem sapien.</p>
+                                        <h5><?= $this->lang->line('our_vision_label') ?></h5>
+                                        <p><?= $this->lang->line('our_vision_content') ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +80,7 @@
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-md-12 text-center">
-                                <h1 class="big-title">We are a great team</h1>
+                                <h1 class="big-title"><?= $this->lang->line('headdin_lable') ?></h1>
                             </div>
                         </div>
                     </div>
@@ -95,7 +93,7 @@
                        <!--Items Club News -->
                        <div class="row">
                           <div class="col-md-12">
-                              <h3 class="clear-title">Latest News</h3>
+                              <h3 class="clear-title"><?= $this->lang->line('news_lable') ?></h3>
                           </div>
 
                           <!--Item Club News -->

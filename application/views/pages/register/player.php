@@ -7,48 +7,46 @@
 				<div class="col-md-4">
 					<div class=" text-center mt-5">
 						<h5 class="mt-5 text-black">
-							Ready to take your sports journey to new heights? Join <span class="text-green">PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.
-
-						</h5>
+						<?= $this->lang->line('register_info')?></h5>
 						<img src="images/register.png" class="img-fluid" alt="">
 					</div>
 				</div>
 				<div class="col-md-8">
 					<div class="card border-radius-none custom-login-card">
 						<div class="card-body border-radius-none">
-							<h3 class="text-green">Player Registration</h3>
-							<small class="text-black">Unlock Opportunities, Showcase Talent!</small>
+							<h3 class="text-green"><?= $this->lang->line('main_headding')?> </h3>
+							<small class="text-black"><?= $this->lang->line('register_p')?> </small>
 							<hr>
 							<form id="form" onsubmit="submitForm()" method="post" action="register/player">
 								<div class=" form-group row">
-									<label class="control-label text-black col-sm-3">First Name <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('first_name')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
-										<input type="text" id="first_name" name="first_name" class="form-control" placeholder="Type your first name" required>
+										<input type="text" id="first_name" name="first_name" class="form-control" placeholder="<?= $this->lang->line('input_first_name')?> " required>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">Last Name <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('last_name')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
-										<input type="text" id="last_name" name="last_name" class="form-control" placeholder="Type your last name" required>
+										<input type="text" id="last_name" name="last_name" class="form-control" placeholder="<?= $this->lang->line('input_last_name')?> " required>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">Country Name <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('country_name')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
 										<?php include 'partials/__countries.php' ?>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">City Name <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('city_name')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
-										<input type="text" id="city" name="city" class="form-control" placeholder="Type City Name" required>
+										<input type="text" id="city" name="city" class="form-control" placeholder="<?= $this->lang->line('input_city_name')?>" required>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">Choose Your Sport <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('your_sports')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
 										<select id="sport_id" name="sport_id" class="form-control form-control-sm" required="">
-											<option value="">Select Your Sport</option>
+											<option value=""><?= $this->lang->line('input_your_sports')?></option>
 											<?php
 											foreach ($sports as $sport) :
 											?>
@@ -58,25 +56,25 @@
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">Email Address <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('your_mail')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
-										<input type="text" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+										<input type="text" id="email" name="email" class="form-control" placeholder="<?= $this->lang->line('input_your_mail')?>" required>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">Choose Password <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('your_pass')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
-										<input type="password" id="password" name="password" class="form-control" placeholder="Choose Your Password" required>
+										<input type="password" id="password" name="password" class="form-control" placeholder="<?= $this->lang->line('input_your_pass')?>" required>
 									</div>
 								</div>
 								<div class="form-group row">
-									<label class="control-label text-black col-sm-3">Confirm Password <span class="float-right">:</span> </label>
+									<label class="control-label text-black col-sm-3"><?= $this->lang->line('your_password')?> <span class="float-right">:</span> </label>
 									<div class="col-sm-9">
-										<input type="password" id="con_password" name="con_password" class="form-control" placeholder="Re-Enter Your Password" required>
+										<input type="password" id="con_password" name="con_password" class="form-control" placeholder="<?= $this->lang->line('input_your_password')?>" required>
 									</div>
 								</div>
 								<div class="form-group text-center">
-									<button class="btn btn-primary" id="submit-btn"> Register Your Account</button>
+									<button class="btn btn-primary" id="submit-btn"><?= $this->lang->line('submit')?> </button>
 								</div>
 								<div class="alert alert-danger d-none" id="message-container" tabindex="0">
 									<p class="pb-0 mb-0" id="message-box"></p>

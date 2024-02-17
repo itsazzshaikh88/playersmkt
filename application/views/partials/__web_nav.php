@@ -10,7 +10,7 @@
 				<ul class="sf-menu float-right" id="menu">
 					<?php if (!empty($this->user)) : ?>
 						<li class="">
-							<a href="<?= generatePanelLink($this->user, $this->usertype) ?>">My Profile</a>
+							<a href="<?= generatePanelLink($this->user, $this->usertype) ?>"><?= $this->lang->line('nav_my_profile') ?></a>
 						</li>
 					<?php endif; ?>
 					<li class="">

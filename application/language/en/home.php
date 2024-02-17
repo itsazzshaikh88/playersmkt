@@ -9,3 +9,33 @@ $lang['our_vision_label'] = "Our Vision";
 $lang['our_vision_content'] = "Revolutionize global sports recruitment, fostering inclusivity and diversity. Connect players and clubs worldwide, transcending barriers with technology. Redefine the future of sports by unlocking the potential of every aspiring athlete.";
 $lang['our_mission_label'] = "Our Mission";
 $lang['our_mission_content'] = "Democratize sports recruitment through an inclusive platform. Empower athletes to showcase skills and facilitate transparent connections with clubs. Remove barriers, inspire diversity, and reshape the sports industry for a brighter, more accessible future.";
+
+
+$lang['recent_club_label'] = "Recent Clubs";
+$lang['recent_result_label'] = "Recent Result";
+$lang['recent_player_label'] = "Recent player";
+$lang['categorie_label'] = "Sports Categories";
+$lang['categorie_info'] = "Explore a world of talent and opportunities across diverse sports on PlayersMkt. From aspiring
+athletes to elite clubs, our platform brings together passion, skill, and potential, creating a
+global hub for sports enthusiasts to connect, discover, and succeed.";
+$lang['categories_explore'] = "Explore All Categories";
+$lang['explore_featured'] = "Explore Featured <span class='text-resalt'>Players</span>";
+
+$lang['explore_featured_info'] = "Dive into our curated showcase of exceptional players. Discover their unique talents,
+stories, and achievements as we bring you the best in the world of sports.";
+
+$lang['explore_all_player'] = "Explore All Players";
+$lang['explore_all_club'] = "View All Clubs";
+$lang['email_lable'] = "Enter your e-mail and <span class='text-resalt'>subscribe</span> to our newsletter.";
+$lang['email_info'] = "Subscribe to our newsletter and stay in the loop with the latest in sports recruitment,
+player showcases, and exciting opportunities. Join our community to receive exclusive
+updates, featured player spotlights, and insights into the evolving world of sports.";
+
+$lang['sing_up'] = "SIGN UP";
+$lang['subscrib_email'] = "Enter Your Email";
+$lang['subscrib_pass'] = "Enter Your Password";
+
+// for palyer card
+$lang['nationality'] = "NATIONALITY";
+$lang['matches'] = "MATCHES";
+$lang['age'] = "AGE";
