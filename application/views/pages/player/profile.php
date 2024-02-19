@@ -149,11 +149,7 @@
                                                  <li>
                                                      <p><?= $this->lang->line('nationality') ?> <span><?= isset($Personal_info['nationality']) ? $Personal_info['nationality'] : '' ?></span></p>
                                                  </li>
-                                                 <li>
-                                                     <p><?= $this->lang->line('emergency_num') ?>
-                                                         <span><?= isset($Personal_info['emergency_contact_number']) ? $Personal_info['emergency_contact_number'] : '' ?></span>
-                                                     </p>
-                                                 </li>
+                                                 
                                                  <li>
                                                      <p><?= $this->lang->line('dob') ?> <span><?= isset($Personal_info['date_of_birth']) ? $Personal_info['date_of_birth'] : '' ?></span></p>
                                                  </li>

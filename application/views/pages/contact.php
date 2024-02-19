@@ -13,8 +13,8 @@
                         <address>
                             <strong>Sports Cup, Inc.</strong><br>
                             <i class="fa fa-map-marker"></i><strong><?= $this->lang->line('address') ?> : </strong> fa795 Folsom Ave, Suite 600<br>
-                            <i class="fa fa-plane"></i><strong><?= $this->lang->line('aity') ?> : </strong>San Francisco, CA 94107<br>
-                            <i class="fa fa-phone"></i> <abbr title="Phone"><?= $this->lang->line('phone') ?> :</abbr> (123) 456-7890
+                            <i class="fa fa-plane"></i><strong><?= $this->lang->line('city') ?> : </strong>San Francisco, CA 94107<br>
+                            <i class="fa fa-phone"></i><strong> <abbr title="Phone"><?= $this->lang->line('phone') ?> :</abbr></strong> (123) 456-7890
                         </address>
                     </div>
                 </aside>
