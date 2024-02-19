@@ -2,10 +2,10 @@
 <nav class="mainmenu">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-5">
 
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<!-- Menu-->
 				<ul class="sf-menu float-right" id="menu">
 					<?php if (!empty($this->user)) : ?>

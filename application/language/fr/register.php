@@ -25,32 +25,33 @@ $lang['submit'] = "Enregistrer votre compte";
 
 //For Club 
 
-$lang['club_register_info'] = "Ready to take your sports journey to new heights? Join <span class='text-green'>PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.";
-$lang['club_main_headding'] = "Club Registration";
+$lang['club_register_info'] = "Prêt à propulser votre parcours sportif vers de nouveaux sommets ? Rejoignez <span class='text-green'>PlayersMkt</span> en créant votre compte. Présentez votre talent, connectez-vous avec des clubs du monde entier et ouvrez les portes d'un monde de possibilités passionnantes dans le domaine du sport.";
+$lang['club_main_headding'] = "Inscription au club";
 
-$lang['club_register_p'] = "Welcome to <span class='text-success'>PlayersMkt</span>! By creating your club account, you'll gain access to a wide range of features tailored to meet your team's needs. Join our global network of clubs and unlock opportunities to connect with talented players, manage team activities, and showcase your achievements. Get started today and take your club to new heights!";
-$lang['club_first_name'] = "First Name";
-$lang['club_input_first_name'] = "Type your first name";
-$lang['club_last_name'] = "Last Name";
-$lang['club_input_last_name'] = "Type your last name";
-$lang['club_country_name'] = "Country Name";
-$lang['club_input_country_name'] = "Select country";
-$lang['club_city_name'] = "City Name";
-$lang['club_input_city_name'] = "Type City Name";
-$lang['club_your_sports'] = "Choose Your Sport";
-$lang['club_input_your_sports'] = "Select Your Sport";
-$lang['club_your_mail'] = "Email Address";
-$lang['club_input_your_mail'] = "Enter your email address";
-$lang['club_your_pass'] = "Choose Password";
-$lang['club_input_your_pass'] = "Choose Your Password";
-$lang['club_your_password'] = "Confirm Password";
-$lang['club_input_your_password'] = "Re-Enter Your Password";
-$lang['club_submit'] = "Register Your Account";
+$lang['club_register_p'] = "Bienvenue sur <span class='text-success'>PlayersMkt</span> ! En créant votre compte club, vous aurez accès à un large éventail de fonctionnalités adaptées aux besoins de votre équipe. Rejoignez notre réseau mondial de clubs et débloquez des opportunités de vous connecter avec des joueurs talentueux, de gérer les activités de l'équipe et de présenter vos réalisations. Commencez dès aujourd'hui et propulsez votre club vers de nouveaux sommets !";
+$lang['club_first_name'] = "
+Prénom";
+$lang['club_input_first_name'] = "Tapez votre prénom";
+$lang['club_last_name'] = "Nom de famille";
+$lang['club_input_last_name'] = "Tapez votre nom de famille";
+$lang['club_country_name'] = "Nom du pays";
+$lang['club_input_country_name'] = "Choisissez le pays";
+$lang['club_city_name'] = "Nom de Ville";
+$lang['club_input_city_name'] = "Tapez le nom de la ville";
+$lang['club_your_sports'] = "Choisissez votre sport";
+$lang['club_input_your_sports'] = "Sélectionnez votre sport";
+$lang['club_your_mail'] = "Adresse e-mail";
+$lang['club_input_your_mail'] = "Entrez votre adresse email";
+$lang['club_your_pass'] = "Choisissez un mot de passe";
+$lang['club_input_your_pass'] = "Choisissez votre mot de passe";
+$lang['club_your_password'] = "Confirmez le mot de passe";
+$lang['club_input_your_password'] = "Entrez à nouveau votre mot de passe";
+$lang['club_submit'] = "Enregistrer votre compte";
 
 
 //After registered
 
-$lang['congo'] = "Congratulations,";
-$lang['congo_p1'] = "Welcome aboard! You've successfully registered with <span class='text-green'>PlayersMkt</span>, and we're thrilled to have you here. Your journey to sports opportunities and connections starts here.";
-$lang['congo_p2'] = "We've sent a verification link to your email address. Please check your inbox and click on the link to complete the registration process. This step ensures the security of your account and allows you to fully access all the features <span class='text-green'>PlayersMkt</span> has to offer.";
-$lang['login_acc'] = "Click Here To Login To Your Account";
+$lang['congo'] = "Toutes nos félicitations,";
+$lang['congo_p1'] = "Bienvenue à bord! Vous vous êtes inscrit avec succès sur <span class='text-green'>PlayersMkt</span> et nous sommes ravis de vous accueillir ici. Votre voyage vers des opportunités et des relations sportives commence ici.";
+$lang['congo_p2'] = "Nous avons envoyé un lien de vérification à votre adresse e-mail. Veuillez vérifier votre boîte de réception et cliquer sur le lien pour terminer le processus d'inscription. Cette étape garantit la sécurité de votre compte et vous permet d'accéder pleinement à toutes les fonctionnalités que <span class='text-green'>PlayersMkt</span> a à offrir.";
+$lang['login_acc'] = "Cliquez ici pour vous connecter à votre compte";

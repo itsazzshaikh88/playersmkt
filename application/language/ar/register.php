@@ -26,27 +26,27 @@ $lang['submit'] = "سجل حسابك";
 
 //For Club 
 
-$lang['club_register_info'] = "Ready to take your sports journey to new heights? Join <span class='text-green'>PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.";
-$lang['club_main_headding'] = "Club Registration";
+$lang['club_register_info'] = "هل أنت مستعد للانتقال برحلتك الرياضية إلى آفاق جديدة؟ انضم إلى <span class='text-green'>PlayersMkt</span> عن طريق تثبيت حسابك. اعرض موهبتك، وتواصل مع الأندية على مستوى العالم، وافتح الأبواب أمام عالم من الإمكانيات المثيرة في عالم الرياضة.";
+$lang['club_main_headding'] = "تسجيل النادي";
 
-$lang['club_register_p'] = "Welcome to <span class='text-success'>PlayersMkt</span>! By creating your club account, you'll gain access to a wide range of features tailored to meet your team's needs. Join our global network of clubs and unlock opportunities to connect with talented players, manage team activities, and showcase your achievements. Get started today and take your club to new heights!";
-$lang['club_first_name'] = "First Name";
-$lang['club_input_first_name'] = "Type your first name";
-$lang['club_last_name'] = "Last Name";
-$lang['club_input_last_name'] = "Type your last name";
-$lang['club_country_name'] = "Country Name";
-$lang['club_input_country_name'] = "Select country";
-$lang['club_city_name'] = "City Name";
-$lang['club_input_city_name'] = "Type City Name";
-$lang['club_your_sports'] = "Choose Your Sport";
-$lang['club_input_your_sports'] = "Select Your Sport";
-$lang['club_your_mail'] = "Email Address";
-$lang['club_input_your_mail'] = "Enter your email address";
-$lang['club_your_pass'] = "Choose Password";
-$lang['club_input_your_pass'] = "Choose Your Password";
-$lang['club_your_password'] = "Confirm Password";
-$lang['club_input_your_password'] = "Re-Enter Your Password";
-$lang['club_submit'] = "Register Your Account";
+$lang['club_register_p'] = "مرحبًا بك في <span class='text-success'>PlayersMkt</span>! من خلال إنشاء حساب النادي الخاص بك، ستتمكن من الوصول إلى مجموعة واسعة من الميزات المصممة لتلبية احتياجات فريقك. انضم إلى شبكتنا العالمية من الأندية وافتح الفرص للتواصل مع اللاعبين الموهوبين وإدارة أنشطة الفريق وعرض إنجازاتك. ابدأ اليوم وانتقل بناديك إلى آفاق جديدة!";
+$lang['club_first_name'] = "الاسم الأول";
+$lang['club_input_first_name'] = "اكتب اسمك الأول";
+$lang['club_last_name'] = "اسم العائلة";
+$lang['club_input_last_name'] = "اكتب اسمك الأخير";
+$lang['club_country_name'] = "اسم الدولة";
+$lang['club_input_country_name'] = "حدد الدولة";
+$lang['club_city_name'] = "اسم المدينة";
+$lang['club_input_city_name'] = "اكتب اسم المدينة";
+$lang['club_your_sports'] = "اختر رياضتك";
+$lang['club_input_your_sports'] = "اختر رياضتك";
+$lang['club_your_mail'] = "عنوان البريد الإلكتروني";
+$lang['club_input_your_mail'] = "أدخل عنوان بريدك الالكتروني";
+$lang['club_your_pass'] = "إختر كلمة السر";
+$lang['club_input_your_pass'] = "أختر كلمة مرورك";
+$lang['club_your_password'] = "تأكيد كلمة المرور";
+$lang['club_input_your_password'] = "أعد إدخال كلمة المرور";
+$lang['club_submit'] = "سجل حسابك";
 
 
 //After registered
