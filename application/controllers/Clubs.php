@@ -83,7 +83,7 @@ class Clubs extends App_Controller
         $data['club_details'] = $this->Club_model->ClubFetch();
         $data['scripts'] = ['assets/js/custom/login.js'];
         $data['scripts'] = ['assets/js/list/club.js'];
-        $data['sports'] = $this->Lists_model->sports();
+        $data['sports'] = $this->Club_model->sports();
         $this->load->view('template', $data);
     }
 

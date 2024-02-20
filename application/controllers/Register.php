@@ -50,7 +50,9 @@ class Register extends App_Controller
 				->set_output(json_encode($response));
 			return;
 		}
+
 		$data['player_detail'] = [];
+		
 		if ($this->uri->total_segments() == 4 && $action == 'account-created') {
 			$id = $this->input->get('account-id');
 			$token = $this->input->get('account-token');
@@ -92,14 +94,15 @@ class Register extends App_Controller
 				$this->app_mail($sender, $receiver, $subject, $message);
 			}
 
-
 			// Send a response back to the client
 			$this->output
 				->set_content_type('application/json')
 				->set_output(json_encode($response));
 			return;
 		}
+
 		$data['club_detail'] = [];
+
 		if ($this->uri->total_segments() == 4 && $action == 'account-created') {
 			$id = $this->input->get('account-id');
 			$token = $this->input->get('account-token');

@@ -91,8 +91,7 @@ class Players extends App_Controller
 		$this->lang->load('login', $this->site_lang);
 		$view_name = 'player-list';
 		$data['view_path'] = "pages/$view_name";
-		$multi = 0;
-		$offest = 0;
+		
 		$data['sports'] = $this->app_model->fetchSports();
 		$data['Player_details'] = $this->Player_model->players();
 		$data['css_files'] = ['assets/css/custom/login.css'];

@@ -33,7 +33,6 @@ class Login extends App_Controller
 				->set_output(json_encode($response));
 			return;
 		}
-
 		// App Languages
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
@@ -57,7 +56,6 @@ class Login extends App_Controller
 				->set_output(json_encode($response));
 			return;
 		}
-
 		// App Languages
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;

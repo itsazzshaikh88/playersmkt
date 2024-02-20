@@ -31,6 +31,8 @@ class Sports extends App_Controller
         // App Languages
         $data['current_language'] = $this->site_lang;
         $data['supported_languages'] = $this->supported_languages;
+        $data['Player_details'] = $this->Player_model->players();
+        $data['club_details'] = $this->Club_model->ClubFetch();
         // Load View and Language Files
         $this->lang->load('home', $this->site_lang);
         // Load View Template
@@ -123,4 +125,20 @@ class Sports extends App_Controller
         $this->load->view('template', $data);
     }
 
+
+    public function history()
+    {
+        // App Languages
+        $data['current_language'] = $this->site_lang;
+        $data['supported_languages'] = $this->supported_languages;
+        // Load View and Language Files
+        $this->lang->load('home', $this->site_lang);
+        // Load View Template
+        $view_name = 'categories/history';
+        $data['view_path'] = "pages/$view_name";
+        $data['scripts'] = ['assets/js/custom/home.js'];
+        $data['app_title'] = APP_NAME . " - Your Gateway to Sports Talent";
+
+        $this->load->view('template', $data);
+    }
 }

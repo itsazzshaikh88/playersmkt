@@ -48,3 +48,13 @@ function showErrorMessage(message, class_name) {
 	message_box.classList.add(`alert-${class_name}`);
 	messsage_container.focus();
 }
+
+
+// for follow 
+
+$(function() {
+	$(".heart").on("click", function() {
+		console.log('yes');
+	  $(this).toggleClass("is-active");
+	});
+  });
