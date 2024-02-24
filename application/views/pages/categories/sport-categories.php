@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1>Sports Gallery</h1>
+                <h1>Sports Categories</h1>
             </div>
 
             <div class="col-md-4">
@@ -28,7 +28,7 @@
 <section class="content-info">
 
     <!-- Nav Filters -->
-    <div class="portfolioFilter">
+    <!-- <div class="portfolioFilter">
         <div class="container">
             <h5><i class="fa fa-filter" aria-hidden="true"></i>Filter By:</h5>
             <a href="#" data-filter="*" class="current">All</a>
@@ -36,7 +36,7 @@
             <a href="#" data-filter=".moto">Moto Cross</a>
             <a href="#" data-filter=".bmx">Bmx</a>
         </div>
-    </div>
+    </div> -->
     <!-- End Nav Filters -->
 
 
@@ -46,30 +46,23 @@
             <div class="row portfolioContainer margin-top">
 
                 <!-- Item Gallery -->
-                <?php foreach ($sports as  $item) :
-                    
+                <?php foreach ($sports as  $sport) :
+                    $sport_link = "sports/categories/" . strtolower(str_replace(" ", "", $sport['sport_name'])) . "?sport-id=" . $sport['sr_no'];
                     // print_r($sports);
                     if (isset($sports['cover_image'])) {
                         $profile = $sports['cover_image'];
                     } else {
-                        $profile = 'images/default-listing.png';
+                        $profile = 'images/default-sports.webp';
                     }
 
                 ?>
-
-                    <div class="col-sm-6 col-lg-4 col-xl-3 soccer">
-                        <div class="item-gallery">
-                            <div class="hover small">
-                                <img src="<?= $profile ?>" alt="Club Team" />
-                                <a class="swipebox-ligbox" href="sports/sport_category/<?=$item['sr_no']?>">
-                                    <div class="overlay"><i class="fa fa-plus"></i></div>
-                                </a>
+                    <div class="col-md-4 col-xl-3">
+                        <a href="<?= $sport_link ?>">
+                            <div class="item-boxed-img small" style="background: url(<?= $profile ?>);">
+                                <h4 class="text-warning"><?= $sport['sport_name'] ?> </h4> <br />
+                                <p class="badge bg-secondary" style="font-size: 12px;"><?= $sport['type'] ?></p>
                             </div>
-                            <div class="info-gallery">
-                                <p><?= $item['sport_name'] ?></p>
-                                <i class="fa fa-picture-o"></i>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                 <?php endforeach; ?>
                 <!-- Item Gallery -->

@@ -20,6 +20,16 @@
      .panel-box .list-panel li {
          margin: 0px 0 !important;
      }
+
+     .aling {
+         text-align: center !important;
+         margin: 0 0 15px 0 !important;
+
+     }
+
+     .item-player {
+         margin-bottom: 15px !important;
+     }
  </style>
  <!-- Section Area - Content Central -->
  <section class="content-info">
@@ -42,7 +52,7 @@
                          </div>
                          <div class="info-player">
                              <span class="number-player">
-                             <!-- <i class="bi bi-heart"></i> -->
+                                 <!-- <i class="bi bi-heart"></i> -->
                                  10
                              </span>
                              <h4>
@@ -64,24 +74,40 @@
                          </div>
                      </div>
 
-                     <!-- Personal Info -->
+                     <!-- buttons -->
+                     <div class="aling">
+                         <a class="btn btn-sm btn-primary" href="#!" role="button">
+                         <i class="bi bi-person-add"></i></a>
+                         <a class="btn btn-sm btn-primary" href="#!" role="button">
+                         <i class="bi bi-file-earmark-plus-fill"></i></a>
+                         <a class="btn btn-sm btn-primary" href="#!" role="button">
+                         <i class="bi bi-person-add"></i>
+                        </a>
+                         <!-- <a href="#" class="btn btn-primary btn-sm">Followers</a>
+                         <a href="#" class="btn btn-primary btn-sm">Wishlist</a>
+                         <a href="#" class="btn btn-primary btn-sm">Followers</a> -->
+
+                     </div>
+                     <!-- End buttons -->
+
+                     <!-- Links -->
                      <div class="panel-box">
                          <div class="titles no-margin">
                              <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
                          </div>
                          <ul class="list-panel" id="myTab">
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/details"><?= $this->lang->line('profile') ?> </a></p>
+                                 <p><a href="players/profile/details?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('profile') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/posts"><?= $this->lang->line('post') ?> </a></p>
+                                 <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats"><?= $this->lang->line('status') ?> </a></p>
+                                 <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
                              </li>
                          </ul>
                      </div>
-                     <!-- End Personal Info -->
+                     <!-- End Links -->
 
                  </div>
                  <!-- end Side info single team-->
@@ -89,7 +115,7 @@
                  <div class="col-lg-8 col-xl-9">
                      <!-- Nav Tabs -->
                      <ul class="nav nav-tabs">
-                         <li class="active"><a ><?= $this->lang->line('profile') ?></a></li>
+                         <li class="active"><a><?= $this->lang->line('profile') ?></a></li>
                      </ul>
                      <!-- End Nav Tabs -->
 
@@ -149,7 +175,7 @@
                                                  <li>
                                                      <p><?= $this->lang->line('nationality') ?> <span><?= isset($Personal_info['nationality']) ? $Personal_info['nationality'] : '' ?></span></p>
                                                  </li>
-                                                 
+
                                                  <li>
                                                      <p><?= $this->lang->line('dob') ?> <span><?= isset($Personal_info['date_of_birth']) ? $Personal_info['date_of_birth'] : '' ?></span></p>
                                                  </li>

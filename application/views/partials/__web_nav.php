@@ -3,7 +3,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-5">
-
+				<style>
+					.bg-success {
+						background-color: #01d099 !important;
+					}
+				</style>
 			</div>
 			<div class="col-md-7">
 				<!-- Menu-->
@@ -25,7 +29,7 @@
 					<li class="">
 						<a href="contact-us"><?= $this->lang->line('nav_contact_us') ?></a>
 					</li>
-					<li class="current">
+					<li class="current bg bg-success">
 						<a><?= $this->lang->line('nav_login') ?></a>
 						<ul class="sub-current">
 							<li>

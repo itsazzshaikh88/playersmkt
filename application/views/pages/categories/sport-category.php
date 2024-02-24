@@ -87,30 +87,30 @@
                          <div class="info-player text-black">
                              <ul>
                                  <?php
-                                    foreach ($Player_details as $players) :
+                                    foreach ($players as $play) :
 
-                                        if (isset($players['photo'])) {
-                                            $profile = $players['photo'];
+                                        if (isset($play['photo'])) {
+                                            $profile = $play['photo'];
                                         } else {
                                             $profile = 'images/default-listing.png';
                                         }
                                     ?>
                                      <li>
                                          <span class="position">
-                                             <?= $players['id'] ?>
+                                             <?= $play['id'] ?>
                                          </span>
-                                         <a href="players/profile/<?= $players['id'] ?>">
+                                         <a href="players/profile/details?p-id=<?= $play['player_id'] ?>&id=<?= $play['id']?>&source=listing">
                                              <img src="<?= $profile ?>" alt="">
-                                             <?= $players['player_id'] ?>
+                                             <?= $play['player_id'] ?>
                                          </a>
                                          <span class="points home-list">
-                                             <?= $players['sport_id'] ?>
+                                             <?= $play['sport_id'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
                              </ul>
                          </div>
-                         <?php if (count($Player_details) >= 10) : ?>
+                         <?php if (count($players) >= 10) : ?>
                              <div class="">
                                  <a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
                              </div>
@@ -122,33 +122,33 @@
                  <div class="col-lg-4">
                      <div class="player-ranking">
                          <h3>Most Searched</h3>
-                         <div class="info-player">
+                         <div class="info-player text-black">
                              <ul>
                                  <?php
-                                    foreach ($Player_details as $players) :
+                                    foreach ($players as $play) :
 
-                                        if (isset($players['photo'])) {
-                                            $profile = $players['photo'];
+                                        if (isset($play['photo'])) {
+                                            $profile = $play['photo'];
                                         } else {
                                             $profile = 'images/default-listing.png';
                                         }
                                     ?>
                                      <li>
                                          <span class="position">
-                                             <?= $players['id'] ?>
+                                             <?= $play['id'] ?>
                                          </span>
-                                         <a href="players/profile/<?= $players['id'] ?>">
+                                         <a href="players/profile/details?p-id=<?= $play['player_id'] ?>&id=<?= $play['id']?>&source=listing">
                                              <img src="<?= $profile ?>" alt="">
-                                             <?= $players['player_id'] ?>
+                                             <?= $play['player_id'] ?>
                                          </a>
                                          <span class="points home-list">
-                                             <?= $players['sport_id'] ?>
+                                             <?= $play['sport_id'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
                              </ul>
                          </div>
-                         <?php if (count($Player_details) >= 10) : ?>
+                         <?php if (count($players) >= 10) : ?>
                              <div class="">
                                  <a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
                              </div>
@@ -160,33 +160,33 @@
                  <div class="col-lg-4">
                      <div class="player-ranking">
                          <h3>Top</h3>
-                         <div class="info-player">
+                         <div class="info-player text-black">
                              <ul>
                                  <?php
-                                    foreach ($Player_details as $players) :
+                                    foreach ($players as $play) :
 
-                                        if (isset($players['photo'])) {
-                                            $profile = $players['photo'];
+                                        if (isset($play['photo'])) {
+                                            $profile = $play['photo'];
                                         } else {
                                             $profile = 'images/default-listing.png';
                                         }
                                     ?>
                                      <li>
                                          <span class="position">
-                                             <?= $players['id'] ?>
+                                             <?= $play['id'] ?>
                                          </span>
-                                         <a href="players/profile/<?= $players['id'] ?>">
+                                         <a href="players/profile/details?p-id=<?= $play['player_id'] ?>&id=<?= $play['id']?>&source=listing">
                                              <img src="<?= $profile ?>" alt="">
-                                             <?= $players['player_id'] ?>
+                                             <?= $play['player_id'] ?>
                                          </a>
                                          <span class="points home-list">
-                                             <?= $players['sport_id'] ?>
+                                             <?= $play['sport_id'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
                              </ul>
                          </div>
-                         <?php if (count($Player_details) >= 10) : ?>
+                         <?php if (count($players) >= 10) : ?>
                              <div class="">
                                  <a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
                              </div>
@@ -194,6 +194,7 @@
                      </div>
                  </div>
                  <!-- End Top player -->
+                
              </div>
          </div>
      </div>

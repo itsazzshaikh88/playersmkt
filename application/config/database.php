@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '216.172.184.110',
-	'username' => 'playersm_user',
-	'password' => 'Olive@7246$',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => '',
 	'database' => 'playersm_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

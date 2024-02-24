@@ -75,14 +75,14 @@
                              <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
                          </div>
                          <ul class="list-panel" id="myTab">
-                             <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/details"><?= $this->lang->line('profile') ?> </a></p>
+                         <li>
+                                 <p><a href="players/profile/details?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id']?>&source=listing"><?= $this->lang->line('profile') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/posts"><?= $this->lang->line('post') ?> </a></p>
+                                 <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id']?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/<?= $Player_details['id'] ?>/stats"><?= $this->lang->line('status') ?> </a></p>
+                                 <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id']?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
                              </li>
                          </ul>
                      </div>

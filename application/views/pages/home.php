@@ -1,78 +1,30 @@
 <!-- section-hero-posts-->
 <style>
 	.heart {
-  width: 100px;
-  height: 100px;
-  background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
-  background-position: 0 0;
-  cursor: pointer;
-  transition: background-position 1s steps(28);
-  transition-duration: 0s;
-}
+		width: 100px;
+		height: 100px;
+		background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+		background-position: 0 0;
+		cursor: pointer;
+		transition: background-position 1s steps(28);
+		transition-duration: 0s;
+	}
 
-.heart.is-active {
-  transition-duration: 1s;
-  background-position: -2800px 0;
-}
+	.heart.is-active {
+		transition-duration: 1s;
+		background-position: -2800px 0;
+	}
 
-.stage {
-  position: relative;
-  top: 100%;
-  left: 100%;
-  transform: translate(-50%, -50%);
-}
-
+	.stage {
+		position: relative;
+		top: 100%;
+		left: 100%;
+		transform: translate(-50%, -50%);
+	}
 </style>
 <div class="hero-header">
 	<!-- Hero Slider-->
 	<div id="hero-slider" class="hero-slider">
-		<!-- Item Slide-->
-		<!-- <div class="item-slider" style="background:url(img/slide/3.jpg);">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-7">
-						<div class="info-slider">
-							<h1>Group Stage Breakdown</h1>
-							<p>While familiar with fellow European nation France, Hareide admits that South American side Peru.</p>
-							<a href="#" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- End Item Slide-->
-
-		<!-- Item Slide-->
-		<!-- <div class="item-slider" style="background:url(img/slide/2.jpg);">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-7">
-						<div class="info-slider">
-							<h1>World Cup rivalries reprised</h1>
-							<p>The outdoor exhibition on Manezhnaya Square comprises 11 figures that symbolise the main sites of interest.</p>
-							<a href="#" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- End Item Slide-->
-
-		<!-- Item Slide-->
-		<!-- <div class="item-slider" style="background:url(img/slide/1.jpg);">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-7">
-						<div class="info-slider">
-							<h1>Group Stage Breakdown</h1>
-							<p>While familiar with fellow European nation France, Hareide admits that South American side Peru.</p>
-							<a href="#" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
-		<!-- End Item Slide-->
 
 	</div>
 	<!-- End Hero Slider-->
@@ -242,30 +194,30 @@
 						<div class="info-player">
 							<ul>
 								<?php
-								foreach ($Player_details as $players) :
+								foreach ($player_Fetch as $play) :
 
-									if (isset($players['photo'])) {
-										$profile = $players['photo'];
+									if (isset($play['photo'])) {
+										$profile = $play['photo'];
 									} else {
 										$profile = 'images/default-listing.png';
 									}
 								?>
 									<li>
 										<span class="position">
-											<?= $players['id'] ?>
+											<?= $play['id'] ?>
 										</span>
-										<a href="players/profile/<?= $players['id'] ?>">
+										<a href="players/profile/details?p-id=<?= $play['player_id'] ?>&id=<?= $play['id']?>&source=listing">
 											<img src="<?= $profile ?>" alt="">
-											<?= $players['player_id'] ?>
+											<?= $play['player_id'] ?>
 										</a>
 										<span class="points home-list text-green">
-											<!-- <?= $players['sport_id'] ?> -->
+											<!-- <?= $play['sport_id'] ?> -->
 										</span>
 									</li>
 								<?php endforeach; ?>
 							</ul>
 						</div>
-						<?php if (count($Player_details) >= 10) : ?>
+						<?php if (count($player_Fetch) >= 10) : ?>
 							<div class="">
 								<a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
 							</div>
@@ -291,7 +243,7 @@
 					<h2><?= $this->lang->line('categorie_label') ?></h2>
 					<p class="lead">
 						<?= $this->lang->line('categorie_info') ?>
-					</p>
+					</p> 
 					<div class="text-right">
 						<a href="sports/categories">
 							<h3 class="text-green text-underline"> <?= $this->lang->line('categories_explore') ?><span><i class="bi bi-arrow-right-circle"></i></span></h3>
@@ -303,52 +255,18 @@
 
 				<div class="col-lg-7">
 					<div class="row">
-						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/cricket">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/cricket.avif' ?>);">
-									<h4>Cricket </h4>
-								</div>
-							</a>
-						</div>
 
+					<?php  foreach ($sport_details as $sports) : ?>
+						
 						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/football">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/football.jpg' ?>);">
-									<h4>Football</h4>
+							<a href="sports/categories/cricket?sport-id=<?= $sports['sr_no']?>">
+								<div class="item-boxed-img small" style="background: url(<?= $sports['cover_image']?>);">
+									<h4><?= $sports['sport_name']?> </h4>
 								</div>
 							</a>
 						</div>
+						<?php endforeach; ?>
 
-						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/basketball">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/basketball.jpg' ?>);">
-									<h4>Basketball</h4>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/hockey">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/hockey.jpg' ?>);">
-									<h4>Hockey </h4>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/tennis">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/tennis.jpg' ?>);">
-									<h4>Tennis</h4>
-								</div>
-							</a>
-						</div>
-
-						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/badminton">
-								<div class="item-boxed-img small" style="background: url(<?= FILES_URL . '/images/sport_images/badminton.avif' ?>);">
-									<h4>Badminton</h4>
-								</div>
-							</a>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -380,19 +298,23 @@
 			<div class="row portfolioContainer" style="position: relative; height: 1501.22px;">
 
 				<!-- Item Player -->
-				<?php
+				<?php $index = 0;
+
 				foreach ($Player_details as $players) :
 				?>
-					<div class="col-xl-3 col-lg-4 col-md-6 defender">
+					<div class="col-xl-3 col-lg-4 col-md-6 defender" id="D<?= ++$index ?>">
 						<div class="item-player">
 							<div class="head-player">
-								<img src="images/default-listing.png" alt="location-team">
+								<img src="images/default-listing.png" alt=
+								"location-team">
 
 							</div>
 							<div class="info-player">
 								<span class="number-player">
 									<div class="stage">
-										<div class="heart"></div>
+										<?php $heart = $players['wishlist'] == 'added' ? 'UnHeart' : 'Heart' ?>
+										<div class="heart <?=$players['wishlist'] == 'added' ? 'is-active' : ''?>" id="heart<?= $index ?>" onclick="<?=$heart?>('<?= $index ?>','<?= $players['id'] ?>','P')">
+										</div>
 									</div>
 									<!-- <?= $players['id'] ?> -->
 								</span>
@@ -409,7 +331,7 @@
 									<li><strong><?= $this->lang->line('age') ?> :</strong> <span>28</span></li>
 								</ul>
 							</div>
-							<a href="players/profile/<?= $players['id'] ?>" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<a href="players/profile/details?p-id=<?= $players['player_id'] ?>&id=<?= $players['id']?>&source=listing" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				<?php

@@ -20,31 +20,32 @@ let FetchList = (scroll) => {
 					let position =
 						element.position_name == null ? "-" : element.position_name;
 
-					str += `<div class="col-xl-3 col-lg-3 col-md-3">
-                    <div class="item-player">
-                        <div class="head-player">
-                            <img src="${pp}" alt="location-team">
-                        </div>
-                        <div class="info-player">
-                            <span class="number-player">
-
-                            </span>
-                            <h4>
-                            ${element.player_id}
-                                <span>${position}</span>
-                            </h4>
-                            <ul>
-                            <li>
-                            <strong>Country</strong> <span>${element.country}</span>
-                            </li>
-                            <li><strong>City:</strong> <span>${element.city}</span></li>
-                            <li><strong>AGE:</strong> <span>${"-"}</span></li>
-                            </ul>
-                        </div>
-                        <a href="players/profile/${element.id}" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                    </div>
-                </div>`;
-				});
+					str += `
+					<div class="col-xl-4 col-lg-4 col-md-3">
+                    	<div class="item-player">
+                    	    <div class="head-player">
+                    	        <img src="${pp}" alt="location-team">
+                    	    </div>
+                    	    <div class="info-player">
+                    	        <span class="number-player">
+									10
+                    	        </span>
+                    	        <h4>
+                    	        ${element.player_id}
+                    	            <span>${position}</span>
+                    	        </h4>
+                    	        <ul>
+                    	        <li>
+                    	        <strong>Country</strong> <span>${element.country}</span>
+                    	        </li>
+                    	        <li><strong>City:</strong> <span>${element.city}</span></li>
+                    	        <li><strong>AGE:</strong> <span>${"-"}</span></li>
+                    	        </ul>
+                    	    </div>
+                    	    <a href="players/profile/details?p-id=${element.player_id}&id=${element.id}&source=listing" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    	</div>
+                	</div>`;
+					});
 
 				// Append instead of replacing HTML
 				$("#player_list").append(str);
@@ -86,3 +87,65 @@ FetchList();
 // function SeeMore() {
 // 	FetchList(1);
 // }
+
+
+
+//Ansari Kamran
+// follow
+
+
+function Heart(rowIdx, id, type) {
+
+	let loader = `<div class="spinner-border" role="status">
+	<span class="sr-only">Loading...</span>
+  </div>`;
+
+	$.ajax({
+		url: base_url + "wishlist/add",
+		method: "GET",
+		data: { id, type },
+		dataType: "json",
+		beforeSend: function () {
+			$("#heart" + rowIdx).html(loader);
+		},
+		success: function (res) {
+
+			if(res['status'] == 1)
+			{
+				$("#heart" + rowIdx).toggleClass("is-active");
+				$("#heart" + rowIdx).attr("onclick","UnHeart('"+rowIdx+"','"+id+"','"+type+"')");
+
+			}
+
+		}
+	});
+
+}
+
+function UnHeart(rowIdx, id, type) {
+
+	let loader = `<div class="spinner-border" role="status">
+	<span class="sr-only">Loading...</span>
+  </div>`;
+
+	$.ajax({
+		url: base_url + "wishlist/remove",
+		method: "GET",
+		data: { id, type },
+		dataType: "json",
+		beforeSend: function () {
+			$("#heart" + rowIdx).html(loader);
+		},
+		success: function (res) {
+
+			if(res['status'] == 1)
+			{
+				$("#heart" + rowIdx).removeClass("is-active");
+				$("#heart" + rowIdx).attr("onclick",`Heart('${rowIdx}','${id}','${type}')`);
+
+			}
+
+		}
+	});
+
+}

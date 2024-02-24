@@ -92,9 +92,12 @@ define('FILES_URL', 'https://files.playersmkt.com');
 define('APP_LOGO', 'https://playersmkt.com/img/logo.png');
 $player_app = "https://player.playersmkt.com";
 $club_app = "https://club.playersmkt.com";
+$admin_app = "https://admin.playersmkt.com";
 if (in_array($_SERVER['HTTP_HOST'], $local_servers)) {
 	$player_app = "http://" . $_SERVER['HTTP_HOST'] . "/player-plsmkt";
 	$club_app = "http://" . $_SERVER['HTTP_HOST'] . "/club-plsmkt";
+	$admin_app = "http://" . $_SERVER['HTTP_HOST'] . "/admin-plsmkt";
 }
 define('PLAYER_APP_URL', $player_app);
 define('CLUB_APP_URL', $club_app);
+define('ADMIN_APP_URL', $admin_app);

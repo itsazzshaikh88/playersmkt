@@ -49,8 +49,7 @@ class Players extends App_Controller
 		$data['view_path'] = "pages/$view_name";
 		$data['sports'] = $this->app_model->fetchSports();
 		$data['css_files'] = ['assets/css/custom/login.css'];
-		$data['scripts'] = ['assets/js/custom/login.js'];
-		$data['scripts'] = ['assets/js/list/player.js'];
+		$data['scripts'] = ['assets/js/custom/login.js','assets/js/list/player.js'];
 		$this->load->view('template', $data);
 	}
 
@@ -91,7 +90,7 @@ class Players extends App_Controller
 		$this->lang->load('login', $this->site_lang);
 		$view_name = 'player-list';
 		$data['view_path'] = "pages/$view_name";
-		
+
 		$data['sports'] = $this->app_model->fetchSports();
 		$data['Player_details'] = $this->Player_model->players();
 		$data['css_files'] = ['assets/css/custom/login.css'];
@@ -101,8 +100,15 @@ class Players extends App_Controller
 	}
 
 
-	function profile($id, $type = 'details')
+	function profile($type = 'details')
 	{
+		$pid = $this->input->get('p-id');
+		$id = $this->input->get('id');
+		$s = $this->input->get('source');
+		// print_r($pid.'<br>');
+		// print_r($d.'<br>' );
+		// print_r($s );
+		// die();
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
 		$this->lang->load('profile', $this->site_lang);

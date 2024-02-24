@@ -29,17 +29,20 @@ class Welcome extends App_Controller
 		// App Languages
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
+		$this->lang->load('home', $this->site_lang);
 		// fetch player data
 		$data['Player_details'] = $this->Player_model->players();
+		//fetch player list
+		$data['player_Fetch'] = $this->Player_model->player_list();
+		//fetch sports
+		$data['sport_details'] = $this->Player_model->top_sports();
 		// fetch club data
 		$data['club_details'] = $this->Club_model->ClubFetch();
 		// Load View and Language Files
-		$this->lang->load('home', $this->site_lang);
 		// Load View Template
 		$view_name = 'home';
 		$data['view_path'] = "pages/$view_name";
-		$data['scripts'] = ['assets/js/custom/home.js'];
-		$data['scripts'] = ['assets/js/news/news.js'];
+		$data['scripts'] = ['assets/js/custom/home.js','assets/js/news/news.js'];
 		$data['app_title'] = APP_NAME . " - Your Gateway to Sports Talent";
 	
 		$this->load->view('template', $data);
