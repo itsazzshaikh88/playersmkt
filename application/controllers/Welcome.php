@@ -32,12 +32,14 @@ class Welcome extends App_Controller
 		$this->lang->load('home', $this->site_lang);
 		// fetch player data
 		$data['Player_details'] = $this->Player_model->players();
+		// $data['subscribe'] = $this->Player_model->is_subscribe();
 		//fetch player list
 		$data['player_Fetch'] = $this->Player_model->player_list();
 		//fetch sports
 		$data['sport_details'] = $this->Player_model->top_sports();
 		// fetch club data
 		$data['club_details'] = $this->Club_model->ClubFetch();
+		$data['usertype']= $this->usertype;
 		// Load View and Language Files
 		// Load View Template
 		$view_name = 'home';

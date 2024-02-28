@@ -82,14 +82,14 @@
 									if (isset($clubs['photo'])) {
 										$profile = $clubs['photo'];
 									} else {
-										$profile = 'img/clubs-logos/rusia.png';
+										$profile = 'img/bydefaultclub.png';
 									}
 								?>
 									<li>
 										<span class="position">
 											<?= $clubs['id'] ?>
 										</span>
-										<a href="clubs/profile/<?= $clubs['id'] ?>">
+										<a href="clubs/profile/details?c-id=<?= $clubs['club_id'] ?>&id=<?= $clubs['id'] ?>&source=listing">
 											<img src="<?= $profile ?>" alt="">
 											<?= $clubs['club_id'] ?>
 										</a>
@@ -201,12 +201,13 @@
 									} else {
 										$profile = 'images/default-listing.png';
 									}
+
 								?>
 									<li>
 										<span class="position">
 											<?= $play['id'] ?>
 										</span>
-										<a href="players/profile/details?p-id=<?= $play['player_id'] ?>&id=<?= $play['id']?>&source=listing">
+										<a href="players/profile/details?p-id=<?= $play['player_id'] ?>&id=<?= $play['id'] ?>&source=listing">
 											<img src="<?= $profile ?>" alt="">
 											<?= $play['player_id'] ?>
 										</a>
@@ -243,7 +244,7 @@
 					<h2><?= $this->lang->line('categorie_label') ?></h2>
 					<p class="lead">
 						<?= $this->lang->line('categorie_info') ?>
-					</p> 
+					</p>
 					<div class="text-right">
 						<a href="sports/categories">
 							<h3 class="text-green text-underline"> <?= $this->lang->line('categories_explore') ?><span><i class="bi bi-arrow-right-circle"></i></span></h3>
@@ -256,15 +257,15 @@
 				<div class="col-lg-7">
 					<div class="row">
 
-					<?php  foreach ($sport_details as $sports) : ?>
-						
-						<div class="col-md-6 col-xl-4">
-							<a href="sports/categories/cricket?sport-id=<?= $sports['sr_no']?>">
-								<div class="item-boxed-img small" style="background: url(<?= $sports['cover_image']?>);">
-									<h4><?= $sports['sport_name']?> </h4>
-								</div>
-							</a>
-						</div>
+						<?php foreach ($sport_details as $sports) : ?>
+
+							<div class="col-md-6 col-xl-4">
+								<a href="sports/categories/cricket?sport-id=<?= $sports['sr_no'] ?>">
+									<div class="item-boxed-img small" style="background: url(<?= $sports['cover_image'] ?>);">
+										<h4><?= $sports['sport_name'] ?> </h4>
+									</div>
+								</a>
+							</div>
 						<?php endforeach; ?>
 
 					</div>
@@ -301,19 +302,19 @@
 				<?php $index = 0;
 
 				foreach ($Player_details as $players) :
+					$is_subscribed = true;
 				?>
 					<div class="col-xl-3 col-lg-4 col-md-6 defender" id="D<?= ++$index ?>">
 						<div class="item-player">
 							<div class="head-player">
-								<img src="images/default-listing.png" alt=
-								"location-team">
+								<img src="images/default-listing.png" alt="location-team">
 
 							</div>
 							<div class="info-player">
 								<span class="number-player">
 									<div class="stage">
 										<?php $heart = $players['wishlist'] == 'added' ? 'UnHeart' : 'Heart' ?>
-										<div class="heart <?=$players['wishlist'] == 'added' ? 'is-active' : ''?>" id="heart<?= $index ?>" onclick="<?=$heart?>('<?= $index ?>','<?= $players['id'] ?>','P')">
+										<div class="heart <?= $players['wishlist'] == 'added' ? 'is-active' : '' ?>" id="heart<?= $index ?>" onclick="<?= $heart ?>('<?= $index ?>','<?= $players['id'] ?>','<?= $usertype?>')">
 										</div>
 									</div>
 									<!-- <?= $players['id'] ?> -->
@@ -331,7 +332,11 @@
 									<li><strong><?= $this->lang->line('age') ?> :</strong> <span>28</span></li>
 								</ul>
 							</div>
-							<a href="players/profile/details?p-id=<?= $players['player_id'] ?>&id=<?= $players['id']?>&source=listing" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<!-- <?php if ($is_subscribed) : ?> -->
+								<a href="players/profile/details?p-id=<?= $players['player_id'] ?>&id=<?= $players['id'] ?>&source=listing" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<!-- <?php else : ?>
+								<a href="#" class="btn">Subscribe Please <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<?php endif; ?> -->
 						</div>
 					</div>
 				<?php

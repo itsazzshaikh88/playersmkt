@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'playersm_db',
+	'hostname' => '89.117.157.204',
+	'username' => 'u239737065_dev',
+	'password' => 'Olive@7246$',
+	'database' => 'u239737065_playersmkt',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -97,4 +97,14 @@ class App_controller extends CI_Controller
 			$this->userid = null;
 		}
 	}
+
+
+	function club_is_subscriber()
+	{
+		$status = false;
+		// cehck user is club and it is subsctribe
+		if ($this->usertype == 'C')
+			$status = $this->user['is_subscribed'] == "1" ? true : false;
+		return $status;
+	}
 }

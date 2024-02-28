@@ -159,14 +159,14 @@
                             <h4><i class="fa fa-link"></i>Links</h4>
                         </div>
                         <ul class="list-panel" id="myTab">
-                            <li>
-                                <p><a href="clubs/profile/<?= $club_details['id'] ?>/details">Profile</a></p>
+                        <li>
+                                <p><a href="clubs/profile/details?c-id=<?= $club_details['club_id'] ?>&id=<?= $club_details['id'] ?>&source=listing">Profile</a></p>
                             </li>
                             <li>
-                                <p><a href="clubs/profile/<?= $club_details['id'] ?>/posts">Post</a></p>
+                                <p><a href="clubs/profile/posts?c-id=<?= $club_details['club_id'] ?>&id=<?= $club_details['id'] ?>&source=listing">Post</a></p>
                             </li>
                             <li>
-                                <p><a href="clubs/profile/<?= $club_details['id'] ?>/stats">Stats</a></p>
+                                <p><a href="clubs/profile/stats?c-id=<?= $club_details['club_id'] ?>&id=<?= $club_details['id'] ?>&source=listing">Stats</a></p>
                             </li>
 
                         </ul>

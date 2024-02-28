@@ -88,8 +88,15 @@ class Clubs extends App_Controller
     }
 
 
-    function profile($id, $type = 'details')
+    function profile($type = 'details')
     {
+        $pid = $this->input->get('p-id');
+		$id = $this->input->get('id');
+		$s = $this->input->get('source');
+		// print_r($pid.'<br>');
+		// print_r($d.'<br>' );
+		// print_r($s );
+		// die();
         $data['current_language'] = $this->site_lang;
         $data['supported_languages'] = $this->supported_languages;
         $this->lang->load('login', $this->site_lang);

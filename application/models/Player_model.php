@@ -188,6 +188,7 @@ class Player_model extends CI_Model
 		left join wishlist w on p.id=w.user_id";
 
 		return $this->db->query($sql)->result_array();
+		
 	}
 	function player_list()
 	{
@@ -218,6 +219,24 @@ class Player_model extends CI_Model
 			ELSE 999999 -- Assign a very high value to NULL orders
 		END
 	LIMIT 6;";
+		return $this->db->query($sql)->result_array();
+	}
+
+
+	function followers($user,$user_type){
+
+		$sql = "SELECT
+		c.player_id,
+		c.country,
+		c.id,
+		f.id as f_id,
+		f.followed_by_user_type,
+		f.followed_by,
+		IFNULL((f.status),'Follow') follow
+		FROM players c
+		LEFT JOIN followers f on f.following_to = c.id and
+		f.followed_by = $user and f.following_user_type = 'P' and f.followed_by_user_type = '$user_type'
+		where c.player_id NOT IN (1);";
 		return $this->db->query($sql)->result_array();
 	}
 }

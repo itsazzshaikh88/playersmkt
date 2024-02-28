@@ -1,7 +1,7 @@
 <!-- Info Resalt-->
 <div class="container-fluid padding-top">
     <div class="row">
-        <div class="col-xl-3 col-lg-3 col-md-3">
+        <div class="col-xl-2 col-lg-2 col-md-2">
 
 
 
@@ -314,7 +314,7 @@
         </div>
 
 
-        <div class="col-xl-9 col-lg-9 col-md-8">
+        <div class="col-xl-10 col-lg-10 col-md-10">
             <div class="row" id="player_list">
 
                 <!-- <div class="col-xl-3 col-lg-3 col-md-3">

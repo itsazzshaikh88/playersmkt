@@ -49,7 +49,7 @@ class Players extends App_Controller
 		$data['view_path'] = "pages/$view_name";
 		$data['sports'] = $this->app_model->fetchSports();
 		$data['css_files'] = ['assets/css/custom/login.css'];
-		$data['scripts'] = ['assets/js/custom/login.js','assets/js/list/player.js'];
+		$data['scripts'] = ['assets/js/custom/login.js', 'assets/js/list/player.js'];
 		$this->load->view('template', $data);
 	}
 
@@ -105,10 +105,6 @@ class Players extends App_Controller
 		$pid = $this->input->get('p-id');
 		$id = $this->input->get('id');
 		$s = $this->input->get('source');
-		// print_r($pid.'<br>');
-		// print_r($d.'<br>' );
-		// print_r($s );
-		// die();
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
 		$this->lang->load('profile', $this->site_lang);
@@ -125,6 +121,53 @@ class Players extends App_Controller
 		$data['view_path'] = "pages/$view_name";
 		$data['css_files'] = ['assets/css/custom/login.css'];
 		$data['scripts'] = ['assets/js/custom/login.js'];
+
+		$data['club_is_subscriber'] = $this->club_is_subscriber();
+		$data['login'] = $this->isUserLoggedIn();
+
+
+		$this->load->view('template', $data);
+	}
+
+
+	function follower()
+	{
+		// $pid = $this->input->get('p-id');
+		// $id = $this->input->get('id');
+		// $s = $this->input->get('source');
+		// $id = $this->input->get('id');
+		$user = $this->userid;
+		$usertype = $this->usertype;
+		$data['current_language'] = $this->site_lang;
+		$data['supported_languages'] = $this->supported_languages;
+		$data['Player_details'] = $this->Player_model->followers($user,$usertype);
+		$data['userid'] = $user;
+		$data['usertype'] = $usertype;
+		$this->lang->load('home', $this->site_lang);
+		
+		$view_name = 'player/followers';
+		$data['view_path'] = "pages/$view_name";
+		$data['css_files'] = ['assets/css/custom/login.css'];
+		$data['scripts'] = ['assets/js/custom/login.js','assets/js/custom/follow.js'];
+		$this->load->view('template', $data);
+	}
+
+
+	function wishlist()
+	{
+		$pid = $this->input->get('p-id');
+		$id = $this->input->get('id');
+		$s = $this->input->get('source');
+		// $id = $this->input->get('id');
+		$data['current_language'] = $this->site_lang;
+		$data['supported_languages'] = $this->supported_languages;
+		$this->lang->load('home', $this->site_lang);
+		$data['Player_details'] = $this->Player_model->players($id);
+		$data['usertype']= $this->usertype;
+		$view_name = 'player/wishlist';
+		$data['view_path'] = "pages/$view_name";
+		$data['css_files'] = ['assets/css/custom/login.css'];
+		$data['scripts'] = ['assets/js/custom/login.js','assets/js/custom/wishlist.js'];
 		$this->load->view('template', $data);
 	}
 }

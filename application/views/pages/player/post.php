@@ -26,6 +26,15 @@
      .panel-box .list-panel li {
          margin: 0px 0 !important;
      }
+     .aling {
+         text-align: center !important;
+         margin: 0 0 15px 0 !important;
+
+     }
+
+     .item-player {
+         margin-bottom: 15px !important;
+     }
  </style>
  <!-- Section Area - Content Central -->
  <section class="content-info">
@@ -48,6 +57,7 @@
                          </div>
                          <div class="info-player">
                              <span class="number-player">
+                                 <!-- <i class="bi bi-heart"></i> -->
                                  10
                              </span>
                              <h4>
@@ -55,7 +65,7 @@
                                  <span>Forward</span>
                              </h4>
                              <ul class="list-panel">
-                             <li>
+                                 <li>
                                      <p><?= $this->lang->line('weight') ?> <span><?= isset($Personal_info['weight']) ? $Personal_info['weight'] : '' ?></span></p>
                                  </li>
                                  <li>
@@ -69,24 +79,34 @@
                          </div>
                      </div>
 
-                     <!-- Personal Info -->
+                     <!-- buttons -->
+                     <div class="aling">
+                         <a class="btn btn-sm btn-primary" href="players/follower" role="button">
+                             <i class="bi bi-person-add"></i> Followers</a>
+                         <a class="btn btn-sm btn-primary" href="players/wishlist" role="button">
+                             <i class="bi bi-file-earmark-plus-fill"></i> Wishlist</a>
+                         <!-- <a class="btn btn-sm btn-primary" href="#!" role="button"><i class="bi bi-person-add"></i></a> -->
+                     </div>
+                     <!-- End buttons -->
+
+                     <!-- Links -->
                      <div class="panel-box">
                          <div class="titles no-margin">
                              <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
                          </div>
                          <ul class="list-panel" id="myTab">
-                         <li>
-                                 <p><a href="players/profile/details?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id']?>&source=listing"><?= $this->lang->line('profile') ?> </a></p>
+                             <li>
+                                 <p><a href="players/profile/details?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('profile') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id']?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
+                                 <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
                              </li>
                              <li>
-                                 <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id']?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
+                                 <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
                              </li>
                          </ul>
                      </div>
-                     <!-- End Personal Info -->
+                     <!-- End Links -->
 
                  </div>
                  <!-- end Side info single team-->
@@ -99,74 +119,61 @@
                      <!-- End Nav Tabs -->
 
                      <!-- Content Tabs -->
-                     <div class="tab-content">
+                     
+                         <div class="tab-content">
 
-                         <!--Items Club video -->
-                         <div class="row no-line-height">
+                             <!--Items Club video -->
+                             <div class="row no-line-height">
 
-                             <div class="col-md-12">
-                                 <h3 class="clear-title"><?= $this->lang->line('posts') ?></h3>
-                             </div>
-
-                         </div>
-                         <!--End Items Club video -->
-
-                         <!--Items Club video -->
-                         <div class="row no-line-height">
-                             <div class="col-lg-2 col-xl-2">
-                             </div>
-
-                             <div class="col-lg-8 col-xl-8">
-                                 <div class="panel-box">
-                                     <div class="titles no-margin">
-                                         <h4><a href="#">Eliminatory to the world.</a></h4>
-                                     </div>
-                                     <iframe class="video post" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                 <div class="col-md-12">
+                                     <h3 class="clear-title"><?= $this->lang->line('posts') ?></h3>
                                  </div>
-                             </div>
-                             <div class="col-lg-2 col-xl-2">
-                             </div>
-                         </div>
-                         <!--End Items Club video -->
-
-                         <!--Items Club video -->
-                         <div class="row no-line-height">
-                             <div class="col-lg-2 col-xl-2">
-                             </div>
-
-                             <div class="col-lg-8 col-xl-8">
-                                 <div class="panel-box">
-                                     <div class="titles no-margin">
-                                         <h4><a href="#">Colombia classification</a></h4>
+                                 <?php if ($login || $club_is_subscriber) : ?>
+                                 <!--Item Club News -->
+                                 <div class="col-lg-6 col-xl-4">
+                                     <!-- Widget Text-->
+                                     <div class="panel-box">
+                                         <div class="titles no-margin">
+                                             <h4><a href="#">Eliminatory to the world.</a></h4>
+                                         </div>
+                                         <iframe class="video" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                                      </div>
-                                     <iframe class="video post" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                     <!-- End Widget Text-->
                                  </div>
-                             </div>
-                             <div class="col-lg-2 col-xl-2">
-                             </div>
-                         </div>
-                         <!--End Items Club video -->
+                                 <!--End Item Club News -->
 
-                         <!--Items Club video -->
-                         <div class="row no-line-height">
-                             <div class="col-lg-2 col-xl-2">
-                             </div>
-
-                             <div class="col-lg-8 col-xl-8">
-                                 <div class="panel-box">
-                                     <div class="titles no-margin">
-                                         <h4><a href="#">The Day that COLOMBIA Classifies WORLDCUP 16 YEARS AFTER !!!</a></h4>
+                                 <!--Item Club News -->
+                                 <div class="col-lg-6 col-xl-4">
+                                     <!-- Widget Text-->
+                                     <div class="panel-box">
+                                         <div class="titles no-margin">
+                                             <h4><a href="#">Colombia classification</a></h4>
+                                         </div>
+                                         <iframe class="video" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                                      </div>
-                                     <iframe class="video post" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                     <!-- End Widget Text-->
                                  </div>
+                                 <!--End Item Club News -->
+
+                                 <!--Item Club News -->
+                                 <div class="col-lg-6 col-xl-4">
+                                     <!-- Widget Text-->
+                                     <div class="panel-box">
+                                         <div class="titles no-margin">
+                                             <h4><a href="#">World Cup goal</a></h4>
+                                         </div>
+                                         <iframe class="video" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                                     </div>
+                                     <!-- End Widget Text-->
+                                 </div>
+                                 <!--End Item Club News -->
+                                 <?php endif; ?>
                              </div>
-                             <div class="col-lg-2 col-xl-2">
-                             </div>
+                             <!--End Items Club video -->
+
+
                          </div>
-                         <!--End Items Club video -->
-
-
-                     </div>
+                     
                      <!-- Content Tabs -->
                  </div>
              </div>

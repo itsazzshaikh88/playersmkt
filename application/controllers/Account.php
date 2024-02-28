@@ -245,4 +245,12 @@ class Account extends App_Controller
 		$data['scripts'] = ['assets/js/custom/update-password.js'];
 		$this->load->view('template', $data);
 	}
+
+	function follow()
+	{
+		// Notification if Success
+		$response = $this->account_model->follow();
+
+		echo json_encode($response);
+	}
 }
