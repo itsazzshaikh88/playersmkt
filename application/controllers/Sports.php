@@ -20,7 +20,7 @@ class Sports extends App_Controller
         $data['club_details'] = $this->Club_model->ClubFetch();
         // $data['topsports'] = $this->Sports_model->top_sport();
         // Load View and Language Files
-        $this->lang->load('home', $this->site_lang);
+        $this->lang->load('categories', $this->site_lang);
         if ($sport == null){
             $view_name = 'sport-categories';
         }else{

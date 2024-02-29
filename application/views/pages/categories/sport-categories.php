@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1>Sports Categories</h1>
+                <h1><?= $this->lang->line('sports_cate') ?></h1>
             </div>
 
             <div class="col-md-4">

@@ -20,6 +20,7 @@
      .panel-box .list-panel li {
          margin: 0px 0 !important;
      }
+
      .aling {
          text-align: center !important;
          margin: 0 0 15px 0 !important;
@@ -37,73 +38,73 @@
      <div class="single-player-tabs">
          <div class="container">
              <div class="row">
-                  <!-- Side info single team-->
-                  <div class="col-lg-4 col-xl-3">
+                 <!-- Side info single team-->
+                 <div class="col-lg-4 col-xl-3">
 
-<div class="item-player single-player">
-    <div class="head-player">
-        <?php if (isset($Personal_info['photo'])) {
-               $profile = $Personal_info['photo'];
-           } else {
-               $profile = 'images/default-listing.png';
-           } ?>
-        <img src="<?= $profile ?>" alt="location-team">
-    </div>
-    <div class="info-player">
-        <span class="number-player">
-            <!-- <i class="bi bi-heart"></i> -->
-            10
-        </span>
-        <h4>
-            <?= $Player_details['player_id'] ?>
-            <span>Forward</span>
-        </h4>
-        <ul class="list-panel">
-            <li>
-                <p><?= $this->lang->line('weight') ?> <span><?= isset($Personal_info['weight']) ? $Personal_info['weight'] : '' ?></span></p>
-            </li>
-            <li>
-                <p><?= $this->lang->line('height') ?> <span><?= isset($Personal_info['height']) ? $Personal_info['height'] : '' ?></span></p>
-            </li>
-            <li>
-                <p><?= $this->lang->line('gender') ?> <span><?= isset($Personal_info['gender']) ? $Personal_info['gender'] : '' ?></span></p>
-            </li>
-        </ul>
+                     <div class="item-player single-player">
+                         <div class="head-player">
+                             <?php if (isset($Personal_info['photo'])) {
+                                    $profile = $Personal_info['photo'];
+                                } else {
+                                    $profile = 'images/default-listing.png';
+                                } ?>
+                             <img src="<?= $profile ?>" alt="location-team">
+                         </div>
+                         <div class="info-player">
+                             <span class="number-player">
+                                 <!-- <i class="bi bi-heart"></i> -->
+                                 10
+                             </span>
+                             <h4>
+                                 <?= $Player_details['player_id'] ?>
+                                 <span>Forward</span>
+                             </h4>
+                             <ul class="list-panel">
+                                 <li>
+                                     <p><?= $this->lang->line('weight') ?> <span><?= isset($Personal_info['weight']) ? $Personal_info['weight'] : '' ?></span></p>
+                                 </li>
+                                 <li>
+                                     <p><?= $this->lang->line('height') ?> <span><?= isset($Personal_info['height']) ? $Personal_info['height'] : '' ?></span></p>
+                                 </li>
+                                 <li>
+                                     <p><?= $this->lang->line('gender') ?> <span><?= isset($Personal_info['gender']) ? $Personal_info['gender'] : '' ?></span></p>
+                                 </li>
+                             </ul>
 
-    </div>
-</div>
+                         </div>
+                     </div>
 
-<!-- buttons -->
-<div class="aling">
-    <a class="btn btn-sm btn-primary" href="players/follower" role="button">
-        <i class="bi bi-person-add"></i> Followers</a>
-    <a class="btn btn-sm btn-primary" href="players/wishlist" role="button">
-        <i class="bi bi-file-earmark-plus-fill"></i> Wishlist</a>
-    <!-- <a class="btn btn-sm btn-primary" href="#!" role="button"><i class="bi bi-person-add"></i></a> -->
-</div>
-<!-- End buttons -->
+                     <!-- buttons -->
+                     <div class="aling">
+                         <a class="btn btn-sm btn-primary" href="players/follower" role="button">
+                             <i class="bi bi-person-add"></i> Followers</a>
+                         <a class="btn btn-sm btn-primary" href="players/wishlist" role="button">
+                             <i class="bi bi-file-earmark-plus-fill"></i> Wishlist</a>
+                         <!-- <a class="btn btn-sm btn-primary" href="#!" role="button"><i class="bi bi-person-add"></i></a> -->
+                     </div>
+                     <!-- End buttons -->
 
-<!-- Links -->
-<div class="panel-box">
-    <div class="titles no-margin">
-        <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
-    </div>
-    <ul class="list-panel" id="myTab">
-        <li>
-            <p><a href="players/profile/details?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('profile') ?> </a></p>
-        </li>
-        <li>
-            <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
-        </li>
-        <li>
-            <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
-        </li>
-    </ul>
-</div>
-<!-- End Links -->
+                     <!-- Links -->
+                     <div class="panel-box">
+                         <div class="titles no-margin">
+                             <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
+                         </div>
+                         <ul class="list-panel" id="myTab">
+                             <li>
+                                 <p><a href="players/profile/details?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('profile') ?> </a></p>
+                             </li>
+                             <li>
+                                 <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
+                             </li>
+                             <li>
+                                 <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
+                             </li>
+                         </ul>
+                     </div>
+                     <!-- End Links -->
 
-</div>
-<!-- end Side info single team-->
+                 </div>
+                 <!-- end Side info single team-->
 
                  <div class="col-lg-8 col-xl-9">
                      <!-- Nav Tabs -->
@@ -113,15 +114,17 @@
                      <!-- End Nav Tabs -->
 
                      <!-- Content Tabs -->
-                     <?php if ($login || $club_is_subscriber) : ?>
-                         <div class="tab-content">
 
-                             <div class="row">
+                     <div class="tab-content">
 
-                                 <div class="col-md-12">
-                                     <h3 class="clear-title"><?= $this->lang->line('status') ?> </h3>
-                                 </div>
-                                 <div class="col-md-12">
+                         <div class="row">
+
+                             <div class="col-md-12">
+                                 <h3 class="clear-title"><?= $this->lang->line('status') ?> </h3>
+                             </div>
+                             <div class="col-md-12">
+
+                                 <?php if ($login || $club_is_subscriber) : ?>
                                      <div class="tab-pane" id="stats">
 
                                          <div class="row">
@@ -267,18 +270,19 @@
 
                                      </div>
                                      <!-- End Tab Theree - stats -->
-                                 </div>
-
-
-
-                                 <!-- Tab Theree - stats -->
-
-
-
+                                 <?php endif; ?>
                              </div>
 
+
+
+                             <!-- Tab Theree - stats -->
+
+
+
                          </div>
-                     <?php endif; ?>
+
+                     </div>
+
                      <!-- Content Tabs -->
                  </div>
              </div>
