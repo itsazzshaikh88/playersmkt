@@ -27,19 +27,6 @@
 <!-- Section Area - Content Central -->
 <section class="content-info">
 
-    <!-- Nav Filters -->
-    <!-- <div class="portfolioFilter">
-        <div class="container">
-            <h5><i class="fa fa-filter" aria-hidden="true"></i>Filter By:</h5>
-            <a href="#" data-filter="*" class="current">All</a>
-            <a href="#" data-filter=".soccer">Soccer</a>
-            <a href="#" data-filter=".moto">Moto Cross</a>
-            <a href="#" data-filter=".bmx">Bmx</a>
-        </div>
-    </div> -->
-    <!-- End Nav Filters -->
-
-
     <!-- White Section -->
     <div class="white-section paddings">
         <div class="container">
@@ -71,9 +58,6 @@
         </div>
     </div>
     <!-- End White Section -->
-
-
-
 
 </section>
 <!-- End Section Area -  Content Central -->
