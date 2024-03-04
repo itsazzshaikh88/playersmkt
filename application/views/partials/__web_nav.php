@@ -29,7 +29,7 @@
 					<li class="">
 						<a href="contact-us"><?= $this->lang->line('nav_contact_us') ?></a>
 					</li>
-					<li class="current bg bg-success">
+					<li class="current bg">
 						<a><?= $this->lang->line('nav_login') ?></a>
 						<ul class="sub-current">
 							<li>
