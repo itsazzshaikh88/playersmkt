@@ -103,6 +103,26 @@
                      </div>
                      <!-- End Links -->
 
+                     <!-- Links -->
+                     <div class="panel-box">
+                         <div class="titles no-margin">
+                             <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
+                         </div>
+                         <ul class="list-panel" id="myTab">
+                            <?php
+                             if (isset($formslist)) :
+                                foreach ($formslist as $forms) :
+                                ?>
+                                 <li>
+                                     <p><a href="custom/form/<?= $forms['form_name'] ?>?form-id=<?= $forms['id'] ?>"> <?= $forms['form_name'] ?></a></p>
+                                 </li>
+                             <?php endforeach;
+                             endif; ?>
+
+                         </ul>
+                     </div>
+                     <!-- End Links -->
+
                  </div>
                  <!-- end Side info single team-->
 
@@ -126,34 +146,6 @@
 
                                  <?php if ($login || $club_is_subscriber) : ?>
                                      <div class="tab-pane" id="stats">
-
-                                         <div class="row">
-                                             <div class="col-lg-12">
-                                                 <div class="stats-info">
-                                                     <ul>
-                                                         <li>
-                                                             Appearances
-                                                             <h3>50</h3>
-                                                         </li>
-
-                                                         <li>
-                                                             Goals
-                                                             <h3>10</h3>
-                                                         </li>
-
-                                                         <li>
-                                                             Wins
-                                                             <h3>16</h3>
-                                                         </li>
-
-                                                         <li>
-                                                             Losses
-                                                             <h3>5</h3>
-                                                         </li>
-                                                     </ul>
-                                                 </div>
-                                             </div>
-                                         </div>
 
                                          <div class="row">
                                              <div class="col-lg-6 col-xl-4">

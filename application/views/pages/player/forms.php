@@ -12,12 +12,6 @@
  </div>
  <!-- End Section Title -->
  <style>
-     .post {
-         width: 100%;
-         height: 336px !important;
-         border: 0;
-     }
-
      p {
          margin-bottom: 0rem !important;
 
@@ -26,6 +20,7 @@
      .panel-box .list-panel li {
          margin: 0px 0 !important;
      }
+
      .aling {
          text-align: center !important;
          margin: 0 0 15px 0 !important;
@@ -58,7 +53,7 @@
                          <div class="info-player">
                              <span class="number-player">
                                  <!-- <i class="bi bi-heart"></i> -->
-                                 10
+                                 <?= $Player_details['id'] ?>
                              </span>
                              <h4>
                                  <?= $Player_details['player_id'] ?>
@@ -101,25 +96,25 @@
                              <li>
                                  <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
                              </li>
+
                          </ul>
                      </div>
                      <!-- End Links -->
-
                      <!-- Links -->
                      <div class="panel-box">
                          <div class="titles no-margin">
                              <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
                          </div>
                          <ul class="list-panel" id="myTab">
-                            <?php
-                             if (isset($formslist)) :
-                                foreach ($formslist as $forms) :
+                             <?php
+                                if (isset($formslist)) :
+                                    foreach ($formslist as $forms) :
                                 ?>
-                                 <li>
-                                     <p><a href="players/profile/custom?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing&form-id=<?= $forms['id'] ?>&form-name=<?= $forms['form_name'] ?>"> <?= $forms['form_name'] ?></a></p>
-                                 </li>
+                                     <li>
+                                         <p><a href="players/profile/custom?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing&form-id=<?= $forms['id'] ?>&form-name=<?= $forms['form_name'] ?>"> <?= $forms['form_name'] ?></a></p>
+                                     </li>
                              <?php endforeach;
-                             endif; ?>
+                                endif; ?>
 
                          </ul>
                      </div>
@@ -131,66 +126,51 @@
                  <div class="col-lg-8 col-xl-9">
                      <!-- Nav Tabs -->
                      <ul class="nav nav-tabs">
-                         <li class="active"><a><?= $this->lang->line('posts') ?> </a></li>
+                         <li class="active"><a><?= $this->lang->line('status') ?> </a></li>
                      </ul>
                      <!-- End Nav Tabs -->
 
                      <!-- Content Tabs -->
-                     
-                         <div class="tab-content">
-
-                             <!--Items Club video -->
-                             <div class="row no-line-height">
-
-                                 <div class="col-md-12">
-                                     <h3 class="clear-title"><?= $this->lang->line('posts') ?></h3>
-                                 </div>
+                     <div class="tab-content">
+                         <div class="row">
+                             <div class="col-md-12">
+                                 <h3 class="clear-title"><?= $this->lang->line('status') ?> </h3>
+                             </div>
+                             <div class="col-md-12">
                                  <?php if ($login || $club_is_subscriber) : ?>
-                                 <!--Item Club News -->
-                                 <div class="col-lg-6 col-xl-4">
-                                     <!-- Widget Text-->
-                                     <div class="panel-box">
-                                         <div class="titles no-margin">
-                                             <h4><a href="#">Eliminatory to the world.</a></h4>
-                                         </div>
-                                         <iframe class="video" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                     </div>
-                                     <!-- End Widget Text-->
-                                 </div>
-                                 <!--End Item Club News -->
+                                     <div class="tab-pane" id="stats">
 
-                                 <!--Item Club News -->
-                                 <div class="col-lg-6 col-xl-4">
-                                     <!-- Widget Text-->
-                                     <div class="panel-box">
-                                         <div class="titles no-margin">
-                                             <h4><a href="#">Colombia classification</a></h4>
-                                         </div>
-                                         <iframe class="video" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                     </div>
-                                     <!-- End Widget Text-->
-                                 </div>
-                                 <!--End Item Club News -->
+                                         <div class="row">
+                                             <div class="col-lg-12 col-xl-12">
+                                                 <!-- Attack -->
+                                                 <div class="panel-box">
+                                                     <div class="titles no-margin">
+                                                         <h4><i class="fa fa-calendar"></i>Attack</h4>
+                                                     </div>
+                                                     <ul class="list-panel">
+                                                         <?php foreach ($cust_details['lables'] as $lable) : ?>
+                                                             <li>
+                                                                 <p><?= $lable['field_name'] ?>
+                                                                     <span>
+                                                                         <?= isset($cust_details['data'][$lable['column_name']]) ? $cust_details['data'][$lable['column_name']] : '' ?>
+                                                                     </span>
+                                                                 </p>
+                                                             </li>
+                                                         <?php endforeach; ?>
 
-                                 <!--Item Club News -->
-                                 <div class="col-lg-6 col-xl-4">
-                                     <!-- Widget Text-->
-                                     <div class="panel-box">
-                                         <div class="titles no-margin">
-                                             <h4><a href="#">World Cup goal</a></h4>
+                                                     </ul>
+                                                 </div>
+                                                 <!-- End Attack -->
+                                             </div>
                                          </div>
-                                         <iframe class="video" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
                                      </div>
-                                     <!-- End Widget Text-->
-                                 </div>
-                                 <!--End Item Club News -->
+                                     <!-- End Tab Theree - stats -->
                                  <?php endif; ?>
                              </div>
-                             <!--End Items Club video -->
-
-
+                             <!-- Tab Theree - stats -->
                          </div>
-                     
+                     </div>
                      <!-- Content Tabs -->
                  </div>
              </div>

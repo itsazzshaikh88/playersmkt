@@ -188,7 +188,6 @@ class Player_model extends CI_Model
 		left join wishlist w on p.id=w.user_id";
 
 		return $this->db->query($sql)->result_array();
-		
 	}
 	function player_list()
 	{
@@ -223,7 +222,8 @@ class Player_model extends CI_Model
 	}
 
 
-	function followers($user,$user_type){
+	function followers($user, $user_type)
+	{
 
 		$sql = "SELECT
 		c.player_id,
@@ -238,5 +238,21 @@ class Player_model extends CI_Model
 		f.followed_by = $user and f.following_user_type = 'P' and f.followed_by_user_type = '$user_type'
 		where c.player_id NOT IN (1);";
 		return $this->db->query($sql)->result_array();
+	}
+
+
+	// for player stats
+
+	function player_stats()
+	{
+		$sql = "select * from players";
+
+		return $this->db->query($sql)->row_array();
+	}
+
+	function players_info_stats()
+	{
+		$sql = "select * from user_details";
+		return $this->db->query($sql)->row_array();
 	}
 }

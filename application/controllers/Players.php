@@ -102,20 +102,24 @@ class Players extends App_Controller
 
 	function profile($type = 'details')
 	{
-		$pid = $this->input->get('p-id');
+		
 		$id = $this->input->get('id');
-		$s = $this->input->get('source');
+		$form_id = $this->input->get('form-id');
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
 		$this->lang->load('profile', $this->site_lang);
 		$data['Player_details'] = $this->Player_model->player($id);
+		$sport_id = $data['Player_details']['sport_id'];
 		$data['Personal_info'] = $this->Player_model->players_info($id);
+        $data['formslist'] = $this->Form_model->fetchformlist($sport_id);
 		if ($type == 'details')
 			$view_name = 'player/profile';
 		elseif ($type == 'posts')
 			$view_name = 'player/post';
-		elseif ($type == 'stats')
-			$view_name = 'player/stats';
+		elseif ($type == 'custom'){
+			$view_name = 'player/forms';
+			$data['cust_details'] = $this->Form_model->cust_details($id,$form_id);
+		}
 		else
 			$view_name = 'player/profile';
 		$data['view_path'] = "pages/$view_name";

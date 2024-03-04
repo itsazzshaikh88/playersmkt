@@ -96,9 +96,26 @@
                              <li>
                                  <p><a href="players/profile/posts?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('post') ?> </a></p>
                              </li>
-                             <li>
-                                 <p><a href="players/profile//stats?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing"><?= $this->lang->line('status') ?> </a></p>
-                             </li>
+                         </ul>
+                     </div>
+                     <!-- End Links -->
+
+                     <!-- Links -->
+                     <div class="panel-box">
+                         <div class="titles no-margin">
+                             <h4><i class="fa fa-link"></i><?= $this->lang->line('links') ?></h4>
+                         </div>
+                         <ul class="list-panel" id="myTab">
+                            <?php
+                             if (isset($formslist)) :
+                                foreach ($formslist as $forms) :
+                                ?>
+                                 <li>
+                                     <p><a href="players/profile/custom?p-id=<?= $Player_details['player_id'] ?>&id=<?= $Player_details['id'] ?>&source=listing&form-id=<?= $forms['id'] ?>&form-name=<?= $forms['form_name']?>"> <?= $forms['form_name'] ?></a></p>
+                                 </li>
+                             <?php endforeach;
+                             endif; ?>
+
                          </ul>
                      </div>
                      <!-- End Links -->
