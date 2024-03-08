@@ -144,9 +144,9 @@
                                              <div class="col-lg-12 col-xl-12">
                                                  <!-- Attack -->
                                                  <div class="panel-box">
-                                                     <div class="titles no-margin">
+                                                     <!-- <div class="titles no-margin">
                                                          <h4><i class="fa fa-calendar"></i>Attack</h4>
-                                                     </div>
+                                                     </div> -->
                                                      <ul class="list-panel">
                                                          <?php foreach ($cust_details['lables'] as $lable) : ?>
                                                              <li>

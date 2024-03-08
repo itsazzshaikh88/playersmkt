@@ -33,7 +33,7 @@
 
 <!-- Section Area - Content Central -->
 <section class="content-info">
-	<!-- White Section -->
+	<!-- White Section About -->
 	<div class="white-section paddings">
 		<div class="container">
 			<div class="row">
@@ -66,7 +66,7 @@
 	</div>
 	<!-- End White Section -->
 
-	<!-- Schedules and Stats  -->
+	<!-- player and club listing  -->
 	<div class="default-section paddings">
 		<div class="container">
 			<div class="row">
@@ -94,7 +94,7 @@
 											<?= $clubs['club_id'] ?>
 										</a>
 										<span class="points home-list text-green">
-											Club Sports
+											<?= $clubs['sport_name'] ?>
 										</span>
 									</li>
 								<?php endforeach; ?>
@@ -212,7 +212,7 @@
 											<?= $play['player_id'] ?>
 										</a>
 										<span class="points home-list text-green">
-											<!-- <?= $play['sport_id'] ?> -->
+											<?= $play['sport_name'] ?>
 										</span>
 									</li>
 								<?php endforeach; ?>
@@ -275,13 +275,102 @@
 	</div>
 	<!-- Sports Categories End -->
 
-	<!-- White Section -->
+	<!-- Today chengas -------------------------------- Ansari kamran -------------------------------------  -->
+	<!-- Explore featured News -->
+	<div class="default-section paddings">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="text-center padding-bottom">
+						<h2>Explore Featured <span class='text-resalt'> News </span></h2>
+						<p>Dive into our curated showcase of exceptional news. Discover their unique talents, stories, and achievements as we bring you the best in the world of news.</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
+		<!-- Info Resalt-->
+		<div class="container">
+			<div class="row">
+				<!--Item Club News -->
+				<div class="col-lg-3 col-xl-3">
+					<div class="panel-box">
+						<div class="titles no-margin">
+							<h4><a href="#">World football's dates.</a></h4>
+						</div>
+						<a href="#"><img src="img/blog/1.jpg" alt=""></a>
+						<div class="row">
+							<div class="info-panel">
+								<p>Fans from all around the world can apply for 2018 FIFA World Cup™ tickets as the first window of sales.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--End Item Club News -->
 
+				<!--Item Club News -->
+				<div class="col-lg-3 col-xl-3">
+					<div class="panel-box">
+						<div class="titles no-margin">
+							<h4><a href="#">Mbappe’s year to remember</a></h4>
+						</div>
+						<a href="#"><img src="img/blog/2.jpg" alt=""></a>
+						<div class="row">
+							<div class="info-panel">
+								<p>Tickets may be purchased online by using Visa payment cards or Visa Checkout. Visa is the official.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--End Item Club News -->
 
-	<!-- End White Section -->
+				<!--Item Club News -->
+				<div class="col-lg-3 col-xl-3">
+					<div class="panel-box">
+						<div class="titles no-margin">
+							<h4><a href="#">Egypt are one family</a></h4>
+						</div>
+						<a href="#"><img src="img/blog/3.jpg" alt=""></a>
+						<div class="row">
+							<div class="info-panel">
+								<p>Successful applicants who have applied for supporter tickets and conditional supporter tickets will.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--End Item Club News -->
 
-	<!-- End gray Section -->
+				<!--Item Club News -->
+				<div class="col-lg-3 col-xl-3">
+					<div class="panel-box">
+						<div class="titles no-margin">
+							<h4><a href="#">World football's dates.</a></h4>
+						</div>
+						<a href="#"><img src="img/blog/1.jpg" alt=""></a>
+						<div class="row">
+							<div class="info-panel">
+								<p>Fans from all around the world can apply for 2018 FIFA World Cup™ tickets as the first window of sales.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--End Item Club News -->
+			</div>
+			<!--End Items Club News -->
+		</div>
+		<!-- End Info Resalt-->
+
+		<!-- <div class="container">
+			<div class="row justify-content-center padding-top">
+				<a href="News" class="btn-iw outline skin">Explore All News</a>
+			</div>
+		</div> -->
+
+	</div>
+	<!-- End Gray Section -->
+	<!-- Today chengas -------------------------------- Ansari kamran -------------------------------------  -->
+
+	<!-- Explore featured players -->
 	<div class="default-section paddings">
 		<div class="container">
 			<div class="row">
@@ -308,32 +397,37 @@
 						<div class="item-player">
 							<div class="head-player">
 								<img src="images/default-listing.png" alt="location-team">
-
 							</div>
 							<div class="info-player">
 								<span class="number-player">
 									<div class="stage">
 										<?php $heart = $players['wishlist'] == 'added' ? 'UnHeart' : 'Heart' ?>
-										<div class="heart <?= $players['wishlist'] == 'added' ? 'is-active' : '' ?>" id="heart<?= $index ?>" onclick="<?= $heart ?>('<?= $index ?>','<?= $players['id'] ?>','<?= $usertype?>')">
+										<div class="heart <?= $players['wishlist'] == 'added' ? 'is-active' : '' ?>" id="heart<?= $index ?>" onclick="<?= $heart ?>('<?= $index ?>','<?= $players['id'] ?>','<?= $usertype ?>')">
 										</div>
 									</div>
-									<!-- <?= $players['id'] ?> -->
 								</span>
 								<h4>
 									<?= $players['player_id'] ?>
-									<span>Defender</span>
+									<span><?= $players['sport_name'] ?></span>
 								</h4>
 								<ul>
 									<li>
 										<strong><?= $this->lang->line('nationality') ?> :</strong> <span>
 											<?= $players['country'] ?> </span>
 									</li>
-									<li><strong><?= $this->lang->line('matches') ?> :</strong> <span>90</span></li>
-									<li><strong><?= $this->lang->line('age') ?> :</strong> <span>28</span></li>
+									<li><strong><?= $this->lang->line('matches') ?> :</strong> <span><?= $players['gender'] == '' ? '-': $players['gender'] ?></span></li>
+									<?php
+									$dob = $players['date_of_birth'];
+									$today = new DateTime();
+									$birthdate = new DateTime($dob);
+									$interval = $today->diff($birthdate);
+									$age =$interval->y;
+									?>
+									<li><strong><?= $this->lang->line('age') ?> :</strong> <span><?=$age?></span></li>
 								</ul>
 							</div>
 							<!-- <?php if ($is_subscribed) : ?> -->
-								<a href="players/profile/details?p-id=<?= $players['player_id'] ?>&id=<?= $players['id'] ?>&source=listing" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+							<a href="players/profile/details?p-id=<?= $players['player_id'] ?>&id=<?= $players['id'] ?>&source=listing" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<!-- <?php else : ?>
 								<a href="#" class="btn">Subscribe Please <i class="fa fa-angle-right" aria-hidden="true"></i></a>
 							<?php endif; ?> -->

@@ -90,7 +90,6 @@ class Players extends App_Controller
 		$this->lang->load('login', $this->site_lang);
 		$view_name = 'player-list';
 		$data['view_path'] = "pages/$view_name";
-
 		$data['sports'] = $this->app_model->fetchSports();
 		$data['Player_details'] = $this->Player_model->players();
 		$data['css_files'] = ['assets/css/custom/login.css'];
@@ -136,10 +135,6 @@ class Players extends App_Controller
 
 	function follower()
 	{
-		// $pid = $this->input->get('p-id');
-		// $id = $this->input->get('id');
-		// $s = $this->input->get('source');
-		// $id = $this->input->get('id');
 		$user = $this->userid;
 		$usertype = $this->usertype;
 		$data['current_language'] = $this->site_lang;
@@ -159,10 +154,7 @@ class Players extends App_Controller
 
 	function wishlist()
 	{
-		$pid = $this->input->get('p-id');
 		$id = $this->input->get('id');
-		$s = $this->input->get('source');
-		// $id = $this->input->get('id');
 		$data['current_language'] = $this->site_lang;
 		$data['supported_languages'] = $this->supported_languages;
 		$this->lang->load('home', $this->site_lang);

@@ -57,7 +57,7 @@
  <section class="content-info">
 
      <!-- Nav Filters -->
-     <div class="portfolioFilter">
+     <!-- <div class="portfolioFilter">
          <div class="container">
              <h5><i class="fa fa-filter" aria-hidden="true"></i>Filter By:</h5>
              <a href="#" data-filter="*" class="current">Show All</a>
@@ -66,7 +66,7 @@
              <a href="#" data-filter=".midfielder">Midfielder</a>
              <a href="#" data-filter=".goalkeeper">Goalkeeper</a>
          </div>
-     </div>
+     </div> -->
      <!-- End Nav Filters -->
 
      <!-- Schedules and Stats For Player -->
@@ -104,7 +104,7 @@
                                              <?= $play['player_id'] ?>
                                          </a>
                                          <span class="points home-list">
-                                             <?= $play['sport_id'] ?>
+                                             <?= $play['sport_name'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
@@ -112,7 +112,7 @@
                          </div>
                          <?php if (count($players) >= 10) : ?>
                              <div class="">
-                                 <a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
+                                 <a href="players/find" class="btn btn-sm btn-primary text-white">See All</a>
                              </div>
                          <?php endif; ?>
                      </div>
@@ -142,7 +142,7 @@
                                              <?= $play['player_id'] ?>
                                          </a>
                                          <span class="points home-list">
-                                             <?= $play['sport_id'] ?>
+                                             <?= $play['sport_name'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
@@ -150,7 +150,7 @@
                          </div>
                          <?php if (count($players) >= 10) : ?>
                              <div class="">
-                                 <a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
+                                 <a href="players/find" class="btn btn-sm btn-primary text-white">See All</a>
                              </div>
                          <?php endif; ?>
                      </div>
@@ -180,7 +180,7 @@
                                              <?= $play['player_id'] ?>
                                          </a>
                                          <span class="points home-list">
-                                             <?= $play['sport_id'] ?>
+                                             <?= $play['sport_name'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
@@ -188,7 +188,7 @@
                          </div>
                          <?php if (count($players) >= 10) : ?>
                              <div class="">
-                                 <a href="players/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
+                                 <a href="players/find" class="btn btn-sm btn-primary text-white">See All</a>
                              </div>
                          <?php endif; ?>
                      </div>
@@ -232,7 +232,7 @@
                                              <?= $clubs['club_id'] ?>
                                          </a>
                                          <span class="points home-list text-green">
-                                             Club Sports
+                                         <?= $clubs['sport_name'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
@@ -240,7 +240,7 @@
                          </div>
                          <?php if (count($club_details) >= 10) : ?>
                              <div class="">
-                                 <a href="clubs/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
+                                 <a href="clubs/find" class="btn btn-sm btn-primary text-white">See All</a>
                              </div>
                          <?php endif; ?>
                      </div>
@@ -270,7 +270,7 @@
                                              <?= $clubs['club_id'] ?>
                                          </a>
                                          <span class="points home-list text-green">
-                                             Club Sports
+                                         <?= $clubs['sport_name'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
@@ -278,7 +278,7 @@
                          </div>
                          <?php if (count($club_details) >= 10) : ?>
                              <div class="">
-                                 <a href="clubs/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
+                                 <a href="clubs/find" class="btn btn-sm btn-primary text-white">See All</a>
                              </div>
                          <?php endif; ?>
                      </div>
@@ -308,7 +308,7 @@
                                              <?= $clubs['club_id'] ?>
                                          </a>
                                          <span class="points home-list text-green">
-                                             Club Sports
+                                         <?= $clubs['sport_name'] ?>
                                          </span>
                                      </li>
                                  <?php endforeach; ?>
@@ -316,7 +316,7 @@
                          </div>
                          <?php if (count($club_details) >= 10) : ?>
                              <div class="">
-                                 <a href="clubs/find/new" class="btn btn-sm btn-primary text-white">See More +</a>
+                                 <a href="clubs/find" class="btn btn-sm btn-primary text-white">See All</a>
                              </div>
                          <?php endif; ?>
                      </div>

@@ -86,13 +86,12 @@ defined('EXIT__AUTO_MAX')      or define('EXIT__AUTO_MAX', 125); // highest auto
 
 $local_servers = ['localhost', '127.0.0.1'];
 // User Defined Constant
-define('APP_NAME', 'PlayersMkt');
-define('APP_URL_COOKIE', '.playersmkt.com');
-define('FILES_URL', 'https://files.playersmkt.com');
-define('APP_LOGO', 'https://playersmkt.com/img/logo.png');
-$player_app = "https://player.playersmkt.com";
-$club_app = "https://club.playersmkt.com";
-$admin_app = "https://admin.playersmkt.com";
+define('APP_NAME', 'SporGlo');
+define('APP_URL_COOKIE', '.sporglo.com');
+define('APP_LOGO', 'https://sporglo.com/img/logo.png');
+$player_app = "https://player.sporglo.com/";
+$club_app = "https://club.sporglo.com/";
+$admin_app = "https://admin.sporglo.com/";
 if (in_array($_SERVER['HTTP_HOST'], $local_servers)) {
 	$player_app = "http://" . $_SERVER['HTTP_HOST'] . "/player-plsmkt";
 	$club_app = "http://" . $_SERVER['HTTP_HOST'] . "/club-plsmkt";
@@ -101,3 +100,7 @@ if (in_array($_SERVER['HTTP_HOST'], $local_servers)) {
 define('PLAYER_APP_URL', $player_app);
 define('CLUB_APP_URL', $club_app);
 define('ADMIN_APP_URL', $admin_app);
+
+define('PLAYER_FILES', 'https://player.sporglo.com/files/');
+define('CLUB_FILES', 'https://club.sporglo.com/files/');
+define('ADMIN_FILES', 'https://admin.sporglo.com/files/');

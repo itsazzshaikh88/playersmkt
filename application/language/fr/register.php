@@ -1,6 +1,6 @@
 <?php
 include_once 'common.php';
-$lang['register_info'] = "Prêt à propulser votre parcours sportif vers de nouveaux sommets ? Rejoignez <span class='text-green'>PlayersMkt</span> en créant votre compte. Présentez votre talent, connectez-vous avec des clubs du monde entier et ouvrez les portes d'un monde de possibilités passionnantes dans le domaine du sport.";
+$lang['register_info'] = "Prêt à propulser votre parcours sportif vers de nouveaux sommets ? Rejoignez <span class='text-green'>SporGlo</span> en créant votre compte. Présentez votre talent, connectez-vous avec des clubs du monde entier et ouvrez les portes d'un monde de possibilités passionnantes dans le domaine du sport.";
 $lang['main_headding'] = "Inscription des joueurs";
 
 $lang['register_p'] = "Débloquez des opportunités, mettez en valeur vos talents !";
@@ -25,10 +25,10 @@ $lang['submit'] = "Enregistrer votre compte";
 
 //For Club 
 
-$lang['club_register_info'] = "Prêt à propulser votre parcours sportif vers de nouveaux sommets ? Rejoignez <span class='text-green'>PlayersMkt</span> en créant votre compte. Présentez votre talent, connectez-vous avec des clubs du monde entier et ouvrez les portes d'un monde de possibilités passionnantes dans le domaine du sport.";
+$lang['club_register_info'] = "Prêt à propulser votre parcours sportif vers de nouveaux sommets ? Rejoignez <span class='text-green'>SporGlo</span> en créant votre compte. Présentez votre talent, connectez-vous avec des clubs du monde entier et ouvrez les portes d'un monde de possibilités passionnantes dans le domaine du sport.";
 $lang['club_main_headding'] = "Inscription au club";
 
-$lang['club_register_p'] = "Bienvenue sur <span class='text-success'>PlayersMkt</span> ! En créant votre compte club, vous aurez accès à un large éventail de fonctionnalités adaptées aux besoins de votre équipe. Rejoignez notre réseau mondial de clubs et débloquez des opportunités de vous connecter avec des joueurs talentueux, de gérer les activités de l'équipe et de présenter vos réalisations. Commencez dès aujourd'hui et propulsez votre club vers de nouveaux sommets !";
+$lang['club_register_p'] = "Bienvenue sur <span class='text-success'>SporGlo</span> ! En créant votre compte club, vous aurez accès à un large éventail de fonctionnalités adaptées aux besoins de votre équipe. Rejoignez notre réseau mondial de clubs et débloquez des opportunités de vous connecter avec des joueurs talentueux, de gérer les activités de l'équipe et de présenter vos réalisations. Commencez dès aujourd'hui et propulsez votre club vers de nouveaux sommets !";
 $lang['club_first_name'] = "
 Prénom";
 $lang['club_input_first_name'] = "Tapez votre prénom";
@@ -52,6 +52,6 @@ $lang['club_submit'] = "Enregistrer votre compte";
 //After registered
 
 $lang['congo'] = "Toutes nos félicitations,";
-$lang['congo_p1'] = "Bienvenue à bord! Vous vous êtes inscrit avec succès sur <span class='text-green'>PlayersMkt</span> et nous sommes ravis de vous accueillir ici. Votre voyage vers des opportunités et des relations sportives commence ici.";
-$lang['congo_p2'] = "Nous avons envoyé un lien de vérification à votre adresse e-mail. Veuillez vérifier votre boîte de réception et cliquer sur le lien pour terminer le processus d'inscription. Cette étape garantit la sécurité de votre compte et vous permet d'accéder pleinement à toutes les fonctionnalités que <span class='text-green'>PlayersMkt</span> a à offrir.";
+$lang['congo_p1'] = "Bienvenue à bord! Vous vous êtes inscrit avec succès sur <span class='text-green'>SporGlo</span> et nous sommes ravis de vous accueillir ici. Votre voyage vers des opportunités et des relations sportives commence ici.";
+$lang['congo_p2'] = "Nous avons envoyé un lien de vérification à votre adresse e-mail. Veuillez vérifier votre boîte de réception et cliquer sur le lien pour terminer le processus d'inscription. Cette étape garantit la sécurité de votre compte et vous permet d'accéder pleinement à toutes les fonctionnalités que <span class='text-green'>SporGlo</span> a à offrir.";
 $lang['login_acc'] = "Cliquez ici pour vous connecter à votre compte";

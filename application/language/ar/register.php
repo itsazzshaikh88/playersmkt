@@ -1,6 +1,6 @@
 <?php
 include_once 'common.php';
-$lang['register_info'] = "هل أنت مستعد للانتقال برحلتك الرياضية إلى آفاق جديدة؟ انضم إلى <span class='text-green'>PlayersMkt</span> عن طريق تثبيت حسابك. اعرض موهبتك، وتواصل مع الأندية على مستوى العالم، وافتح الأبواب أمام عالم من الإمكانيات المثيرة في عالم الرياضة.";
+$lang['register_info'] = "هل أنت مستعد للانتقال برحلتك الرياضية إلى آفاق جديدة؟ انضم إلى <span class='text-green'>SporGlo</span> عن طريق تثبيت حسابك. اعرض موهبتك، وتواصل مع الأندية على مستوى العالم، وافتح الأبواب أمام عالم من الإمكانيات المثيرة في عالم الرياضة.";
 $lang['main_headding'] = "تسجيل اللاعب";
 
 $lang['register_p'] = "أطلق العنان للفرص، واعرض المواهب!";
@@ -26,10 +26,10 @@ $lang['submit'] = "سجل حسابك";
 
 //For Club 
 
-$lang['club_register_info'] = "هل أنت مستعد للانتقال برحلتك الرياضية إلى آفاق جديدة؟ انضم إلى <span class='text-green'>PlayersMkt</span> عن طريق تثبيت حسابك. اعرض موهبتك، وتواصل مع الأندية على مستوى العالم، وافتح الأبواب أمام عالم من الإمكانيات المثيرة في عالم الرياضة.";
+$lang['club_register_info'] = "هل أنت مستعد للانتقال برحلتك الرياضية إلى آفاق جديدة؟ انضم إلى <span class='text-green'>SporGlo</span> عن طريق تثبيت حسابك. اعرض موهبتك، وتواصل مع الأندية على مستوى العالم، وافتح الأبواب أمام عالم من الإمكانيات المثيرة في عالم الرياضة.";
 $lang['club_main_headding'] = "تسجيل النادي";
 
-$lang['club_register_p'] = "مرحبًا بك في <span class='text-success'>PlayersMkt</span>! من خلال إنشاء حساب النادي الخاص بك، ستتمكن من الوصول إلى مجموعة واسعة من الميزات المصممة لتلبية احتياجات فريقك. انضم إلى شبكتنا العالمية من الأندية وافتح الفرص للتواصل مع اللاعبين الموهوبين وإدارة أنشطة الفريق وعرض إنجازاتك. ابدأ اليوم وانتقل بناديك إلى آفاق جديدة!";
+$lang['club_register_p'] = "مرحبًا بك في <span class='text-success'>SporGlo</span>! من خلال إنشاء حساب النادي الخاص بك، ستتمكن من الوصول إلى مجموعة واسعة من الميزات المصممة لتلبية احتياجات فريقك. انضم إلى شبكتنا العالمية من الأندية وافتح الفرص للتواصل مع اللاعبين الموهوبين وإدارة أنشطة الفريق وعرض إنجازاتك. ابدأ اليوم وانتقل بناديك إلى آفاق جديدة!";
 $lang['club_first_name'] = "الاسم الأول";
 $lang['club_input_first_name'] = "اكتب اسمك الأول";
 $lang['club_last_name'] = "اسم العائلة";
@@ -52,6 +52,6 @@ $lang['club_submit'] = "سجل حسابك";
 //After registered
 
 $lang['congo'] = "Congratulations,";
-$lang['congo_p1'] = "Welcome aboard! You've successfully registered with <span class='text-green'>PlayersMkt</span>, and we're thrilled to have you here. Your journey to sports opportunities and connections starts here.";
-$lang['congo_p2'] = "We've sent a verification link to your email address. Please check your inbox and click on the link to complete the registration process. This step ensures the security of your account and allows you to fully access all the features <span class='text-green'>PlayersMkt</span> has to offer.";
+$lang['congo_p1'] = "Welcome aboard! You've successfully registered with <span class='text-green'>SporGlo</span>, and we're thrilled to have you here. Your journey to sports opportunities and connections starts here.";
+$lang['congo_p2'] = "We've sent a verification link to your email address. Please check your inbox and click on the link to complete the registration process. This step ensures the security of your account and allows you to fully access all the features <span class='text-green'>SporGlo</span> has to offer.";
 $lang['login_acc'] = "Click Here To Login To Your Account";

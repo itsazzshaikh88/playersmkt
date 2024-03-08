@@ -2,7 +2,7 @@
 include_once 'common.php';
 
 // For Player
-$lang['register_info'] = "Ready to take your sports journey to new heights? Join <span class='text-green'>PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.";
+$lang['register_info'] = "Ready to take your sports journey to new heights? Join <span class='text-green'>SporGlo</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.";
 $lang['main_headding'] = "Player Registration";
 
 $lang['register_p'] = "Unlock Opportunities, Showcase Talent!";
@@ -27,10 +27,10 @@ $lang['submit'] = "Register Your Account";
 
 //For Club 
 
-$lang['club_register_info'] = "Ready to take your sports journey to new heights? Join <span class='text-green'>PlayersMkt</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.";
+$lang['club_register_info'] = "Ready to take your sports journey to new heights? Join <span class='text-green'>SporGlo</span> by cerating your account. Showcase your talent, connect with clubs globally, and open doors to a world of exciting possibilities in the realm of sports.";
 $lang['club_main_headding'] = "Club Registration";
 
-$lang['club_register_p'] = "Welcome to <span class='text-success'>PlayersMkt</span>! By creating your club account, you'll gain access to a wide range of features tailored to meet your team's needs. Join our global network of clubs and unlock opportunities to connect with talented players, manage team activities, and showcase your achievements. Get started today and take your club to new heights!";
+$lang['club_register_p'] = "Welcome to <span class='text-success'>SporGlo</span>! By creating your club account, you'll gain access to a wide range of features tailored to meet your team's needs. Join our global network of clubs and unlock opportunities to connect with talented players, manage team activities, and showcase your achievements. Get started today and take your club to new heights!";
 $lang['club_first_name'] = "First Name";
 $lang['club_input_first_name'] = "Type your first name";
 $lang['club_last_name'] = "Last Name";
@@ -53,6 +53,6 @@ $lang['club_submit'] = "Register Your Account";
 //After registered
 
 $lang['congo'] = "Congratulations,";
-$lang['congo_p1'] = "Welcome aboard! You've successfully registered with <span class='text-green'>PlayersMkt</span>, and we're thrilled to have you here. Your journey to sports opportunities and connections starts here.";
-$lang['congo_p2'] = "We've sent a verification link to your email address. Please check your inbox and click on the link to complete the registration process. This step ensures the security of your account and allows you to fully access all the features <span class='text-green'>PlayersMkt</span> has to offer.";
+$lang['congo_p1'] = "Welcome aboard! You've successfully registered with <span class='text-green'>SporGlo</span>, and we're thrilled to have you here. Your journey to sports opportunities and connections starts here.";
+$lang['congo_p2'] = "We've sent a verification link to your email address. Please check your inbox and click on the link to complete the registration process. This step ensures the security of your account and allows you to fully access all the features <span class='text-green'>SporGlo</span> has to offer.";
 $lang['login_acc'] = "Click Here To Login To Your Account";

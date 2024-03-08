@@ -12,7 +12,7 @@ class Form_model extends CI_model
 		return $this->db->query("SELECT * FROM custom_form_lines where header_id = $form_id")->result_array();
 	}
 
-	function zcust_details($id, $form_id)
+	function cust_details($id, $form_id)
 	{
 		$table_sql = $this->db->query("SELECT * FROM custom_form_header where id = $form_id")->row_array();
 		$table = $table_sql['form_table_name'];

@@ -9,6 +9,16 @@ class Club_model extends CI_Model
         return $this->db->query($sql)->result_array();
     }
 
+    // for club list
+    function ClubFetch()
+    {
+        $sql = "select p.club_id,s.sport_name,p.id
+        from clubs p
+        left join sports s on s.sr_no=p.id
+        LIMIT 10;";
+        return $this->db->query($sql)->result_array();
+    }
+
     function fetch_clubs($multi)
     {
         $data =  $this->input->get();
@@ -42,12 +52,6 @@ class Club_model extends CI_Model
         return $query->result_array();
     }
 
-
-    function ClubFetch()
-    {
-        $sql = "select * from clubs LIMIT 10";
-        return $this->db->query($sql)->result_array();
-    }
 
     function fetch_position()
     {

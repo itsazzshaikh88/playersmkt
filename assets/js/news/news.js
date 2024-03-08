@@ -1,5 +1,4 @@
 const data_news_api = {
-	
 	_type: "news",
 	didUMean: "",
 	totalCount: 926,
@@ -402,7 +401,6 @@ async function fetchNews(data) {
 		let temp_str = "";
 		if (data["value"].length > 0) {
 			data["value"].forEach((element) => {
-
 				let image = element["image"]["url"];
 				let title = element["title"];
 				let desc = element["description"];
@@ -414,7 +412,7 @@ async function fetchNews(data) {
                         <div class="info-slider">
                             <h1>${title}</h1>
                             <p>${desc}</p>
-                            <a href="${link_to_open}" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
+                            <a href="${link_to_open}" target="_blank" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -426,4 +424,3 @@ async function fetchNews(data) {
 	}
 }
 fetchNews(data_news_api);
-
